@@ -1,5 +1,5 @@
 <img src='svg_data/pytest_passing.svg'><img src='svg_data/coverage.svg'>
-[![Binder](https://notebooks.gesis.org/binder/badge.svg)](https://notebooks.gesis.org/binder/v2/gh/face2face_public/master)
+[![Binder](https://notebooks.gesis.org/binder/badge.svg)](https://notebooks.gesis.org/binder/v2/gh/gesiscss/face2face_public/master?filepath=tutorial)
 
 2020-07-06 11:20:19.132423
 2020-07-06 14:55:47.095103
