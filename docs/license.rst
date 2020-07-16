@@ -1,0 +1,5 @@
+LICENSE
+========
+
+.. literalinclude:: ../LICENSE.rst
+
