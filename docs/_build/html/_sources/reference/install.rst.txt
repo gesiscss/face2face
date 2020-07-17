@@ -1,4 +1,0 @@
-Install
-=======
-
-SocioPatterns requires....
