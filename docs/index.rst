@@ -1,12 +1,12 @@
-.. SocioPatterns documentation master file, created by
+.. face2face documentation master file, created by
    sphinx-quickstart on Wed Apr 22 09:59:56 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Software for basic Sociopatterns analysis
+Software for basic face2face interaction analysis
 ==========================================
 
-The face-to-face-interaction-analysis package "Sociopatterns" allows you to use predefined functions to analyse social behaviour.
+The face-to-face-interaction-analysis package "face2face" allows you to use predefined functions to analyse social behaviour.
 
 Sociopatterns provides:
 
@@ -19,19 +19,19 @@ Sociopatterns provides:
 Audience
 ---------
 
-The audience for this Sociopatterns package includes social scientists who have basic knowledge about programming and who wants to extend their methods by computational social science methods. This
+The audience for this face2face package includes social scientists who have basic knowledge about programming and who wants to extend their methods by computational social science methods. This
 Package should give an idea on the use of Python or other programming languages on datasets.
 
 Free software
 -------------
 
-Sociopatterns is an Open Source Project from GESIS.
+face2face is an Open Source Project from GESIS.
 
 History
 ---------
 
-Sociopatterns was published in __.__.2020 and the original version was designed by Andreas Kruff a "Data & Information Science"-Student from Cologne. The package was part of his 
-internship at GESIS. Three people have contributed to the success of Sociopatterns.
+face2face was published in __.__.2020 and the original version was designed by Andreas Kruff a "Data & Information Science"-Student from Cologne. The package was part of his 
+internship at GESIS. Three people have contributed to the success of face2face.
 
 
 .. toctree::

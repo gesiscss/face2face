@@ -1,12 +1,12 @@
 Statistics
 ==========
 
-.. currentmodule:: sociopatterns
+.. currentmodule:: face2face
 
 Distribution
 ------------
 
-.. automodule:: sociopatterns.statistics.distribution
+.. automodule:: face2face.statistics.distribution
 
 
 .. autosummary::
@@ -20,7 +20,7 @@ Distribution
 Null Model
 ----------
 
-.. automodule:: sociopatterns.statistics.null_modell
+.. automodule:: face2face.statistics.null_modell
 
 .. autosummary::
 	:toctree: generated/
@@ -35,21 +35,19 @@ Null Model
 Average Degree
 ----------------
 
-.. automodule:: sociopatterns.statistics.average_degree
+.. automodule:: face2face.statistics.average_degree
 
 .. autosummary::
 	:toctree: generated/
 	
-	new_avg_degree_attr
 	avg_degree_attr
-	new_group_list_degree
 	group_list_degree
 	global_avg_var_std
 	
 Network Measurements
 ---------------------
 
-.. automodule:: sociopatterns.statistics.calculating_multiple_measurements_for_a_network
+.. automodule:: face2face.statistics.calculating_multiple_measurements_for_a_network
 
 .. autosummary::
 	:toctree: generated/
@@ -63,7 +61,7 @@ Network Measurements
 Check distribution
 -------------------
 
-.. automodule:: sociopatterns.statistics.check_distribution
+.. automodule:: face2face.statistics.check_distribution
 
 .. autosummary::
 	:toctree: generated/

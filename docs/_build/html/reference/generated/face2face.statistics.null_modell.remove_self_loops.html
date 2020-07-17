@@ -1,0 +1,270 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>face2face.statistics.null_modell.remove_self_loops &mdash; face2face  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="face2face.statistics.null_modell.to_simple_graph" href="face2face.statistics.null_modell.to_simple_graph.html" />
+    <link rel="prev" title="face2face.statistics.null_modell.shuffle_label_z_score_mixing_matrix" href="face2face.statistics.null_modell.shuffle_label_z_score_mixing_matrix.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> face2face
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../imports.html">    Imports</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../statistics.html">    Statistics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.distribution">Distribution</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../statistics.html#module-face2face.statistics.null_modell">Null Model</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="face2face.statistics.null_modell.check_bonferroni_correction.html">face2face.statistics.null_modell.check_bonferroni_correction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="face2face.statistics.null_modell.mapping_function.html">face2face.statistics.null_modell.mapping_function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix.html">face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="face2face.statistics.null_modell.shuffle_label_z_score_mixing_matrix.html">face2face.statistics.null_modell.shuffle_label_z_score_mixing_matrix</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">face2face.statistics.null_modell.remove_self_loops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="face2face.statistics.null_modell.to_simple_graph.html">face2face.statistics.null_modell.to_simple_graph</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.average_degree">Average Degree</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.calculating_multiple_measurements_for_a_network">Network Measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.check_distribution">Check distribution</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../visualization.html">    Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compatiblity_check.html">    Compatibility</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devguide.html">Developer Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">face2face</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Reference</a> &raquo;</li>
+        
+          <li><a href="../statistics.html">Statistics</a> &raquo;</li>
+        
+      <li>face2face.statistics.null_modell.remove_self_loops</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/reference/generated/face2face.statistics.null_modell.remove_self_loops.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="face2face-statistics-null-modell-remove-self-loops">
+<h1>face2face.statistics.null_modell.remove_self_loops<a class="headerlink" href="#face2face-statistics-null-modell-remove-self-loops" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt id="face2face.statistics.null_modell.remove_self_loops">
+<code class="sig-prename descclassname">face2face.statistics.null_modell.</code><code class="sig-name descname">remove_self_loops</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">graph</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.statistics.null_modell.remove_self_loops" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes self-loops that occur by using the “configuration_model”-function</p>
+<p>Removes self-loops that occur by using the “configuration_model”-function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graph</strong> (<em>networkX Graph</em>) – A graph with a specified degree sequence. Nodes are labeled based on the imported dataset. Graph might
+contain self loops</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>graph</strong> – A graph with a specified degree sequence. Nodes are labeled based on the imported dataset. Graph contains
+no selfloops anymore.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>networkX Graph</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+<p class="rubric">Examples</p>
+<p>The <code class="xref py py-func docutils literal notranslate"><span class="pre">networkx.configuration_model()</span></code> function which is being used for the configuration model can lead to
+self- and parellel edges. As you can see here the function <a class="reference internal" href="#face2face.statistics.null_modell.remove_self_loops" title="face2face.statistics.null_modell.remove_self_loops"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_self_loops()</span></code></a> filters self loops out of
+the network.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">degree_sequence_1</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">test_network</span><span class="o">.</span><span class="n">degree</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_model</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">configuration_model</span><span class="p">(</span><span class="n">degree_sequence_1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">test_model</span><span class="o">.</span><span class="n">edges</span><span class="p">)</span>
+<span class="go">[(0, 1, 0), (1, 1, 0), (2, 6, 0), (2, 3, 0), (3, 4, 0), (4, 8, 0), (5, 5, 0), (6, 9, 0), (7, 8, 0), (7, 9, 0)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">remove_self_loops</span><span class="p">(</span><span class="n">test_model</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">test_model</span><span class="o">.</span><span class="n">edges</span><span class="p">)</span>
+<span class="go">[(0, 1, 0), (2, 6, 0), (2, 3, 0), (3, 4, 0), (4, 8, 0), (6, 9, 0), (7, 8, 0), (7, 9, 0)]</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix</p>
+</div></blockquote>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="face2face.statistics.null_modell.to_simple_graph.html" class="btn btn-neutral float-right" title="face2face.statistics.null_modell.to_simple_graph" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="face2face.statistics.null_modell.shuffle_label_z_score_mixing_matrix.html" class="btn btn-neutral float-left" title="face2face.statistics.null_modell.shuffle_label_z_score_mixing_matrix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Andreas
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

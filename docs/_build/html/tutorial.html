@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tutorial &mdash; SocioPatterns  documentation</title>
+  <title>Tutorial &mdash; face2face  documentation</title>
   
 
   
@@ -51,7 +51,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> SocioPatterns
+            <a href="index.html" class="icon icon-home"> face2face
           
 
           
@@ -92,7 +92,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#tutorial-first-functions">02_tutorial_first_functions</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#sociopatterns-tutorials">Sociopatterns Tutorials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#face2face-tutorials">face2face Tutorials</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#import-data-set">import_data_set</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#avg-degree">avg_degree</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dynamic-network-analyses">dynamic_network_analyses</a></li>
@@ -123,7 +123,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">SocioPatterns</a>
+          <a href="index.html">face2face</a>
         
       </nav>
 
@@ -179,11 +179,11 @@
 <div class="section" id="import-tij-and-metadata-as-data-object">
 <h2>Import Tij- and Metadata as Data Object<a class="headerlink" href="#import-tij-and-metadata-as-data-object" title="Permalink to this headline">¶</a></h2>
 <p>Import predefined datasets as Data Object.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">sociopatterns</span> <span class="k">as</span> <span class="nn">sp</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Data</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">face2face</span> <span class="k">as</span> <span class="nn">f2f</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">f2f</span><span class="o">.</span><span class="n">Data</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code> is a collection of one or two pandas dataframes. It always contains a tij-dataframe, but it can also contain a metadata dataframe. You can use the whole Data-Object as Parameter for all functions where you use tij-dataframes or metadata-dataframes.
+<p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code> object is a collection of one or two pandas dataframes. It always contains a tij-dataframe, but it can also contain a metadata dataframe. You can use the whole Data-Object as Parameter for all functions where you use tij-dataframes or metadata-dataframes.
 If you want to access one of the two dataframes of the Data-Object, you can access it like this.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df_tij</span> <span class="o">=</span> <span class="n">Data</span><span class="o">.</span><span class="n">interaction</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">df_meta</span> <span class="o">=</span> <span class="n">Data</span><span class="o">.</span><span class="n">metadata</span>
@@ -193,10 +193,10 @@ If you want to access one of the two dataframes of the Data-Object, you can acce
 <div class="section" id="create-different-networks">
 <h2>Create different Networks<a class="headerlink" href="#create-different-networks" title="Permalink to this headline">¶</a></h2>
 <p>With the <code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code> you can create different kind of networks.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">full_network</span> <span class="o">=</span> <span class="n">create_network_from_data</span><span class="p">(</span><span class="n">Data</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">hopping_network</span> <span class="o">=</span> <span class="n">hopping_time_networks</span><span class="p">(</span><span class="n">Data</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span> <span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">sliding_network</span> <span class="o">=</span> <span class="n">sliding_time_networks</span><span class="p">(</span><span class="n">Data</span><span class="p">,</span> <span class="n">slide</span><span class="o">=</span> <span class="p">,</span><span class="n">interval</span><span class="o">=</span> <span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">event_time_network</span> <span class="o">=</span> <span class="n">event_time_networks</span><span class="p">(</span><span class="n">Data</span><span class="p">,</span> <span class="n">events</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">full_network</span> <span class="o">=</span> <span class="n">f2f</span><span class="o">.</span><span class="n">create_network_from_data</span><span class="p">(</span><span class="n">Data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hopping_network</span> <span class="o">=</span> <span class="n">f2f</span><span class="o">.</span><span class="n">hopping_time_networks</span><span class="p">(</span><span class="n">Data</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sliding_network</span> <span class="o">=</span> <span class="n">f2f</span><span class="o">.</span><span class="n">sliding_time_networks</span><span class="p">(</span><span class="n">Data</span><span class="p">,</span> <span class="n">slide</span><span class="o">=</span> <span class="p">,</span><span class="n">interval</span><span class="o">=</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">event_time_network</span> <span class="o">=</span> <span class="n">f2f</span><span class="o">.</span><span class="n">event_time_networks</span><span class="p">(</span><span class="n">Data</span><span class="p">,</span> <span class="n">events</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -209,7 +209,7 @@ If you want to access one of the two dataframes of the Data-Object, you can acce
 <h3>Beginner Tutorials<a class="headerlink" href="#beginner-tutorials" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="tutorial-exploring-the-data">
 <h4>01_tutorial_exploring_the_data<a class="headerlink" href="#tutorial-exploring-the-data" title="Permalink to this headline">¶</a></h4>
-<p>This tutorial includes small tasks with functions of pandas that are also used for the functions in this library. The tasks should give you an idea on the functions that are used for this library like “groupyby”, “merge” etc.</p>
+<p>This tutorial includes small tasks with functions of pandas that are also used for the functions in this library. The tasks should give you an idea on the functions that are used for this library like “groupby”, “merge” etc.</p>
 <p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/01_tutorial_exploring_the_data.ipynb">here</a></p>
 </div>
 <div class="section" id="tutorial-first-functions">
@@ -218,8 +218,8 @@ If you want to access one of the two dataframes of the Data-Object, you can acce
 <p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/02_tutorial_first_functions.ipynb">here</a></p>
 </div>
 </div>
-<div class="section" id="sociopatterns-tutorials">
-<h3>Sociopatterns Tutorials<a class="headerlink" href="#sociopatterns-tutorials" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="face2face-tutorials">
+<h3>face2face Tutorials<a class="headerlink" href="#face2face-tutorials" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="import-data-set">
 <h4>import_data_set<a class="headerlink" href="#import-data-set" title="Permalink to this headline">¶</a></h4>
 <p>The tutorial “import_data_set” tells you about every way that you can import predefined or your own datasets to make them useable in this library.</p>
@@ -252,7 +252,7 @@ If you want to access one of the two dataframes of the Data-Object, you can acce
 </div>
 <div class="section" id="how-to-use-statistical-characterization">
 <h4>How_to_use_statistical_characterization<a class="headerlink" href="#how-to-use-statistical-characterization" title="Permalink to this headline">¶</a></h4>
-<p>This tutorial requires the knowledge from the previous Tutorial. This tutorial should teach you how to use the packages powerlaw and sociopatterns, to determine reasonable parameters, find the best fitting distribution for the data set and how to visualize it.</p>
+<p>This tutorial requires the knowledge from the previous Tutorial. This tutorial should teach you how to use the packages powerlaw and face2face, to determine reasonable parameters, find the best fitting distribution for the data set and how to visualize it.</p>
 <p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/How_to_use_statistical_characterization.ipynb">here</a></p>
 </div>
 </div>

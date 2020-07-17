@@ -1,7 +1,7 @@
 Tutorial
 ========
 
-.. currentmodule:: sociopatterns
+.. currentmodule:: face2face
 
 This guide should help you to get started with this package.
 
@@ -13,10 +13,10 @@ Import predefined datasets as Data Object.
 
 .. code-block:: python
 
-	>>> import sociopatterns as sp
-	>>> df = sp.Data()
+	>>> import face2face as f2f
+	>>> df = f2f.Data()
 	
-A :class:`Data` is a collection of one or two pandas dataframes. It always contains a tij-dataframe, but it can also contain a metadata dataframe. You can use the whole Data-Object as Parameter for all functions where you use tij-dataframes or metadata-dataframes.
+A :class:`Data` object is a collection of one or two pandas dataframes. It always contains a tij-dataframe, but it can also contain a metadata dataframe. You can use the whole Data-Object as Parameter for all functions where you use tij-dataframes or metadata-dataframes.
 If you want to access one of the two dataframes of the Data-Object, you can access it like this.
 
 .. code-block:: python
@@ -32,10 +32,10 @@ With the :class:`Data` you can create different kind of networks.
 
 .. code-block:: python
 	
-	>>> full_network = create_network_from_data(Data)
-	>>> hopping_network = hopping_time_networks(Data, minute= )
-	>>> sliding_network = sliding_time_networks(Data, slide= ,interval= )
-	>>> event_time_network = event_time_networks(Data, events)
+	>>> full_network = f2f.create_network_from_data(Data)
+	>>> hopping_network = f2f.hopping_time_networks(Data, minute= )
+	>>> sliding_network = f2f.sliding_time_networks(Data, slide= ,interval= )
+	>>> event_time_network = f2f.event_time_networks(Data, events)
 
 
 Notebook Tutorials in Git
@@ -54,7 +54,7 @@ Beginner Tutorials
 01_tutorial_exploring_the_data
 """""""""""""""""""""""""""""""
 
-This tutorial includes small tasks with functions of pandas that are also used for the functions in this library. The tasks should give you an idea on the functions that are used for this library like "groupyby", "merge" etc. 
+This tutorial includes small tasks with functions of pandas that are also used for the functions in this library. The tasks should give you an idea on the functions that are used for this library like "groupby", "merge" etc. 
 
 To get to the tutorial click `here <https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/01_tutorial_exploring_the_data.ipynb>`_
 
@@ -66,7 +66,7 @@ This tutorial explains the basics about the functions that are implemented in th
 To get to the tutorial click `here <https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/02_tutorial_first_functions.ipynb>`_
 
 
-Sociopatterns Tutorials
+face2face Tutorials
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 import_data_set
@@ -118,6 +118,6 @@ To get to the tutorial click `here <https://github.com/gesiscss/face-to-face-int
 How_to_use_statistical_characterization
 """"""""""""""""""""""""""""""""""""""""""
 
-This tutorial requires the knowledge from the previous Tutorial. This tutorial should teach you how to use the packages powerlaw and sociopatterns, to determine reasonable parameters, find the best fitting distribution for the data set and how to visualize it.
+This tutorial requires the knowledge from the previous Tutorial. This tutorial should teach you how to use the packages powerlaw and face2face, to determine reasonable parameters, find the best fitting distribution for the data set and how to visualize it.
 
 To get to the tutorial click `here <https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/How_to_use_statistical_characterization.ipynb>`_

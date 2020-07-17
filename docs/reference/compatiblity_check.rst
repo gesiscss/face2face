@@ -1,12 +1,14 @@
 Check Compatibility
-==================
+=====================
 
-.. currentmodule:: sociopatterns
+.. currentmodule:: face2face
+
 
 Create Network
 -----------------
 
-.. automodule:: sociopatterns.compatibility_check.check_compatibility
+
+.. automodule:: face2face.compatibility_check.check_compatibility
 
 
 .. autosummary::

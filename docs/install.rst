@@ -1,7 +1,7 @@
 Install
 =======
 
-Sociopatterns requires a Python Version >= 3.6.1 for the used librarys inside this one. If you have no python environment on your computer yet you can check the following instruction guide for the installation. `scientific Python stack <https://scipy.org/install.html>`_.
+face2face requires a Python Version >= 3.6.1 for the used librarys inside this one. If you have no python environment on your computer yet you can check the following instruction guide for the installation. `scientific Python stack <https://scipy.org/install.html>`_.
 
 
 .. note::
@@ -16,7 +16,7 @@ Sociopatterns requires a Python Version >= 3.6.1 for the used librarys inside th
    documentation.
    
 Below we assume you have the default Python environment already configured on
-your computer and you intend to install ``sociopatterns`` inside of it.  If you want
+your computer and you intend to install ``face2face`` inside of it.  If you want
 to create and work with Python virtual environments, please follow instructions
 on `venv <https://docs.python.org/3/library/venv.html>`_ and `virtual
 environments <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_.
@@ -29,13 +29,13 @@ installed. If you do not, refer to the `Pip documentation
 Install the released version
 ------------------------------
 
-Install the current release of ``sociopatterns`` with ``pip``::
+Install the current release of ``face2face`` with ``pip``::
 
-    $ pip install sociopatterns
+    $ pip install face2face
 	
-You can also install ``sociopatterns`` with ``conda``::
+You can also install ``face2face`` with ``conda``::
 
-	$ conda install sociopatterns
+	$ conda install face2face
 
 Install the development version
 ------------------------------------
@@ -61,9 +61,9 @@ The following optional packages provide additional functionality.
 - `collections` <https://docs.python.org/3/library/collections.html>`_ provides specialized container datatypes as an alternative to Python's built-in containers.
 
 
-To install ``sociopatterns`` and all optional packages, do::
+To install ``face2face`` and all optional packages, do::
 
-    $ pip install sociopatterns[all]
+    $ pip install face2face[all]
 
 To explicitly install all optional packages, do::
 
@@ -74,14 +74,14 @@ Or, install any optional package (e.g., ``numpy``) individually::
     $ pip install numpy
 
 If you want to use multiple librarys for your project, which use similar librarys like ``pandas`` or ``numpy``, but they require different versions you can use the functions from the ``check_compatiblity`` method to find out if the 
-versions of the required packages contain already or still contain the functions, that are needed in the sociopatterns library. To get the maximum backwards and forward compatibility there are no specific versions required for the packages that are used for this library,
+versions of the required packages contain already or still contain the functions, that are needed in the ``face2face`` library. To get the maximum backwards and forward compatibility there are no specific versions required for the packages that are used for this library,
 but instead you can use this tool as an assistant to find out which parts of this library won't work with the currently installed package versions. So you can decide if you need the affected functions and if the function tells you which functions in the installed package versions are missing you have
 a good hint to find the version you need to make this functions work. 
 
 Testing
 ---------
 
-Sociopatterns uses the Python ``pytest`` testing package.  You can learn more
+face2face uses the Python ``pytest`` testing package.  You can learn more
 about pytest on their `homepage <https://pytest.org>`_.
 
 Test a source distribution

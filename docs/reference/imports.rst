@@ -1,12 +1,12 @@
 Imports
 ==================
 
-.. currentmodule:: sociopatterns
+.. currentmodule:: face2face
 
 Create Network
 -----------------
 
-.. automodule:: sociopatterns.imports.create_network
+.. automodule:: face2face.imports.create_network
 
 
 .. autosummary::
@@ -21,14 +21,14 @@ Create Network
 Load Data
 ------------
 
-.. automodule:: sociopatterns.imports.load_all_data
+.. automodule:: face2face.imports.load_all_data
 
 
 .. autosummary::
 	:toctree: generated/
 	
 	Data
-	sociopatterns.imports.load_all_data.Data.replace_str_attr_to_float
+	face2face.imports.load_all_data.Data.replace_str_attr_to_float
 	
 	
 	

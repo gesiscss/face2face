@@ -1,12 +1,12 @@
 Visualization
 ==================
 
-.. currentmodule:: sociopatterns
+.. currentmodule:: face2face
 
 Network Information
 ---------------------
 
-.. automodule:: sociopatterns.visualization.output_network_information
+.. automodule:: face2face.visualization.output_network_information
 
 .. autosummary::
 	:toctree: generated/
@@ -16,7 +16,7 @@ Network Information
 Average Degree Boxplot
 -----------------------
 
-.. automodule:: sociopatterns.visualization.plot_average_degree_group
+.. automodule:: face2face.visualization.plot_average_degree_group
 
 .. autosummary::
 	:toctree: generated/
@@ -26,7 +26,7 @@ Average Degree Boxplot
 Contact Matrix Heatmap
 -----------------------
 
-.. automodule:: sociopatterns.visualization.plot_contact_matrix_heatmap
+.. automodule:: face2face.visualization.plot_contact_matrix_heatmap
 
 .. autosummary::
 	:toctree: generated/
@@ -36,7 +36,7 @@ Contact Matrix Heatmap
 Null model histogramm
 ------------------------
 
-.. automodule:: sociopatterns.visualization.plot_histogram_null_model
+.. automodule:: face2face.visualization.plot_histogram_null_model
 
 .. autosummary::
 	:toctree: generated/
@@ -48,7 +48,7 @@ Null model histogramm
 Probability distribution histogramm
 ------------------------------------
 
-.. automodule:: sociopatterns.visualization.plot_probability_distribution
+.. automodule:: face2face.visualization.plot_probability_distribution
 
 .. autosummary::
 	:toctree: generated/

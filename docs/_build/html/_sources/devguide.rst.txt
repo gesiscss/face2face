@@ -42,7 +42,7 @@ If you want to be part in the development here is a guide on how to setup your l
 	* Use the green Pull Request button, that shows up in the new branch
 	
 	
-Version Controll for face-to-face-interaction-analysis-toolkit project
+Version Control for face-to-face-interaction-analysis-toolkit project
 ------------------------------------------------------------------------
 
 Please make sure that you have installed ``pre-commit`` and ``pytest`` on your computer
