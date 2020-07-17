@@ -1,0 +1,621 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sociopatterns.statistics package &mdash; SocioPatterns  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="sociopatterns.statistics.tests package" href="sociopatterns.statistics.tests.html" />
+    <link rel="prev" title="sociopatterns.imports.tests package" href="sociopatterns.imports.tests.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> SocioPatterns
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sociopatterns.imports.html">sociopatterns.imports package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">sociopatterns.statistics package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sociopatterns.statistics.tests.html">sociopatterns.statistics.tests package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sociopatterns.statistics.average_degree">sociopatterns.statistics.average_degree module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sociopatterns.statistics.calculating_multiple_measurements_for_a_network">sociopatterns.statistics.calculating_multiple_measurements_for_a_network module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sociopatterns.statistics.distribution">sociopatterns.statistics.distribution module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sociopatterns.statistics.null_modell">sociopatterns.statistics.null_modell module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sociopatterns.statistics">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sociopatterns.visualization.html">sociopatterns.visualization package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SocioPatterns</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>sociopatterns.statistics package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/sociopatterns.statistics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sociopatterns-statistics-package">
+<h1>sociopatterns.statistics package<a class="headerlink" href="#sociopatterns-statistics-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sociopatterns.statistics.tests.html">sociopatterns.statistics.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sociopatterns.statistics.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sociopatterns.statistics.tests.html#module-sociopatterns.statistics.tests.test_degree">sociopatterns.statistics.tests.test_degree module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sociopatterns.statistics.tests.html#module-sociopatterns.statistics.tests.test_distribution">sociopatterns.statistics.tests.test_distribution module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sociopatterns.statistics.tests.html#module-sociopatterns.statistics.tests.test_network_measurements">sociopatterns.statistics.tests.test_network_measurements module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sociopatterns.statistics.tests.html#module-sociopatterns.statistics.tests.test_null_modell">sociopatterns.statistics.tests.test_null_modell module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sociopatterns.statistics.tests.html#module-sociopatterns.statistics.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-sociopatterns.statistics.average_degree">
+<span id="sociopatterns-statistics-average-degree-module"></span><h2>sociopatterns.statistics.average_degree module<a class="headerlink" href="#module-sociopatterns.statistics.average_degree" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="sociopatterns.statistics.average_degree.avg_degree_attr">
+<code class="sig-prename descclassname">sociopatterns.statistics.average_degree.</code><code class="sig-name descname">avg_degree_attr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.average_degree.avg_degree_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the average degree</p>
+<p>Calculates the average degree for every attribute of every group and for the whole group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Data.interaction</strong> (<em>Data</em>)</p></li>
+<li><p><strong>Data.metadata</strong> (<em>Data</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>attr_degree_list</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.average_degree.global_avg_var_std">
+<code class="sig-prename descclassname">sociopatterns.statistics.average_degree.</code><code class="sig-name descname">global_avg_var_std</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">attr_degree_list</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.average_degree.global_avg_var_std" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculating global measures</p>
+<p>Calculate the average, the variance and the standard deviation for the global meta data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>attr_degree_list</strong> (<em>list</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>measures</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.average_degree.group_list_degree">
+<code class="sig-prename descclassname">sociopatterns.statistics.average_degree.</code><code class="sig-name descname">group_list_degree</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.average_degree.group_list_degree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates lists of the degrees</p>
+<p>Creating a list of degrees for every attribute of every group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Data.interaction</strong> (<em>Data</em>)</p></li>
+<li><p><strong>Data.metadata</strong> (<em>Data</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>attr_degree_list</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sociopatterns.statistics.calculating_multiple_measurements_for_a_network">
+<span id="sociopatterns-statistics-calculating-multiple-measurements-for-a-network-module"></span><h2>sociopatterns.statistics.calculating_multiple_measurements_for_a_network module<a class="headerlink" href="#module-sociopatterns.statistics.calculating_multiple_measurements_for_a_network" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="sociopatterns.statistics.calculating_multiple_measurements_for_a_network.average_path_length_network">
+<code class="sig-prename descclassname">sociopatterns.statistics.calculating_multiple_measurements_for_a_network.</code><code class="sig-name descname">average_path_length_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.calculating_multiple_measurements_for_a_network.average_path_length_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the average path length</p>
+<p>Calculating the average path length &lt;d&gt; of a given network</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>network</strong> (<em>networkx Graph</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>d</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_degrees">
+<code class="sig-prename descclassname">sociopatterns.statistics.calculating_multiple_measurements_for_a_network.</code><code class="sig-name descname">calculating_number_of_edges_degrees</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_degrees" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate number of edges/nodes</p>
+<p>Calculating the amount of edges and nodes for a given network</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>network</strong> (<em>networkx Graph</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>number_of_nodes</strong> (<em>int</em>)</p></li>
+<li><p><strong>number_of_edges</strong> (<em>int</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.calculating_multiple_measurements_for_a_network.clustering_coefficient">
+<code class="sig-prename descclassname">sociopatterns.statistics.calculating_multiple_measurements_for_a_network.</code><code class="sig-name descname">clustering_coefficient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.calculating_multiple_measurements_for_a_network.clustering_coefficient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the global Clustering Coefficient</p>
+<p>Calculating the global Clustering Coefficient C for a given network</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>network</strong> (<em>networkx Graph</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>c</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.calculating_multiple_measurements_for_a_network.mean_degree_network">
+<code class="sig-prename descclassname">sociopatterns.statistics.calculating_multiple_measurements_for_a_network.</code><code class="sig-name descname">mean_degree_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.calculating_multiple_measurements_for_a_network.mean_degree_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate average degree</p>
+<p>Calculating the average degree of a given network</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>network</strong> (<em>networkx Graph</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>k</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.calculating_multiple_measurements_for_a_network.variance_std_network">
+<code class="sig-prename descclassname">sociopatterns.statistics.calculating_multiple_measurements_for_a_network.</code><code class="sig-name descname">variance_std_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.calculating_multiple_measurements_for_a_network.variance_std_network" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate variance and standard deviation</p>
+<p>Calculating the variance and the standard deviation of the degrees of a given network</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>network</strong> (<em>networkx Graph</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>var</strong> (<em>float</em>)</p></li>
+<li><p><strong>std</strong> (<em>float</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sociopatterns.statistics.distribution">
+<span id="sociopatterns-statistics-distribution-module"></span><h2>sociopatterns.statistics.distribution module<a class="headerlink" href="#module-sociopatterns.statistics.distribution" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="sociopatterns.statistics.distribution.calculate_contact_duration">
+<code class="sig-prename descclassname">sociopatterns.statistics.distribution.</code><code class="sig-name descname">calculate_contact_duration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.distribution.calculate_contact_duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the probabilitys for contact duration</p>
+<p>Calculates the probability for having a face-to-face contact for the time delta T</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>Data.interaction</strong> (<em>Data</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>[y_probability,x_delta_t]</strong> – A list with two lists. The first list contains the probabilities for the y-axis and the second list contains
+the contact duration delta T</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.distribution.calculate_inter_contact_duration">
+<code class="sig-prename descclassname">sociopatterns.statistics.distribution.</code><code class="sig-name descname">calculate_inter_contact_duration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Data</span></em>, <em class="sig-param"><span class="n">bins</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.distribution.calculate_inter_contact_duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the probabilities for the inter-contact duration</p>
+<p>Calculates the probability for the inter-contact duration delta T of three distinct persons.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>Data.interaction</strong> (<em>Data</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>[x_delta_t,y_probability]</strong> – A list with two lists. The first list contains the probabilities for the y-axis and the second list contains
+the inter-contact duration tAC-tAB</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.distribution.calculate_triangle_duration">
+<code class="sig-prename descclassname">sociopatterns.statistics.distribution.</code><code class="sig-name descname">calculate_triangle_duration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Data</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.distribution.calculate_triangle_duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the probabilities for the contact duration between triangle constellations</p>
+<p>Calculates the probability how long a triangle constellation lasts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>Data.interaction</strong> (<em>Data</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>[y_probability,x_delta_t]</strong> – A list with two lists. The first list contains the probabilitys for the y-axis and the second list contains
+the triangle duration delta T</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sociopatterns.statistics.null_modell">
+<span id="sociopatterns-statistics-null-modell-module"></span><h2>sociopatterns.statistics.null_modell module<a class="headerlink" href="#module-sociopatterns.statistics.null_modell" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="sociopatterns.statistics.null_modell.check_bonferroni_correction">
+<code class="sig-prename descclassname">sociopatterns.statistics.null_modell.</code><code class="sig-name descname">check_bonferroni_correction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">contact_matrix</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.null_modell.check_bonferroni_correction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the bonferroni correction on the contact matrix</p>
+<p>Calculates the p_values of the contact matrix and applies the bonferroni correction on the contact matrix</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>contact_matrix</strong> (<em>list</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>annotation_list</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The annotation_list contains the z-scores of the contact matrix and adds a * at every z-score that is an outlier</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.null_modell.configuration_model_label_z_score_mixing_matrix">
+<code class="sig-prename descclassname">sociopatterns.statistics.null_modell.</code><code class="sig-name descname">configuration_model_label_z_score_mixing_matrix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network</span></em>, <em class="sig-param"><span class="n">Data</span></em>, <em class="sig-param"><span class="n">runs</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">'type'</span></em>, <em class="sig-param"><span class="n">shuffle_label</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">force_simple_graph</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">seed_config_mat</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seed_label</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.null_modell.configuration_model_label_z_score_mixing_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the contact matrix</p>
+<p>Calculates the z-scores for the configuration null modell.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>network</strong> (<em>networkx Graph</em>)</p></li>
+<li><p><strong>Data</strong> (<em>Data</em>)</p></li>
+<li><p><strong>runs</strong> (<em>int</em>)</p></li>
+<li><p><strong>label</strong> (<em>str</em>)</p></li>
+<li><p><strong>shuffle_label</strong> (<em>bool</em>)</p></li>
+<li><p><strong>force_simple_graph</strong> (<em>bool</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>contact_matrix</strong> (<em>list</em>)</p></li>
+<li><p><strong>matrices</strong> (<em>list</em>)</p></li>
+<li><p><strong>data_mixing_matrix</strong> (<em>list</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.null_modell.mapping_function">
+<code class="sig-prename descclassname">sociopatterns.statistics.null_modell.</code><code class="sig-name descname">mapping_function</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Data</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">'type'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.null_modell.mapping_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a mapping</p>
+<p>Creates a mapping dict to create the attribute mixing matrix dynamic independent of the amount of attributes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Data</strong> (<em>Data</em>)</p></li>
+<li><p><strong>label</strong> (<em>str</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>mapping</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.null_modell.remove_self_loops">
+<code class="sig-prename descclassname">sociopatterns.statistics.null_modell.</code><code class="sig-name descname">remove_self_loops</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">graph</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.null_modell.remove_self_loops" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes self loops</p>
+<p>Removes the self loops that occur by using the “configuration_model” function of networkx.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graph</strong> (<em>networkx Graph</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>graph</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>networkx Graph</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.null_modell.shuffle_label_z_score_mixing_matrix">
+<code class="sig-prename descclassname">sociopatterns.statistics.null_modell.</code><code class="sig-name descname">shuffle_label_z_score_mixing_matrix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network</span></em>, <em class="sig-param"><span class="n">Data</span></em>, <em class="sig-param"><span class="n">runs</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">'type'</span></em>, <em class="sig-param"><span class="n">seed_label</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.null_modell.shuffle_label_z_score_mixing_matrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the contact matrix</p>
+<p>Calculates the contact matrix for a null model where you randomize the identities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>network</strong> (<em>networkx Graph</em>)</p></li>
+<li><p><strong>Data</strong> (<em>Data</em>)</p></li>
+<li><p><strong>runs</strong> (<em>int</em>)</p></li>
+<li><p><strong>label</strong> (<em>str</em>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>contact_matrix</strong></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="sociopatterns.statistics.null_modell.to_simple_graph">
+<code class="sig-prename descclassname">sociopatterns.statistics.null_modell.</code><code class="sig-name descname">to_simple_graph</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">graph</span></em><span class="sig-paren">)</span><a class="headerlink" href="#sociopatterns.statistics.null_modell.to_simple_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply the removes self loop function</p>
+<p>Applies the “remove_self_loop” function to create a simple graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>graph</strong> (<em>networkx Graph</em>)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>z-scores</strong> (<em>list</em>)</p></li>
+<li><p><strong>matrices</strong> (<em>list</em>)</p></li>
+<li><p><strong>data_mixing_matrix</strong> (<em>list</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p class="rubric">References</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sociopatterns.statistics">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sociopatterns.statistics" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sociopatterns.statistics.tests.html" class="btn btn-neutral float-right" title="sociopatterns.statistics.tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sociopatterns.imports.tests.html" class="btn btn-neutral float-left" title="sociopatterns.imports.tests package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Andreas
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
