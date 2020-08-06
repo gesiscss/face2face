@@ -47,7 +47,7 @@ Average Degree
 Network Measurements
 ---------------------
 
-.. automodule:: face2face.statistics.calculating_multiple_measurements_for_a_network
+.. automodule:: face2face.statistics.network_quantities
 
 .. autosummary::
 	:toctree: generated/

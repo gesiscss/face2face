@@ -25,6 +25,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -107,7 +108,14 @@
 <li class="toctree-l4"><a class="reference internal" href="generated/face2face.statistics.average_degree.global_avg_var_std.html">face2face.statistics.average_degree.global_avg_var_std</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#network-measurements">Network Measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-face2face.statistics.network_quantities">Network Measurements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/face2face.statistics.network_quantities.calculating_number_of_edges_nodes.html">face2face.statistics.network_quantities.calculating_number_of_edges_nodes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/face2face.statistics.network_quantities.mean_degree_network.html">face2face.statistics.network_quantities.mean_degree_network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/face2face.statistics.network_quantities.variance_std_network.html">face2face.statistics.network_quantities.variance_std_network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/face2face.statistics.network_quantities.average_path_length_network.html">face2face.statistics.network_quantities.average_path_length_network</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/face2face.statistics.network_quantities.clustering_coefficient.html">face2face.statistics.network_quantities.clustering_coefficient</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#module-face2face.statistics.check_distribution">Check distribution</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="generated/face2face.statistics.check_distribution.search_best_fit_distribution.html">face2face.statistics.check_distribution.search_best_fit_distribution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/face2face.statistics.check_distribution.get_best_fit_distribution.html">face2face.statistics.check_distribution.get_best_fit_distribution</a></li>
@@ -259,28 +267,28 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="network-measurements">
-<h2>Network Measurements<a class="headerlink" href="#network-measurements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-face2face.statistics.network_quantities">
+<span id="network-measurements"></span><h2>Network Measurements<a class="headerlink" href="#module-face2face.statistics.network_quantities" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculating_number_of_edges_nodes</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/face2face.statistics.network_quantities.calculating_number_of_edges_nodes.html#face2face.statistics.network_quantities.calculating_number_of_edges_nodes" title="face2face.statistics.network_quantities.calculating_number_of_edges_nodes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculating_number_of_edges_nodes</span></code></a>(network)</p></td>
+<td><p>Calculate number of edges/nodes</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean_degree_network</span></code></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/face2face.statistics.network_quantities.mean_degree_network.html#face2face.statistics.network_quantities.mean_degree_network" title="face2face.statistics.network_quantities.mean_degree_network"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean_degree_network</span></code></a>(network)</p></td>
+<td><p>Calculate average degree</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">variance_std_network</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/face2face.statistics.network_quantities.variance_std_network.html#face2face.statistics.network_quantities.variance_std_network" title="face2face.statistics.network_quantities.variance_std_network"><code class="xref py py-obj docutils literal notranslate"><span class="pre">variance_std_network</span></code></a>(network)</p></td>
+<td><p>Calculate variance and standard deviation</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_path_length_network</span></code></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/face2face.statistics.network_quantities.average_path_length_network.html#face2face.statistics.network_quantities.average_path_length_network" title="face2face.statistics.network_quantities.average_path_length_network"><code class="xref py py-obj docutils literal notranslate"><span class="pre">average_path_length_network</span></code></a>(network)</p></td>
+<td><p>Calculate the average path length</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">clustering_coefficient</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/face2face.statistics.network_quantities.clustering_coefficient.html#face2face.statistics.network_quantities.clustering_coefficient" title="face2face.statistics.network_quantities.clustering_coefficient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clustering_coefficient</span></code></a>(network)</p></td>
+<td><p>Calculate the global Clustering Coefficient</p></td>
 </tr>
 </tbody>
 </table>
