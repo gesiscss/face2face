@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -35,9 +34,7 @@
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="face2face.statistics.calculating_multiple_measurements_for_a_network.variance_std_network" href="face2face.statistics.calculating_multiple_measurements_for_a_network.variance_std_network.html" />
-    <link rel="prev" title="face2face.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_nodes" href="face2face.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_nodes.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,30 +78,10 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Tutorial</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../imports.html">    Imports</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../statistics.html">    Statistics</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.distribution">Distribution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.null_modell">Null Model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.average_degree">Average Degree</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../statistics.html#module-face2face.statistics.calculating_multiple_measurements_for_a_network">Network Measurements</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="face2face.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_nodes.html">face2face.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_nodes</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">face2face.statistics.calculating_multiple_measurements_for_a_network.mean_degree_network</a></li>
-<li class="toctree-l4"><a class="reference internal" href="face2face.statistics.calculating_multiple_measurements_for_a_network.variance_std_network.html">face2face.statistics.calculating_multiple_measurements_for_a_network.variance_std_network</a></li>
-<li class="toctree-l4"><a class="reference internal" href="face2face.statistics.calculating_multiple_measurements_for_a_network.average_path_length_network.html">face2face.statistics.calculating_multiple_measurements_for_a_network.average_path_length_network</a></li>
-<li class="toctree-l4"><a class="reference internal" href="face2face.statistics.calculating_multiple_measurements_for_a_network.clustering_coefficient.html">face2face.statistics.calculating_multiple_measurements_for_a_network.clustering_coefficient</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.check_distribution">Check distribution</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../visualization.html">    Visualization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../compatiblity_check.html">    Compatibility</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../devguide.html">Developer Guide</a></li>
 </ul>
@@ -152,10 +129,6 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">Reference</a> &raquo;</li>
-        
-          <li><a href="../statistics.html">Statistics</a> &raquo;</li>
-        
       <li>face2face.statistics.calculating_multiple_measurements_for_a_network.mean_degree_network</li>
     
     
@@ -177,42 +150,6 @@
             
   <div class="section" id="face2face-statistics-calculating-multiple-measurements-for-a-network-mean-degree-network">
 <h1>face2face.statistics.calculating_multiple_measurements_for_a_network.mean_degree_network<a class="headerlink" href="#face2face-statistics-calculating-multiple-measurements-for-a-network-mean-degree-network" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
-<dt id="face2face.statistics.calculating_multiple_measurements_for_a_network.mean_degree_network">
-<code class="sig-prename descclassname">face2face.statistics.calculating_multiple_measurements_for_a_network.</code><code class="sig-name descname">mean_degree_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.statistics.calculating_multiple_measurements_for_a_network.mean_degree_network" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculate average degree</p>
-<p>Calculating the average degree of a given network</p>
-<p>Average Degree for random network?</p>
-<div class="math notranslate nohighlight">
-\[\langle k \rangle = \frac{2 * \langle L \rangle}{N}\]</div>
-<div class="math notranslate nohighlight">
-\[\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i\]</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>network</strong> (<em>networkx Graph</em>) – A graph with a specified degree sequence. Nodes are labeled based on the imported dataset.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>k</strong> – Contains the average degree for a network.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p class="rubric">References</p>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">t&quot;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>              <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">t&quot;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>              <span class="n">meta_attr_list</span><span class="o">=</span><span class="n">attr_list</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">test_network</span> <span class="o">=</span> <span class="n">create_network_from_data</span><span class="p">(</span><span class="n">test_df</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">k</span> <span class="o">=</span> <span class="n">mean_degree_network</span><span class="p">(</span><span class="n">test_network</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-<span class="go">2</span>
-</pre></div>
-</div>
-</dd></dl>
-
 </div>
 
 
@@ -220,15 +157,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="face2face.statistics.calculating_multiple_measurements_for_a_network.variance_std_network.html" class="btn btn-neutral float-right" title="face2face.statistics.calculating_multiple_measurements_for_a_network.variance_std_network" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="face2face.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_nodes.html" class="btn btn-neutral float-left" title="face2face.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
