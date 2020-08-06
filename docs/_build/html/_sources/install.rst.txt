@@ -1,7 +1,7 @@
 Install
 =======
 
-face2face requires a Python Version >= 3.6.1 for the used librarys inside this one. If you have no python environment on your computer yet you can check the following instruction guide for the installation. `scientific Python stack <https://scipy.org/install.html>`_.
+face2face requires a Python Version >= 3.6.1 for the used librarys inside this toolbox. If you have no python environment on your computer yet you can check the following instruction guide for the installation. `scientific Python stack <https://scipy.org/install.html>`_.
 
 
 .. note::
@@ -40,42 +40,40 @@ You can also install ``face2face`` with ``conda``::
 Install the development version
 ------------------------------------
 
-Optional packages
+Additional packages
 ------------------
 
-The following optional packages provide additional functionality.
+The following additional packages provide additional functionality.
 
-- `NumPy <http://www.numpy.org/>`_ (>= 1.15.4) provides matrix representation of
+- `NumPy <http://www.numpy.org/>`_ provides matrix representation of
   graphs and is used in some graph algorithms for high-performance matrix
   computations.
-- `pandas <http://pandas.pydata.org/>`_ (>= 0.23.3) provides a DataFrame, which
+- `pandas <http://pandas.pydata.org/>`_ provides a DataFrame, which
   is a tabular data structure with labeled axes.
-- `Matplotlib <http://matplotlib.org/>`_ (>= 3.0.2) provides flexible drawing of
+- `Matplotlib <http://matplotlib.org/>`_ provides flexible drawing of
   graphs.
-- `networkX <https://networkx.github.io/documentation/stable/>`_ (>= >) provides creating and analysing of network graphs.
-- `SciPy <https://docs.scipy.org/doc/scipy/reference/index.html>`_ (>= >) provides a collection of mathematical algorithms and convenience functions.
-- `seaborn <https://seaborn.pydata.org/>`_ (>=) provides functions to create statistical graphics in python.
-- `powerlaw` <https://pythonhosted.org/powerlaw/>`_ () provides functions to find the best fitting distribution for a data set.
-- `random` <https://docs.python.org/3/library/random.html>`_ () provides functions to generate pseudo-random numbers.
-- `math` <https://docs.python.org/3/library/math.html>`_ () provides mathematical functions.
-- `collections` <https://docs.python.org/3/library/collections.html>`_ provides specialized container datatypes as an alternative to Python's built-in containers.
+- `networkX <https://networkx.github.io/documentation/stable/>`_ provides creating and analysing of network graphs.
+- `SciPy <https://docs.scipy.org/doc/scipy/reference/index.html>`_ provides a collection of mathematical algorithms and convenience functions.
+- `seaborn <https://seaborn.pydata.org/>`_ provides functions to create statistical graphics in python.
+- `powerlaw` <https://pythonhosted.org/powerlaw/>`_ provides functions to find the best fitting distribution for a data set.
 
 
-To install ``face2face`` and all optional packages, do::
 
-    $ pip install face2face[all]
+To install ``face2face`` and all additional packages, do::
 
-To explicitly install all optional packages, do::
+    $ pip install face2face
 
-    $ pip install numpy pandas matplotlib networkx scipy seaborn powerlaw random math collections
+To explicitly install all additional packages, do::
 
-Or, install any optional package (e.g., ``numpy``) individually::
+    $ pip install numpy pandas matplotlib networkx scipy seaborn powerlaw
+
+Or, install any additional package (e.g., ``numpy``) individually::
 
     $ pip install numpy
 
 If you want to use multiple librarys for your project, which use similar librarys like ``pandas`` or ``numpy``, but they require different versions you can use the functions from the ``check_compatiblity`` method to find out if the 
-versions of the required packages contain already or still contain the functions, that are needed in the ``face2face`` library. To get the maximum backwards and forward compatibility there are no specific versions required for the packages that are used for this library,
-but instead you can use this tool as an assistant to find out which parts of this library won't work with the currently installed package versions. So you can decide if you need the affected functions and if the function tells you which functions in the installed package versions are missing you have
+versions of the required packages contain already or still contain the functions, that are needed in the ``face2face`` toolbox. To get the maximum backwards and forward compatibility there are no specific versions required for the packages that are used for this toolbox,
+but instead you can use this tool as an assistant to find out which parts of this toolbox won't work with the currently installed package versions. So you can decide if you need the affected functions and if the function tells you which functions in the installed package versions are missing you have
 a good hint to find the version you need to make this functions work. 
 
 Testing

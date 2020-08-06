@@ -29,7 +29,7 @@ If you want to be part in the development here is a guide on how to setup your l
 		
 	* Commit your progress locally with (``git add`` and ``git commit``)
 	
-	* Create a branch for your new feature or for the bugfix that you want to add to the library. Use a meaningful name as a branch name like 'Feature_XYZ'::
+	* Create a branch for your new feature or for the bugfix that you want to add to the toolbox. Use a meaningful name as a branch name like 'Feature_XYZ'::
 	
 		git checkout -b Feature_XYZ
 

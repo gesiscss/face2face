@@ -197,18 +197,16 @@ dataset</p>
 <p class="rubric">Examples</p>
 <p>You can use the output of the <a class="reference internal" href="face2face.statistics.average_degree.avg_degree_attr.html#face2face.statistics.average_degree.avg_degree_attr" title="face2face.statistics.average_degree.avg_degree_attr"><code class="xref py py-meth docutils literal notranslate"><span class="pre">avg_degree_attr()</span></code></a> method as input for this function. The return of this function
 is the average degree, the variance of the degree and the standard deviation for the degree of all attributes.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_degree_list</span> <span class="o">=</span> <span class="n">avg_degree_attr</span><span class="p">(</span><span class="n">test_df</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">attr_degree_list</span><span class="p">)</span>
-<span class="go">[[&#39;Age&#39;, 1.0, [1, 2, 2]], [&#39;Age&#39;, 0.0, [3, 2]], [&#39;Age&#39;, 2.0, [2, 2, 2]], [&#39;Sex&#39;, &#39;F&#39;, [1, 2, 2, 2, 2]],</span>
-<span class="go">[&#39;Sex&#39;, &#39;M&#39;, [2, 2, 2]]]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">measures</span> <span class="o">=</span> <span class="n">global_avg_var_std</span><span class="p">(</span><span class="n">attr_degree_list</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">measures</span><span class="p">)</span>
-<span class="go">[1.9777777777777779, 0.006049382716049409, 0.07777777777777795]</span>
-</pre></div>
-</div>
+<p>#&gt;&gt;&gt; attr_degree_list = avg_degree_attr(test_df)
+#&gt;&gt;&gt; print(attr_degree_list)
+[[‘Age’, 1.0, [1, 2, 2]], [‘Age’, 0.0, [3, 2]], [‘Age’, 2.0, [2, 2, 2]], [‘Sex’, ‘F’, [1, 2, 2, 2, 2]],
+[‘Sex’, ‘M’, [2, 2, 2]]]
+#&gt;&gt;&gt; measures = global_avg_var_std(attr_degree_list)
+#&gt;&gt;&gt; print(measures)
+[1.9777777777777779, 0.006049382716049409, 0.07777777777777795]</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><code class="xref py py-func docutils literal notranslate"><span class="pre">face2face.avg_degree_attr()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">face2face.group_list_degree()</span></code></p>
+<p><a class="reference internal" href="face2face.statistics.average_degree.avg_degree_attr.html#face2face.statistics.average_degree.avg_degree_attr" title="face2face.statistics.average_degree.avg_degree_attr"><code class="xref py py-func docutils literal notranslate"><span class="pre">avg_degree_attr()</span></code></a>, <a class="reference internal" href="face2face.statistics.average_degree.group_list_degree.html#face2face.statistics.average_degree.group_list_degree" title="face2face.statistics.average_degree.group_list_degree"><code class="xref py py-func docutils literal notranslate"><span class="pre">group_list_degree()</span></code></a></p>
 </div>
 </dd></dl>
 

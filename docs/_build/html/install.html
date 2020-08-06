@@ -25,6 +25,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -84,7 +85,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Install</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#install-the-released-version">Install the released version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-the-development-version">Install the development version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#optional-packages">Optional packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-packages">Additional packages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#test-a-source-distribution">Test a source distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#test-an-installed-package">Test an installed package</a></li>
@@ -162,7 +163,7 @@
             
   <div class="section" id="install">
 <h1>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h1>
-<p>face2face requires a Python Version &gt;= 3.6.1 for the used librarys inside this one. If you have no python environment on your computer yet you can check the following instruction guide for the installation. <a class="reference external" href="https://scipy.org/install.html">scientific Python stack</a>.</p>
+<p>face2face requires a Python Version &gt;= 3.6.1 for the used librarys inside this toolbox. If you have no python environment on your computer yet you can check the following instruction guide for the installation. <a class="reference external" href="https://scipy.org/install.html">scientific Python stack</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you are on Windows and want to install optional packages (e.g., <cite>scipy</cite>),
@@ -196,40 +197,37 @@ installed. If you do not, refer to the <a class="reference external" href="https
 <div class="section" id="install-the-development-version">
 <h2>Install the development version<a class="headerlink" href="#install-the-development-version" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="optional-packages">
-<h2>Optional packages<a class="headerlink" href="#optional-packages" title="Permalink to this headline">¶</a></h2>
-<p>The following optional packages provide additional functionality.</p>
+<div class="section" id="additional-packages">
+<h2>Additional packages<a class="headerlink" href="#additional-packages" title="Permalink to this headline">¶</a></h2>
+<p>The following additional packages provide additional functionality.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://www.numpy.org/">NumPy</a> (&gt;= 1.15.4) provides matrix representation of
+<li><p><a class="reference external" href="http://www.numpy.org/">NumPy</a> provides matrix representation of
 graphs and is used in some graph algorithms for high-performance matrix
 computations.</p></li>
-<li><p><a class="reference external" href="http://pandas.pydata.org/">pandas</a> (&gt;= 0.23.3) provides a DataFrame, which
+<li><p><a class="reference external" href="http://pandas.pydata.org/">pandas</a> provides a DataFrame, which
 is a tabular data structure with labeled axes.</p></li>
-<li><p><a class="reference external" href="http://matplotlib.org/">Matplotlib</a> (&gt;= 3.0.2) provides flexible drawing of
+<li><p><a class="reference external" href="http://matplotlib.org/">Matplotlib</a> provides flexible drawing of
 graphs.</p></li>
-<li><p><a class="reference external" href="https://networkx.github.io/documentation/stable/">networkX</a> (&gt;= &gt;) provides creating and analysing of network graphs.</p></li>
-<li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/index.html">SciPy</a> (&gt;= &gt;) provides a collection of mathematical algorithms and convenience functions.</p></li>
-<li><p><a class="reference external" href="https://seaborn.pydata.org/">seaborn</a> (&gt;=) provides functions to create statistical graphics in python.</p></li>
-<li><p><cite>powerlaw</cite> &lt;<a class="reference external" href="https://pythonhosted.org/powerlaw/">https://pythonhosted.org/powerlaw/</a>&gt;`_ () provides functions to find the best fitting distribution for a data set.</p></li>
-<li><p><cite>random</cite> &lt;<a class="reference external" href="https://docs.python.org/3/library/random.html">https://docs.python.org/3/library/random.html</a>&gt;`_ () provides functions to generate pseudo-random numbers.</p></li>
-<li><p><cite>math</cite> &lt;<a class="reference external" href="https://docs.python.org/3/library/math.html">https://docs.python.org/3/library/math.html</a>&gt;`_ () provides mathematical functions.</p></li>
-<li><p><cite>collections</cite> &lt;<a class="reference external" href="https://docs.python.org/3/library/collections.html">https://docs.python.org/3/library/collections.html</a>&gt;`_ provides specialized container datatypes as an alternative to Python’s built-in containers.</p></li>
+<li><p><a class="reference external" href="https://networkx.github.io/documentation/stable/">networkX</a> provides creating and analysing of network graphs.</p></li>
+<li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/index.html">SciPy</a> provides a collection of mathematical algorithms and convenience functions.</p></li>
+<li><p><a class="reference external" href="https://seaborn.pydata.org/">seaborn</a> provides functions to create statistical graphics in python.</p></li>
+<li><p><cite>powerlaw</cite> &lt;<a class="reference external" href="https://pythonhosted.org/powerlaw/">https://pythonhosted.org/powerlaw/</a>&gt;`_ provides functions to find the best fitting distribution for a data set.</p></li>
 </ul>
-<p>To install <code class="docutils literal notranslate"><span class="pre">face2face</span></code> and all optional packages, do:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install face2face[all]
+<p>To install <code class="docutils literal notranslate"><span class="pre">face2face</span></code> and all additional packages, do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install face2face
 </pre></div>
 </div>
-<p>To explicitly install all optional packages, do:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install numpy pandas matplotlib networkx scipy seaborn powerlaw random math collections
+<p>To explicitly install all additional packages, do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install numpy pandas matplotlib networkx scipy seaborn powerlaw
 </pre></div>
 </div>
-<p>Or, install any optional package (e.g., <code class="docutils literal notranslate"><span class="pre">numpy</span></code>) individually:</p>
+<p>Or, install any additional package (e.g., <code class="docutils literal notranslate"><span class="pre">numpy</span></code>) individually:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install numpy
 </pre></div>
 </div>
 <p>If you want to use multiple librarys for your project, which use similar librarys like <code class="docutils literal notranslate"><span class="pre">pandas</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, but they require different versions you can use the functions from the <code class="docutils literal notranslate"><span class="pre">check_compatiblity</span></code> method to find out if the
-versions of the required packages contain already or still contain the functions, that are needed in the <code class="docutils literal notranslate"><span class="pre">face2face</span></code> library. To get the maximum backwards and forward compatibility there are no specific versions required for the packages that are used for this library,
-but instead you can use this tool as an assistant to find out which parts of this library won’t work with the currently installed package versions. So you can decide if you need the affected functions and if the function tells you which functions in the installed package versions are missing you have
+versions of the required packages contain already or still contain the functions, that are needed in the <code class="docutils literal notranslate"><span class="pre">face2face</span></code> toolbox. To get the maximum backwards and forward compatibility there are no specific versions required for the packages that are used for this toolbox,
+but instead you can use this tool as an assistant to find out which parts of this toolbox won’t work with the currently installed package versions. So you can decide if you need the affected functions and if the function tells you which functions in the installed package versions are missing you have
 a good hint to find the version you need to make this functions work.</p>
 </div>
 <div class="section" id="testing">

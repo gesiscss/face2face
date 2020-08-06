@@ -195,16 +195,18 @@ WS16 datasets if you use this initials as a string.</p></li>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<p>Importing predefined datasets by their string name
-&gt;&gt;&gt; df = Data(“WS16”)
-Importing own datasets or predefined datasets manually (without header)
-&gt;&gt;&gt; attr_list = [“ID”, “Age”, “Sex”]
-&gt;&gt;&gt; test_df = Data(path_tij=”../../data/Test/tij_test.dat”, separator_tij=”t”,
-&gt;&gt;&gt;       path_meta=”../../data/Test/meta_test.dat”, separator_meta = “t”,
-&gt;&gt;&gt;       meta_attr_list=attr_list)
-Importing own datasets or predefined datasets manually (with headers for tij- and metadata)
-&gt;&gt;&gt; test_df = Data(path_tij=”../../data/Test/tij_test_header.dat”, separator_tij=”t”,
-&gt;&gt;&gt;       path_meta=”../../data/Test/meta_test_header.dat”, separator_meta = “t”, header= “all”)</p>
+<p># Importing predefined datasets by their string name
+# &gt;&gt;&gt; df = Data(“WS16”)
+# Importing own datasets or predefined datasets manually (without header)
+# &gt;&gt;&gt; attr_list = [“ID”, “Age”, “Sex”]
+# &gt;&gt;&gt; test_df = Data(path_tij=”../../data/Test/tij_test.dat”, separator_tij=”t”,
+# &gt;&gt;&gt;       path_meta=”../../data/Test/meta_test.dat”, separator_meta = “t”,
+# &gt;&gt;&gt;       meta_attr_list=attr_list)
+# Importing own datasets or predefined datasets manually (with headers for tij- and metadata)
+# &gt;&gt;&gt; test_df = Data(path_tij=”../../data/Test/tij_test_header.dat”, separator_tij=”t”,
+# &gt;&gt;&gt;       path_meta=”../../data/Test/meta_test_header.dat”, separator_meta = “t”, header= “all”)
+#
+#</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>

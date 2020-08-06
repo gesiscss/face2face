@@ -178,9 +178,9 @@
 <p>This guide should help you to get started with this package.</p>
 <div class="section" id="import-tij-and-metadata-as-data-object">
 <h2>Import Tij- and Metadata as Data Object<a class="headerlink" href="#import-tij-and-metadata-as-data-object" title="Permalink to this headline">¶</a></h2>
-<p>Import predefined datasets as Data Object.</p>
+<p>Import predefined datasets as Data Object. The Data Class gives you multiple import options. You can import already predefined data sets included in this toolbox, you can import your own data sets or you can import dataframes which you have created. To learn more about the input parameter of this Class check out the Online documentation or the tutorial “import_data_set”. For this example we import the predefined “WS16” data set as described below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">face2face</span> <span class="k">as</span> <span class="nn">f2f</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">f2f</span><span class="o">.</span><span class="n">Data</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">f2f</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="s2">&quot;WS16)</span>
 </pre></div>
 </div>
 <p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code> object is a collection of one or two pandas dataframes. It always contains a tij-dataframe, but it can also contain a metadata dataframe. You can use the whole Data-Object as Parameter for all functions where you use tij-dataframes or metadata-dataframes.
@@ -202,28 +202,28 @@ If you want to access one of the two dataframes of the Data-Object, you can acce
 </div>
 <div class="section" id="notebook-tutorials-in-git">
 <h2>Notebook Tutorials in Git<a class="headerlink" href="#notebook-tutorials-in-git" title="Permalink to this headline">¶</a></h2>
-<p>To get an overview of the functions that are included in this library you can work through the following tutorials to get an idea how to use these functions.</p>
+<p>To get an overview of the functions that are included in this toolbox you can work through the following tutorials to get an idea how to use these functions.</p>
 <p>If you are already experienced in using python and especially librarys like pandas, numpy and networkX you can skip the beginner tutorials “01_tutorial_exploring_the_data” and “02_tutorial_first_functions”.</p>
 <p>If you are new to Python or this librarys or you want to refresh your knowledge you can start with the beginner tutorials.</p>
 <div class="section" id="beginner-tutorials">
 <h3>Beginner Tutorials<a class="headerlink" href="#beginner-tutorials" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="tutorial-exploring-the-data">
 <h4>01_tutorial_exploring_the_data<a class="headerlink" href="#tutorial-exploring-the-data" title="Permalink to this headline">¶</a></h4>
-<p>This tutorial includes small tasks with functions of pandas that are also used for the functions in this library. The tasks should give you an idea on the functions that are used for this library like “groupby”, “merge” etc.</p>
-<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/01_tutorial_exploring_the_data.ipynb">here</a></p>
+<p>This tutorial includes small tasks with functions of pandas that are also used for the functions in this toolbox. The tasks should give you an idea on the functions that are used for this toolbox like “groupby”, “merge” etc.</p>
+<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/01_tutorial_exploring_the_data.ipynb">here</a></p>
 </div>
 <div class="section" id="tutorial-first-functions">
 <h4>02_tutorial_first_functions<a class="headerlink" href="#tutorial-first-functions" title="Permalink to this headline">¶</a></h4>
 <p>This tutorial explains the basics about the functions that are implemented in the distribution and the average_degree methods. It allows you to get an idea on how to use the pandas and python tools that you saw in the previous tutorial.</p>
-<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/02_tutorial_first_functions.ipynb">here</a></p>
+<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/02_tutorial_first_functions.ipynb">here</a></p>
 </div>
 </div>
 <div class="section" id="face2face-tutorials">
 <h3>face2face Tutorials<a class="headerlink" href="#face2face-tutorials" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="import-data-set">
 <h4>import_data_set<a class="headerlink" href="#import-data-set" title="Permalink to this headline">¶</a></h4>
-<p>The tutorial “import_data_set” tells you about every way that you can import predefined or your own datasets to make them useable in this library.</p>
-<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/import_data_set.ipynb">here</a></p>
+<p>The tutorial “import_data_set” tells you about every way that you can import predefined or your own datasets to make them useable in this toolbox.</p>
+<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/import_data_set.ipynb">here</a></p>
 </div>
 <div class="section" id="avg-degree">
 <h4>avg_degree<a class="headerlink" href="#avg-degree" title="Permalink to this headline">¶</a></h4>
@@ -232,23 +232,23 @@ If you want to access one of the two dataframes of the Data-Object, you can acce
 </div>
 <div class="section" id="dynamic-network-analyses">
 <h4>dynamic_network_analyses<a class="headerlink" href="#dynamic-network-analyses" title="Permalink to this headline">¶</a></h4>
-<p>This tutorial shows you the functions to create different kinds of networks with this library. It also shows you the implemented functions for measurements of the network for a first decisive loook on a given network.</p>
-<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/dynamic_network_analyses.ipynb">here</a></p>
+<p>This tutorial shows you the functions to create different kinds of networks with this toolbox. It also shows you the implemented functions for measurements of the network for a first decisive loook on a given network.</p>
+<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/dynamic_network_analyses.ipynb">here</a></p>
 </div>
 <div class="section" id="homophily">
 <h4>homophily<a class="headerlink" href="#homophily" title="Permalink to this headline">¶</a></h4>
-<p>This tutorial shows you how to apply two kinds of null models on a dataset to get a contact matrix that tells you the deviation from the mean for every pair of attribute values for a given attribute. It also shows you how apply the bonferroni correction and how to plot this contact matrix as a heatmap.</p>
-<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/homophily.ipynb">here</a></p>
+<p>This tutorial shows you how to analyse the data sets in terms of the homophily. The homophily describes the tendency of individuals to be more attracted to get in contact with other people witch share related (socio-demographic) attributes.</p>
+<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/homophily.ipynb">here</a></p>
 </div>
 <div class="section" id="probability-distribution-contact-duration">
 <h4>probability_distribution_contact_duration<a class="headerlink" href="#probability-distribution-contact-duration" title="Permalink to this headline">¶</a></h4>
 <p>This tutorial shows you how to analyze the different kinds of contact durations in a dataset and also how to plot it.</p>
-<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/probability_distribution_contact_duration.ipynb">here</a></p>
+<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/probability_distribution_contact_duration.ipynb">here</a></p>
 </div>
 <div class="section" id="statistical-characterization">
 <h4>Statistical characterization<a class="headerlink" href="#statistical-characterization" title="Permalink to this headline">¶</a></h4>
-<p>This tutorial should give you basic instructions on how to use the powerlaw package to analyze the distribution of the contact duration functions from this library.</p>
-<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/Statistical_characterization.ipynb">here</a></p>
+<p>This tutorial should give you basic instructions on how to use the powerlaw package to analyze the distribution of the contact duration functions from this toolbox.</p>
+<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/Statistical_characterization.ipynb">here</a></p>
 </div>
 <div class="section" id="how-to-use-statistical-characterization">
 <h4>How_to_use_statistical_characterization<a class="headerlink" href="#how-to-use-statistical-characterization" title="Permalink to this headline">¶</a></h4>
