@@ -90,6 +90,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#beginner-tutorials">Beginner Tutorials</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#tutorial-exploring-the-data">01_tutorial_exploring_the_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tutorial-first-functions">02_tutorial_first_functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">03_tutorial_first_functions</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#face2face-tutorials">face2face Tutorials</a><ul>
@@ -180,7 +181,7 @@
 <h2>Import Tij- and Metadata as Data Object<a class="headerlink" href="#import-tij-and-metadata-as-data-object" title="Permalink to this headline">¶</a></h2>
 <p>Import predefined datasets as Data Object. The Data Class gives you multiple import options. You can import already predefined data sets included in this toolbox, you can import your own data sets or you can import dataframes which you have created. To learn more about the input parameter of this Class check out the Online documentation or the tutorial “import_data_set”. For this example we import the predefined “WS16” data set as described below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">face2face</span> <span class="k">as</span> <span class="nn">f2f</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">f2f</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="s2">&quot;WS16)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">f2f</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="s2">&quot;WS16&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code> object is a collection of one or two pandas dataframes. It always contains a tij-dataframe, but it can also contain a metadata dataframe. You can use the whole Data-Object as Parameter for all functions where you use tij-dataframes or metadata-dataframes.
@@ -214,8 +215,13 @@ If you want to access one of the two dataframes of the Data-Object, you can acce
 </div>
 <div class="section" id="tutorial-first-functions">
 <h4>02_tutorial_first_functions<a class="headerlink" href="#tutorial-first-functions" title="Permalink to this headline">¶</a></h4>
-<p>This tutorial explains the basics about the functions that are implemented in the distribution and the average_degree methods. It allows you to get an idea on how to use the pandas and python tools that you saw in the previous tutorial.</p>
+<p>This tutorial explains the basics about the functions that are implemented in the distribution and the average_degree methods. It allows you to get an idea on how to use the pandas and python tools that you saw in the previous tutorial. In this tutorial, the functions for the calculations of the probabilities for the three different interaction durations that are part of this library are explained.</p>
 <p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/02_tutorial_first_functions.ipynb">here</a></p>
+</div>
+<div class="section" id="id2">
+<h4>03_tutorial_first_functions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>This tutorial explains the basics about the functions that are implemented in the distribution and the average_degree methods. It allows you to get an idea on how to use the pandas and python tools that you saw in the previous tutorial. In this tutorial, the functions for the calculations of the average degree for the different groups and subgroups of a data set are explained.</p>
+<p>To get to the tutorial click <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/03_tutorial_first_functions.ipynb">here</a></p>
 </div>
 </div>
 <div class="section" id="face2face-tutorials">

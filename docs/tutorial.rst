@@ -14,7 +14,7 @@ Import predefined datasets as Data Object. The Data Class gives you multiple imp
 .. code-block:: python
 
 	>>> import face2face as f2f
-	>>> df = f2f.Data("WS16)
+	>>> df = f2f.Data("WS16")
 	
 A :class:`Data` object is a collection of one or two pandas dataframes. It always contains a tij-dataframe, but it can also contain a metadata dataframe. You can use the whole Data-Object as Parameter for all functions where you use tij-dataframes or metadata-dataframes.
 If you want to access one of the two dataframes of the Data-Object, you can access it like this.
@@ -61,10 +61,16 @@ To get to the tutorial click `here <https://github.com/gesiscss/face-to-face-int
 02_tutorial_first_functions
 """""""""""""""""""""""""""""
 
-This tutorial explains the basics about the functions that are implemented in the distribution and the average_degree methods. It allows you to get an idea on how to use the pandas and python tools that you saw in the previous tutorial.
+This tutorial explains the basics about the functions that are implemented in the distribution and the average_degree methods. It allows you to get an idea on how to use the pandas and python tools that you saw in the previous tutorial. In this tutorial, the functions for the calculations of the probabilities for the three different interaction durations that are part of this library are explained.
 
 To get to the tutorial click `here <https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/02_tutorial_first_functions.ipynb>`_
 
+03_tutorial_first_functions
+"""""""""""""""""""""""""""""
+
+This tutorial explains the basics about the functions that are implemented in the distribution and the average_degree methods. It allows you to get an idea on how to use the pandas and python tools that you saw in the previous tutorial. In this tutorial, the functions for the calculations of the average degree for the different groups and subgroups of a data set are explained.
+
+To get to the tutorial click `here <https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/03_tutorial_first_functions.ipynb>`_
 
 face2face Tutorials
 ^^^^^^^^^^^^^^^^^^^^^^^^

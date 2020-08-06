@@ -55,7 +55,7 @@ The following additional packages provide additional functionality.
 - `networkX <https://networkx.github.io/documentation/stable/>`_ provides creating and analysing of network graphs.
 - `SciPy <https://docs.scipy.org/doc/scipy/reference/index.html>`_ provides a collection of mathematical algorithms and convenience functions.
 - `seaborn <https://seaborn.pydata.org/>`_ provides functions to create statistical graphics in python.
-- `powerlaw` <https://pythonhosted.org/powerlaw/>`_ provides functions to find the best fitting distribution for a data set.
+- `powerlaw <https://pythonhosted.org/powerlaw/>`_ provides functions to find the best fitting distribution for a data set.
 
 
 
