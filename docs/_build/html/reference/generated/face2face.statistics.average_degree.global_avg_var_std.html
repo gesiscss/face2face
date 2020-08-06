@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -36,7 +35,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="face2face.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_nodes" href="face2face.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_nodes.html" />
+    <link rel="next" title="face2face.statistics.check_distribution.search_best_fit_distribution" href="face2face.statistics.check_distribution.search_best_fit_distribution.html" />
     <link rel="prev" title="face2face.statistics.average_degree.group_list_degree" href="face2face.statistics.average_degree.group_list_degree.html" /> 
 </head>
 
@@ -95,7 +94,7 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">face2face.statistics.average_degree.global_avg_var_std</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.calculating_multiple_measurements_for_a_network">Network Measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics.html#network-measurements">Network Measurements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.check_distribution">Check distribution</a></li>
 </ul>
 </li>
@@ -197,16 +196,18 @@ dataset</p>
 <p class="rubric">Examples</p>
 <p>You can use the output of the <a class="reference internal" href="face2face.statistics.average_degree.avg_degree_attr.html#face2face.statistics.average_degree.avg_degree_attr" title="face2face.statistics.average_degree.avg_degree_attr"><code class="xref py py-meth docutils literal notranslate"><span class="pre">avg_degree_attr()</span></code></a> method as input for this function. The return of this function
 is the average degree, the variance of the degree and the standard deviation for the degree of all attributes.</p>
-<p>#&gt;&gt;&gt; attr_degree_list = avg_degree_attr(test_df)
-#&gt;&gt;&gt; print(attr_degree_list)
-[[‘Age’, 1.0, [1, 2, 2]], [‘Age’, 0.0, [3, 2]], [‘Age’, 2.0, [2, 2, 2]], [‘Sex’, ‘F’, [1, 2, 2, 2, 2]],
-[‘Sex’, ‘M’, [2, 2, 2]]]
-#&gt;&gt;&gt; measures = global_avg_var_std(attr_degree_list)
-#&gt;&gt;&gt; print(measures)
-[1.9777777777777779, 0.006049382716049409, 0.07777777777777795]</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_degree_list</span> <span class="o">=</span> <span class="n">avg_degree_attr</span><span class="p">(</span><span class="n">test_df</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">attr_degree_list</span><span class="p">)</span>
+<span class="go">[[&#39;Age&#39;, 1.0, [1, 2, 2]], [&#39;Age&#39;, 0.0, [3, 2]], [&#39;Age&#39;, 2.0, [2, 2, 2]], [&#39;Sex&#39;, &#39;F&#39;, [1, 2, 2, 2, 2]],</span>
+<span class="go">[&#39;Sex&#39;, &#39;M&#39;, [2, 2, 2]]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">measures</span> <span class="o">=</span> <span class="n">global_avg_var_std</span><span class="p">(</span><span class="n">attr_degree_list</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">measures</span><span class="p">)</span>
+<span class="go">[1.9777777777777779, 0.006049382716049409, 0.07777777777777795]</span>
+</pre></div>
+</div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference internal" href="face2face.statistics.average_degree.avg_degree_attr.html#face2face.statistics.average_degree.avg_degree_attr" title="face2face.statistics.average_degree.avg_degree_attr"><code class="xref py py-func docutils literal notranslate"><span class="pre">avg_degree_attr()</span></code></a>, <a class="reference internal" href="face2face.statistics.average_degree.group_list_degree.html#face2face.statistics.average_degree.group_list_degree" title="face2face.statistics.average_degree.group_list_degree"><code class="xref py py-func docutils literal notranslate"><span class="pre">group_list_degree()</span></code></a></p>
+<p><code class="xref py py-func docutils literal notranslate"><span class="pre">face2face.avg_degree_attr()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">face2face.group_list_degree()</span></code></p>
 </div>
 </dd></dl>
 
@@ -220,7 +221,7 @@ is the average degree, the variance of the degree and the standard deviation for
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="face2face.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_nodes.html" class="btn btn-neutral float-right" title="face2face.statistics.calculating_multiple_measurements_for_a_network.calculating_number_of_edges_nodes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="face2face.statistics.check_distribution.search_best_fit_distribution.html" class="btn btn-neutral float-right" title="face2face.statistics.check_distribution.search_best_fit_distribution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="face2face.statistics.average_degree.group_list_degree.html" class="btn btn-neutral float-left" title="face2face.statistics.average_degree.group_list_degree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

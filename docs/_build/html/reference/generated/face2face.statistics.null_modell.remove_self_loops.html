@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -98,7 +97,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.average_degree">Average Degree</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.calculating_multiple_measurements_for_a_network">Network Measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics.html#network-measurements">Network Measurements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.check_distribution">Check distribution</a></li>
 </ul>
 </li>
@@ -189,9 +188,11 @@
 contain self loops</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul>
-<li><dl class="simple">
-<dt><strong>graph</strong> (<em>networkX Graph</em>) –    A graph with a specified degree sequence. Nodes are labeled based on the imported dataset. Graph contains</dt><dd><p>no selfloops anymore.</p>
+<dd class="field-even"><p><strong>graph</strong> – A graph with a specified degree sequence. Nodes are labeled based on the imported dataset. Graph contains
+no selfloops anymore.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>networkX Graph</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
@@ -200,18 +201,18 @@ contain self loops</p>
 <p>The <code class="xref py py-func docutils literal notranslate"><span class="pre">networkx.configuration_model()</span></code> function which is being used for the configuration model can lead to
 self- and parellel edges. As you can see here the function <a class="reference internal" href="#face2face.statistics.null_modell.remove_self_loops" title="face2face.statistics.null_modell.remove_self_loops"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_self_loops()</span></code></a> filters self loops out of
 the network.</p>
-</li>
-<li><p><em>&gt;&gt;&gt; degree_sequence_1 = [v[1] for v in test_network.degree]</em></p></li>
-<li><p><em>&gt;&gt;&gt; test_model = nx.configuration_model(degree_sequence_1)</em></p></li>
-<li><p><em>&gt;&gt;&gt; print(test_model.edges)</em></p></li>
-<li><p><em>[(0, 1, 0), (1, 1, 0), (2, 6, 0), (2, 3, 0), (3, 4, 0), (4, 8, 0), (5, 5, 0), (6, 9, 0), (7, 8, 0), (7, 9, 0)]</em></p></li>
-<li><p><em>&gt;&gt;&gt; remove_self_loops(test_model)</em></p></li>
-<li><p><em>&gt;&gt;&gt; print(test_model.edges)</em></p></li>
-<li><p><em>[(0, 1, 0), (2, 6, 0), (2, 3, 0), (3, 4, 0), (4, 8, 0), (6, 9, 0), (7, 8, 0), (7, 9, 0)]</em> – .. seealso:: <a class="reference internal" href="face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix.html#face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix" title="face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix</span></code></a></p></li>
-</ul>
-</p>
-</dd>
-</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">degree_sequence_1</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">test_network</span><span class="o">.</span><span class="n">degree</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_model</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">configuration_model</span><span class="p">(</span><span class="n">degree_sequence_1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">test_model</span><span class="o">.</span><span class="n">edges</span><span class="p">)</span>
+<span class="go">[(0, 1, 0), (1, 1, 0), (2, 6, 0), (2, 3, 0), (3, 4, 0), (4, 8, 0), (5, 5, 0), (6, 9, 0), (7, 8, 0), (7, 9, 0)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">remove_self_loops</span><span class="p">(</span><span class="n">test_model</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">test_model</span><span class="o">.</span><span class="n">edges</span><span class="p">)</span>
+<span class="go">[(0, 1, 0), (2, 6, 0), (2, 3, 0), (3, 4, 0), (4, 8, 0), (6, 9, 0), (7, 8, 0), (7, 9, 0)]</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

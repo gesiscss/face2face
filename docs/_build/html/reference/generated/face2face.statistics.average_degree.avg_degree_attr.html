@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -95,7 +94,7 @@
 <li class="toctree-l4"><a class="reference internal" href="face2face.statistics.average_degree.global_avg_var_std.html">face2face.statistics.average_degree.global_avg_var_std</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.calculating_multiple_measurements_for_a_network">Network Measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics.html#network-measurements">Network Measurements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.check_distribution">Check distribution</a></li>
 </ul>
 </li>
@@ -198,19 +197,19 @@
 The following first list entrys for example 1.0, 0.0 or 2.0 are the different attribute values and the second
 entry in the list is the average degree for this attribute value. The ‘GlobalAvG’ list entry tells you the
 average degree for the whole attribute (for example “Age”).</p>
-<p>#&gt;&gt;&gt; attr_list = [“ID”, “Age”, “Sex”]
-#&gt;&gt;&gt; test_df = Data(path_tij=”../../data/Test/tij_test.dat”, separator_tij=”t”,
-#&gt;&gt;&gt;               path_meta=”../../data/Test/meta_test.dat”, separator_meta=”t”,
-#&gt;&gt;&gt;               meta_attr_list=attr_list)
-#&gt;&gt;&gt; avg_degree_list = new_avg_degree_attr(test_df)
-#&gt;&gt;&gt; print(avg_degree_list)
-[[‘Age’, [[1.0, 2.5], [0.0, 1.6666666666666667], [2.0, 2.0], [‘GlobalAvG’, 2.055555555555556]]],</p>
-<blockquote>
-<div><p>[‘Sex’, [[‘F’, 1.8], [‘M’, 2.0], [‘GlobalAvG’, 1.9]]]]</p>
-</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>              <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>              <span class="n">meta_attr_list</span><span class="o">=</span><span class="n">attr_list</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">avg_degree_list</span> <span class="o">=</span> <span class="n">new_avg_degree_attr</span><span class="p">(</span><span class="n">test_df</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">avg_degree_list</span><span class="p">)</span>
+<span class="go">[[&#39;Age&#39;, [[0.0, 1.6666666666666667], [1.0, 2.5], [2.0, 2.0], [&#39;GlobalAvG&#39;, 2.055555555555556]]],</span>
+<span class="go"> [&#39;Sex&#39;, [[&#39;F&#39;, 1.8], [&#39;M&#39;, 2.0], [&#39;GlobalAvG&#39;, 1.9]]]]</span>
+</pre></div>
+</div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><code class="xref py py-func docutils literal notranslate"><span class="pre">new_group_list_degree()</span></code>, <a class="reference internal" href="face2face.statistics.average_degree.global_avg_var_std.html#face2face.statistics.average_degree.global_avg_var_std" title="face2face.statistics.average_degree.global_avg_var_std"><code class="xref py py-func docutils literal notranslate"><span class="pre">global_avg_var_std()</span></code></a></p>
+<p><code class="xref py py-func docutils literal notranslate"><span class="pre">face2face.group_list_degree()</span></code>, <code class="xref py py-func docutils literal notranslate"><span class="pre">face2face.global_avg_var_std()</span></code></p>
 </div>
 </dd></dl>
 

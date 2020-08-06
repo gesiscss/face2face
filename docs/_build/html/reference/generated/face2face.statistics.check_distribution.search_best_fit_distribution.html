@@ -25,7 +25,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -37,7 +36,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="face2face.statistics.check_distribution.get_best_fit_distribution" href="face2face.statistics.check_distribution.get_best_fit_distribution.html" />
-    <link rel="prev" title="face2face.statistics.calculating_multiple_measurements_for_a_network.clustering_coefficient" href="face2face.statistics.calculating_multiple_measurements_for_a_network.clustering_coefficient.html" /> 
+    <link rel="prev" title="face2face.statistics.average_degree.global_avg_var_std" href="face2face.statistics.average_degree.global_avg_var_std.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,7 +89,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.distribution">Distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.null_modell">Null Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.average_degree">Average Degree</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../statistics.html#module-face2face.statistics.calculating_multiple_measurements_for_a_network">Network Measurements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics.html#network-measurements">Network Measurements</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../statistics.html#module-face2face.statistics.check_distribution">Check distribution</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">face2face.statistics.check_distribution.search_best_fit_distribution</a></li>
 <li class="toctree-l4"><a class="reference internal" href="face2face.statistics.check_distribution.get_best_fit_distribution.html">face2face.statistics.check_distribution.get_best_fit_distribution</a></li>
@@ -177,7 +176,7 @@
 <h1>face2face.statistics.check_distribution.search_best_fit_distribution<a class="headerlink" href="#face2face-statistics-check-distribution-search-best-fit-distribution" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="face2face.statistics.check_distribution.search_best_fit_distribution">
-<code class="sig-prename descclassname">face2face.statistics.check_distribution.</code><code class="sig-name descname">search_best_fit_distribution</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">xmin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">xmax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extend_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">discret</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">approximation_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distance_measurement_method</span><span class="o">=</span><span class="default_value">'D'</span></em>, <em class="sig-param"><span class="n">sigma_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameter_range</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.statistics.check_distribution.search_best_fit_distribution" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">face2face.statistics.check_distribution.</code><code class="sig-name descname">search_best_fit_distribution</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">xmin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">xmax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extend_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">discret</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">approximation_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">distance_measurement_method</span><span class="o">=</span><span class="default_value">'D'</span></em>, <em class="sig-param"><span class="n">sigma_threshold</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parameter_range</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_condition</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.statistics.check_distribution.search_best_fit_distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches the best fitting distribution</p>
 <p>Creates a fit object and compares every distribution for the given data set to find the best fitting one.</p>
 <dl class="field-list simple">
@@ -194,6 +193,8 @@ differently.</p></li>
 distribution. Possible Values: “D”,”V”,”Asquare”.</p></li>
 <li><p><strong>sigma_threshold</strong> (<em>float, default: None</em>) – Can be set to add a constraint for the maximum sigma.</p></li>
 <li><p><strong>parameter_range</strong> (<em>dict, default: None</em>) – Can be set to limit multiple parameters for the distributions.</p></li>
+<li><p><strong>termination_condition</strong> (<em>int, default: 1</em>) – If the function get_best_fit_distribution does not find best fit, because the remaining two are too similar
+you can set it on 2, to get the two best fitting distributions.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -223,7 +224,7 @@ distribution. Possible Values: “D”,”V”,”Asquare”.</p></li>
         <a href="face2face.statistics.check_distribution.get_best_fit_distribution.html" class="btn btn-neutral float-right" title="face2face.statistics.check_distribution.get_best_fit_distribution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="face2face.statistics.calculating_multiple_measurements_for_a_network.clustering_coefficient.html" class="btn btn-neutral float-left" title="face2face.statistics.calculating_multiple_measurements_for_a_network.clustering_coefficient" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="face2face.statistics.average_degree.global_avg_var_std.html" class="btn btn-neutral float-left" title="face2face.statistics.average_degree.global_avg_var_std" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
