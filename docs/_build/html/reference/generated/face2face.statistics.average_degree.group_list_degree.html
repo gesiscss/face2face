@@ -179,7 +179,7 @@
 <dt id="face2face.statistics.average_degree.group_list_degree">
 <code class="sig-prename descclassname">face2face.statistics.average_degree.</code><code class="sig-name descname">group_list_degree</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.statistics.average_degree.group_list_degree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates lists of the degrees</p>
-<p>Creating a list of degrees for every attribute of every group</p>
+<p>Creating a list of degrees for every attribute value of every group</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>df</strong> (<em>Data</em>) – Contains a dataframe with the tij-data from the dataset</p>
@@ -191,16 +191,14 @@
 <dd class="field-odd"><p>list</p>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<p class="rubric">References</p>
 <p class="rubric">Examples</p>
 <p>This functions return a list of lists which contains a list for every attribute value. In this list you have the
 attribute as a string, the attribute value and a list with all degrees for this attribute value.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>              <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;      &quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>              <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;    &quot;</span><span class="p">,</span>
 <span class="gp">&gt;&gt;&gt; </span>              <span class="n">meta_attr_list</span><span class="o">=</span><span class="n">attr_list</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">attr_degree_list</span> <span class="o">=</span> <span class="n">new_group_list_degree</span><span class="p">(</span><span class="n">test_df</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">attr_degree_list</span> <span class="o">=</span> <span class="n">group_list_degree</span><span class="p">(</span><span class="n">test_df</span><span class="p">)</span>
 <span class="go">[[&#39;Age&#39;, 1.0, [1, 2, 2]], [&#39;Age&#39;, 0.0, [3, 2]], [&#39;Age&#39;, 2.0, [2, 2, 2]], [&#39;Sex&#39;, &#39;F&#39;, [1, 2, 2, 2, 2]],</span>
 <span class="go">[&#39;Sex&#39;, &#39;M&#39;, [2, 2, 2]]]</span>
 </pre></div>

@@ -179,7 +179,7 @@
 <dt id="face2face.statistics.check_distribution.get_best_fit_distribution">
 <code class="sig-prename descclassname">face2face.statistics.check_distribution.</code><code class="sig-name descname">get_best_fit_distribution</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">distribution_list</span></em>, <em class="sig-param"><span class="n">fit</span></em>, <em class="sig-param"><span class="n">termination_condition</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.statistics.check_distribution.get_best_fit_distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Searches the best fitting distribution</p>
-<p>Tests the included distributions recursivwly against each other to get the best fit object.</p>
+<p>Tests the included distributions recursively against each other to get the best fit object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -190,7 +190,8 @@ you can set it on 2, to get the two best fitting distributions.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>distribution_list</strong> – Contains the best fit distribution as a string.</p>
+<dd class="field-even"><p><strong>distribution_list</strong> – Contains the best fit distribution as a string. Amount of best fitting distributions depends on
+the termination_condition parameter.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>list</p>

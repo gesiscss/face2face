@@ -182,7 +182,8 @@
 <dt id="face2face.statistics.null_modell.mapping_function">
 <code class="sig-prename descclassname">face2face.statistics.null_modell.</code><code class="sig-name descname">mapping_function</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Data</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">'type'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.statistics.null_modell.mapping_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a mapping</p>
-<p>Creates a mapping dict to create the attribute mixing matrix dynamic independent of the amount of attributes</p>
+<p>Creates a mapping dictionary to create the attribute mixing matrix dynamic,
+independent of the amount of attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -199,13 +200,17 @@
 </dl>
 <p class="rubric">Examples</p>
 <p>Based on the amount of attribute values the used attribute has, you have to create a mapping for the
-null model functions.
-&gt;&gt;&gt; mapping = mapping_function(test_df, label=”Age”)
-&gt;&gt;&gt; print(mapping)
-{0: 0, 1: 1, 2: 2}
-&gt;&gt;&gt; mapping = mapping_function(test_df, label=”Sex”)
-&gt;&gt;&gt; print(mapping)
-{0: 0, 1: 1}</p>
+null model functions.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapping</span> <span class="o">=</span> <span class="n">mapping_function</span><span class="p">(</span><span class="n">test_df</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Age&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mapping</span><span class="p">)</span>
+<span class="go">{0: 0, 1: 1, 2: 2}</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapping</span> <span class="o">=</span> <span class="n">mapping_function</span><span class="p">(</span><span class="n">test_df</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Sex&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mapping</span><span class="p">)</span>
+<span class="go">{0: 0, 1: 1}</span>
+</pre></div>
+</div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix.html#face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix" title="face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix()</span></code></a>, <a class="reference internal" href="face2face.statistics.null_modell.shuffle_label_z_score_mixing_matrix.html#face2face.statistics.null_modell.shuffle_label_z_score_mixing_matrix" title="face2face.statistics.null_modell.shuffle_label_z_score_mixing_matrix"><code class="xref py py-func docutils literal notranslate"><span class="pre">face2face.statistics.null_modell.shuffle_label_z_score_mixing_matrix()</span></code></a></p>

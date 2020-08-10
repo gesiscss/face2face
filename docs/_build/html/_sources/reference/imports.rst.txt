@@ -27,8 +27,8 @@ Load Data
 .. autosummary::
 	:toctree: generated/
 	
-	Data
-	face2face.imports.load_all_data.Data.replace_str_attr_to_float
+	Test1 <Data>
+	Test2 <face2face.imports.load_all_data.Data.replace_str_attr_to_float>
 	
 	
 	

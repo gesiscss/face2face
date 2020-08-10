@@ -198,6 +198,11 @@ with a * if they are too small in terms of the bonferroni correction.</p>
 <p class="rubric">Notes</p>
 <p>The annotation_list contains the z-scores of the contact matrix and adds a * at every z-score that is an outlier</p>
 <p class="rubric">References</p>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets">1</span></dt>
+<dd><p>Génois, Mathieu &amp; Zens, Maria &amp; Lechner, Clemens &amp; Rammstedt, Beatrice &amp; Strohmaier, Markus. (2019). Building connections: How scientists meet each other during a conference.</p>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">annotated_cm</span> <span class="o">=</span> <span class="n">check_bonferroni_correction</span><span class="p">(</span><span class="n">cm</span><span class="p">)</span>

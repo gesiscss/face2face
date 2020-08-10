@@ -182,7 +182,7 @@
 <dt id="face2face.statistics.null_modell.remove_self_loops">
 <code class="sig-prename descclassname">face2face.statistics.null_modell.</code><code class="sig-name descname">remove_self_loops</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">graph</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.statistics.null_modell.remove_self_loops" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes self-loops that occur by using the “configuration_model”-function</p>
-<p>Removes self-loops that occur by using the “configuration_model”-function</p>
+<p>Removes self-loops that occur by using the “configuration_model”-function from networkx.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>graph</strong> (<em>networkX Graph</em>) – A graph with a specified degree sequence. Nodes are labeled based on the imported dataset. Graph might
@@ -196,8 +196,6 @@ no selfloops anymore.</p>
 <dd class="field-odd"><p>networkX Graph</p>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<p class="rubric">References</p>
 <p class="rubric">Examples</p>
 <p>The <code class="xref py py-func docutils literal notranslate"><span class="pre">networkx.configuration_model()</span></code> function which is being used for the configuration model can lead to
 self- and parellel edges. As you can see here the function <a class="reference internal" href="#face2face.statistics.null_modell.remove_self_loops" title="face2face.statistics.null_modell.remove_self_loops"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_self_loops()</span></code></a> filters self loops out of

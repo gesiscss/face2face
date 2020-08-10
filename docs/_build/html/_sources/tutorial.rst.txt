@@ -127,3 +127,10 @@ How_to_use_statistical_characterization
 This tutorial requires the knowledge from the previous Tutorial. This tutorial should teach you how to use the packages powerlaw and face2face, to determine reasonable parameters, find the best fitting distribution for the data set and how to visualize it.
 
 To get to the tutorial click `here <https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/How_to_use_statistical_characterization.ipynb>`_
+
+Paper
+"""""""
+
+This tutorial shortly describes how the plots for the paper "The statistical characteristics of face-to-face interaction" were made so that they are more comprenhensible for people how read the paper and are interested.
+
+To get to the tutorial click `here <https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit/blob/development/tutorial/Paper.ipynb>`_

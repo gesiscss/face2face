@@ -177,14 +177,14 @@
 <dl class="py function">
 <dt id="face2face.imports.create_network.create_network_from_data">
 <code class="sig-prename descclassname">face2face.imports.create_network.</code><code class="sig-name descname">create_network_from_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Data</span></em>, <em class="sig-param"><span class="n">replace_attr</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.imports.create_network.create_network_from_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a networkx Graph</p>
-<p>Creating a networkx graph from the interaction and the meta data.</p>
+<dd><p>Allow to create a networkx Graph</p>
+<p>Creating a networkx graph based on the interaction data. Metadata can also be provided to add node attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>Data</strong> (<em>Data</em>) – Data Object that contains Tij- and Metadata for a dataset.</p></li>
-<li><p><strong>replace_attr</strong> (<em>bool</em>) – If True attributes of type string will be replaced by float numbers.</p></li>
-<li><p><strong>label</strong> (<em>optional, string</em>) – If string label is given the rows where label column value is NaN will be removed before creating the
+<li><p><strong>replace_attr</strong> (<em>bool</em>) – If True, attributes of type string will be replaced by float numbers.</p></li>
+<li><p><strong>label</strong> (<em>optional, string</em>) – If string label is given, the rows where label column value is NaN will be removed before creating the
 network.</p></li>
 </ul>
 </dd>
@@ -195,8 +195,6 @@ network.</p></li>
 <dd class="field-odd"><p>NetworkX Graph</p>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<p class="rubric">References</p>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">t&quot;</span><span class="p">,</span>

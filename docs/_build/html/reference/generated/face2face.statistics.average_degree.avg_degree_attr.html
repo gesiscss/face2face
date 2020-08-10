@@ -179,30 +179,28 @@
 <dt id="face2face.statistics.average_degree.avg_degree_attr">
 <code class="sig-prename descclassname">face2face.statistics.average_degree.</code><code class="sig-name descname">avg_degree_attr</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">df</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.statistics.average_degree.avg_degree_attr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates the average degree</p>
-<p>Calculates the average degree for every attribute of every group and for the whole group</p>
+<p>Calculates the average degree for every subgroup and for the whole group for every attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>df</strong> (<em>Data</em>) – Data Object that contains Tij- and Metadata for a dataset.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>attr_degree_list</strong> – A list that contains the average degree for every attribute and every attribute value.</p>
+<dd class="field-even"><p><strong>attr_degree_list</strong> – A list that contains the average degree for every subgroup and for the whole group for every attribute.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>list</p>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<p class="rubric">References</p>
 <p class="rubric">Examples</p>
-<p>The first string in a list for example “Age” tells you which attribute’s average degrees are in this list.
-The following first list entrys for example 1.0, 0.0 or 2.0 are the different attribute values and the second
+<p>The first string in a list, for example “Age”, tells you which attribute’s average degrees are in this list.
+The following first list entrys for example 0.0, 1.0 or 2.0 are the different attribute values and the second
 entry in the list is the average degree for this attribute value. The ‘GlobalAvG’ list entry tells you the
 average degree for the whole attribute (for example “Age”).</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>              <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;     &quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>              <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;   &quot;</span><span class="p">,</span>
 <span class="gp">&gt;&gt;&gt; </span>              <span class="n">meta_attr_list</span><span class="o">=</span><span class="n">attr_list</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">avg_degree_list</span> <span class="o">=</span> <span class="n">new_avg_degree_attr</span><span class="p">(</span><span class="n">test_df</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">avg_degree_list</span> <span class="o">=</span> <span class="n">avg_degree_attr</span><span class="p">(</span><span class="n">test_df</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">avg_degree_list</span><span class="p">)</span>
 <span class="go">[[&#39;Age&#39;, [[0.0, 1.6666666666666667], [1.0, 2.5], [2.0, 2.0], [&#39;GlobalAvG&#39;, 2.055555555555556]]],</span>
 <span class="go"> [&#39;Sex&#39;, [[&#39;F&#39;, 1.8], [&#39;M&#39;, 2.0], [&#39;GlobalAvG&#39;, 1.9]]]]</span>

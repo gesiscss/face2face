@@ -185,18 +185,18 @@
 <dd class="field-odd"><p><strong>Data.interaction</strong> (<em>Data</em>) – Contains a dataframe with the tij-data from the dataset</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><p><strong>[x_delta_t,y_probability]</strong> –</p>
+<dd class="field-even"><p><ul>
+<li><p><strong>x_y_list</strong> (<em>List</em>) –</p>
 <dl class="simple">
 <dt>A list with two lists. The first list contains the probabilities for the y-axis and the second list contains</dt><dd><p>the inter-contact duration tAC-tAB</p>
 </dd>
 </dl>
+</li>
+<li><p><strong>delta_t_list</strong> (<em>list</em>) – Contains all the calculated $delta t$ values for the contact duration of the used data set.</p></li>
+</ul>
 </p>
 </dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>List</p>
-</dd>
 </dl>
-<p class="rubric">Notes</p>
 <p class="rubric">References</p>
 <dl class="footnote brackets">
 <dt class="label" id="id1"><span class="brackets">3</span></dt>
@@ -210,7 +210,7 @@
 <span class="gp">&gt;&gt;&gt; </span>              <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">t&quot;</span><span class="p">,</span>
 <span class="gp">&gt;&gt;&gt; </span>              <span class="n">meta_attr_list</span><span class="o">=</span><span class="n">attr_list</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">80</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">x_y_list</span> <span class="o">=</span> <span class="n">calculate_inter_contact_duration</span><span class="p">(</span><span class="n">test_df</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x_y_list</span><span class="p">,</span> <span class="n">delta_t_list</span> <span class="o">=</span> <span class="n">calculate_inter_contact_duration</span><span class="p">(</span><span class="n">test_df</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x_y_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="go">[0.0, 0.049999999999999996, 0.0]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x_y_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>

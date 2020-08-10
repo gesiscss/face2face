@@ -183,7 +183,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data</strong> (<em>list</em>) – A list of multiple values</p></li>
+<li><p><strong>data</strong> (<em>list</em>) – A list of all the $delta t$ values for the analysed interaction duration.</p></li>
 <li><p><strong>xmin</strong> (<em>float, default: None</em>) – Set xmin to localize the part of the data set that you want to analyze.</p></li>
 <li><p><strong>xmax</strong> (<em>float, default: None</em>) – Set xmax to localize the port of the data set that you you want to analyze.</p></li>
 <li><p><strong>extend_data</strong> (<em>int, default: None</em>) – Can be used to extend the data set with random generated data points.</p></li>
@@ -202,6 +202,8 @@ you can set it on 2, to get the two best fitting distributions.</p></li>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>Fit</strong> (<em>Fit Object</em>) – Contains the created Fit Object to use it for plotting as PDF, CDF or CCDF.</p></li>
 <li><p><strong>tupel_list</strong> (<em>list</em>) – Contains tupels with the comparison of every distribution that is included in the package.</p></li>
+<li><p><strong>best_fit</strong> (<em>list</em>) – Contains the best fitting distributions as strings. Amount of best fitting distributions depends on
+the termination_condition parameter.</p></li>
 </ul>
 </p>
 </dd>
