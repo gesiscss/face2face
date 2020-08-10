@@ -10,8 +10,5 @@ dependencies:
         - powerlaw
         - matplotlib
         - scipy
-        - random
         - seaborn
-        - math
-        - collections
         - face2face
