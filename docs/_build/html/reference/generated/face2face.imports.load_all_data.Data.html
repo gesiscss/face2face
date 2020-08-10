@@ -182,17 +182,17 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data_set_namestring (optional str, default</strong> (<em>None)</em>) – If you want to use predefined datasets you can use this parameter to create a Data object for SFHH or
+<li><p><strong>data_set_namestring (optional str, default None)</strong> – If you want to use predefined datasets you can use this parameter to create a Data object for SFHH or
 WS16 datasets if you use this initials as a string.</p></li>
-<li><p><strong>path_tij (optional str, default</strong> (<em>None)</em>) – Can be used to import tij datasets manually.</p></li>
-<li><p><strong>separator_tij (optional str, default</strong> (<em>None)</em>) – Must be used if you import tij datasets manually.</p></li>
-<li><p><strong>path_meta (optinal str, default</strong> (<em>None)</em>) – Can be used to import meta datasets manually.</p></li>
-<li><p><strong>separator_meta (optional str, default</strong> (<em>None)</em>) – Must be used if you import meta datasets manually.</p></li>
-<li><p><strong>meta_attr_list (optional list, default None)</strong> – Must be used if you want to import a meta dataset manually that has no header.</p></li>
+<li><p><strong>path_tij (optional str, default None)</strong> – Can be used to import tij data sets manually.</p></li>
+<li><p><strong>separator_tij (optional str, default None)</strong> – Must be used if you import tij data sets manually.</p></li>
+<li><p><strong>path_meta (optinal str, default None)</strong> – Can be used to import meta data sets manually.</p></li>
+<li><p><strong>separator_meta (optional str, default None)</strong> – Must be used if you import meta data sets manually.</p></li>
+<li><p><strong>meta_attr_list (optional list, default None)</strong> – Must be used if you want to import a meta data set manually that has no header.</p></li>
 <li><p><strong>header (optional str, default None)</strong> – Must be used if tij and or metadata already contain a header. Possible parameters are ‘tij’, ‘meta’ or
 ‘all’.</p></li>
-<li><p><strong>meta_df (optional dataframe, default</strong> (<em>None)</em>) – Must be used if you want to create a Data Class Object based on dataframes</p></li>
-<li><p><strong>tij_df (optional dataframe, default</strong> (<em>None)</em>) – Must be used if you want to create a Data Class Object based on dataframes, for example with a dataframe
+<li><p><strong>meta_df (optional dataframe, default None)</strong> – Must be used if you want to create a Data Class Object based on dataframes</p></li>
+<li><p><strong>tij_df (optional dataframe, default None)</strong> – Must be used if you want to create a Data Class Object based on dataframes, for example with a dataframe
 of the dataframe list of the create_network functions</p></li>
 </ul>
 </dd>
@@ -202,14 +202,14 @@ of the dataframe list of the create_network functions</p></li>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="s2">&quot;WS16&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Importing own datasets or predefined datasets manually (without header)</p>
+<p>Importing own data sets or predefined data sets manually (without header)</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
 <span class="gp">&gt;&gt;&gt; </span>      <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
 <span class="gp">&gt;&gt;&gt; </span>      <span class="n">meta_attr_list</span><span class="o">=</span><span class="n">attr_list</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Importing own datasets or predefined datasets manually (with headers for tij- and metadata)</p>
+<p>Importing own data sets or predefined data sets manually (with headers for tij- and metadata)</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test_header.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
 <span class="gp">&gt;&gt;&gt; </span>      <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test_header.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">)</span>
 </pre></div>
