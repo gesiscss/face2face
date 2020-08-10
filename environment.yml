@@ -8,10 +8,10 @@ dependencies:
         - networkx
         - numpy
         - powerlaw
-        - matplotlib.pyplot
+        - matplotlib
         - scipy
         - random
         - seaborn
         - math
         - collections
-        
+        - face2face
