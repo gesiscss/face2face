@@ -11,4 +11,3 @@ dependencies:
         - matplotlib
         - scipy
         - seaborn
-        - face2face
