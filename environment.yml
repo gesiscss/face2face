@@ -1,0 +1,17 @@
+name: face2face_env
+channels:
+dependencies:
+    -python
+    -pip
+    -pip:
+        - pandas
+        - networkx
+        - numpy
+        - powerlaw
+        - matplotlib.pyplot
+        - scipy
+        - random
+        - seaborn
+        - math
+        - collections
+        
