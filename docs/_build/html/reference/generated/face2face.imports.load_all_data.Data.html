@@ -186,7 +186,7 @@
 WS16 datasets if you use this initials as a string.</p></li>
 <li><p><strong>path_tij (optional str, default</strong> (<em>None)</em>) – Can be used to import tij datasets manually.</p></li>
 <li><p><strong>separator_tij (optional str, default</strong> (<em>None)</em>) – Must be used if you import tij datasets manually.</p></li>
-<li><p><strong>path_meta (optional str, default</strong> (<em>None)</em>) – Can be used to import meta datasets manually.</p></li>
+<li><p><strong>path_meta (optinal str, default</strong> (<em>None)</em>) – Can be used to import meta datasets manually.</p></li>
 <li><p><strong>separator_meta (optional str, default</strong> (<em>None)</em>) – Must be used if you import meta datasets manually.</p></li>
 <li><p><strong>meta_attr_list (optional list, default None)</strong> – Must be used if you want to import a meta dataset manually that has no header.</p></li>
 <li><p><strong>header (optional str, default None)</strong> – Must be used if tij and or metadata already contain a header. Possible parameters are ‘tij’, ‘meta’ or
@@ -198,16 +198,22 @@ of the dataframe list of the create_network functions</p></li>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<p>Importing predefined datasets by their string name
-&gt;&gt;&gt; df = Data(“WS16”)
-Importing own datasets or predefined datasets manually (without header)
-&gt;&gt;&gt; attr_list = [“ID”, “Age”, “Sex”]
-&gt;&gt;&gt; test_df = Data(path_tij=”../../data/Test/tij_test.dat”, separator_tij=”t”,
-&gt;&gt;&gt;       path_meta=”../../data/Test/meta_test.dat”, separator_meta = “t”,
-&gt;&gt;&gt;       meta_attr_list=attr_list)
-Importing own datasets or predefined datasets manually (with headers for tij- and metadata)
-&gt;&gt;&gt; test_df = Data(path_tij=”../../data/Test/tij_test_header.dat”, separator_tij=”t”,
-&gt;&gt;&gt;       path_meta=”../../data/Test/meta_test_header.dat”, separator_meta = “t”, header= “all”)</p>
+<p>Importing predefined datasets by their string name</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="s2">&quot;WS16&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Importing own datasets or predefined datasets manually (without header)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>      <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>      <span class="n">meta_attr_list</span><span class="o">=</span><span class="n">attr_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Importing own datasets or predefined datasets manually (with headers for tij- and metadata)</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test_header.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>      <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test_header.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <p class="rubric">Methods</p>
