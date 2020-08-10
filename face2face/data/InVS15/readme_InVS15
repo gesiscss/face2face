@@ -1,0 +1,21 @@
+Columns are:
+- ID
+- Name of department in the workspace
+
+
+Labels for categories are:
+- department
+	DCAR:
+	DG:
+	DISQ:
+	DMCT:
+	DMI:
+	DSE:
+	DST:
+	SCOM:
+	SDOC:
+	SFLE:
+	SRH:
+	SSI:
+
+

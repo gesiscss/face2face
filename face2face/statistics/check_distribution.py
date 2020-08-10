@@ -12,7 +12,7 @@ def search_best_fit_distribution(data, xmin=None, xmax=None, extend_data=None, d
         Parameters
         ----------
         data: list
-            A list of multiple values
+            A list of all the $\delta t$ values for the analysed interaction duration.
         xmin: float, default: None
             Set xmin to localize the part of the data set that you want to analyze.
         xmax: float, default: None
@@ -41,6 +41,9 @@ def search_best_fit_distribution(data, xmin=None, xmax=None, extend_data=None, d
             Contains the created Fit Object to use it for plotting as PDF, CDF or CCDF.
         tupel_list: list
             Contains tupels with the comparison of every distribution that is included in the package.
+        best_fit: list
+            Contains the best fitting distributions as strings. Amount of best fitting distributions depends on
+            the termination_condition parameter.
 
 
         See Also
@@ -78,7 +81,7 @@ def get_best_fit_distribution(distribution_list, fit, termination_condition=1):
 
     """Searches the best fitting distribution
 
-        Tests the included distributions recursivwly against each other to get the best fit object.
+        Tests the included distributions recursively against each other to get the best fit object.
 
         Parameters
         ----------
@@ -93,7 +96,8 @@ def get_best_fit_distribution(distribution_list, fit, termination_condition=1):
         Returns
         -------
         distribution_list: list
-            Contains the best fit distribution as a string.
+            Contains the best fit distribution as a string. Amount of best fitting distributions depends on
+            the termination_condition parameter.
 
         See Also
         ---------

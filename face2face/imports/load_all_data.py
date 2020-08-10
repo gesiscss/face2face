@@ -43,13 +43,18 @@ class Data:
             Examples
             ---------
             Importing predefined datasets by their string name
+
             >>> df = Data("WS16")
+
             Importing own datasets or predefined datasets manually (without header)
+
             >>> attr_list = ["ID", "Age", "Sex"]
             >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
             >>>       path_meta="../../data/Test/meta_test.dat", separator_meta = "\\t",
             >>>       meta_attr_list=attr_list)
+
             Importing own datasets or predefined datasets manually (with headers for tij- and metadata)
+
             >>> test_df = Data(path_tij="../../data/Test/tij_test_header.dat", separator_tij="\\t",
             >>>       path_meta="../../data/Test/meta_test_header.dat", separator_meta = "\\t", header= "all")
 
@@ -213,7 +218,7 @@ class Data:
         >>>                meta_attr_list=attr_list)
         >>> print(test_df.metadata)
                 ID     Age  Sex
-    Index
+        Index
         0       0 1.00000    F
         1       1 0.00000  NaN
         2       2     nan    M
@@ -227,7 +232,7 @@ class Data:
         >>> test_df.replace_str_attr_to_float()
         >>> print(test_df.metadata)
                 ID     Age    Sex
-    Index
+        Index
         0       0 1.00000 0.00000
         1       1 0.00000     NaN
         2       2     NaN 1.00000

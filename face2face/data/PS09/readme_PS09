@@ -1,0 +1,12 @@
+Columns are:
+- ID
+- 5 grades with two classes each
+- Gender
+
+
+Labels for categories are:
+- Gender
+	M: Male
+	F: Female
+
+

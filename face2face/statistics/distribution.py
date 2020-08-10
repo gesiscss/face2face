@@ -8,17 +8,18 @@ def calculate_contact_duration(Data, bins=None):
 
     Parameters
     ----------
-    Data.interaction: Data
-        Contains a dataframe with the tij-data from the dataset
+    Data: Data
+        Contains a dataframe with the tij-data from the dataset. Might also contain metadata.
+    bins: (optional int, default: None)
+        Amount of bins that are used to calculate the probabilities based on a histogram.
 
     Returns
     -------
-    [y_probability,x_delta_t]: List
+    x_y_list: List
         A list with two lists. The first list contains the probabilities for the y-axis and the second list contains
         the contact duration delta T
-
-    Notes
-    -----
+    delta_t_list: list
+        Contains all the calculated $\delta t$ values for the contact duration of the used data set.
 
     References
     ----------
@@ -31,7 +32,7 @@ def calculate_contact_duration(Data, bins=None):
     >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
     >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\\t",
     >>>               meta_attr_list=attr_list)
-    >>> y_x_list = calculate_contact_duration(test_df)
+    >>> y_x_list, delta_t_list = calculate_contact_duration(test_df)
     >>> print(y_x_List[0])
     [0.45454545454545453, 0.2727272727272727, 0.13636363636363635, 0.13636363636363635]
     >>> print(y_x_list[1])
@@ -89,12 +90,11 @@ def calculate_triangle_duration(Data, bins=None):
 
         Returns
         -------
-        [y_probability,x_delta_t]: List
+        x_y_list: List
             A list with two lists. The first list contains the probabilitys for the y-axis and the second list contains
             the triangle duration delta T
-
-        Notes
-        -----
+        delta_t_list: list
+            Contains all the calculated $\delta t$ values for the contact duration of the used data set.
 
         References
         ----------
@@ -106,7 +106,7 @@ def calculate_triangle_duration(Data, bins=None):
         >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
         >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\\t",
         >>>               meta_attr_list=attr_list)
-        >>> y_x_list = calculate_triangle_duration(test_df)
+        >>> y_x_list, delta_t_list = calculate_triangle_duration(test_df)
         >>> print(y_x_list[0])
         [0.42857142857142855, 0.2857142857142857, 0.14285714285714285, 0.14285714285714285]
         >>> print(y_x_list[1])
@@ -176,12 +176,11 @@ def calculate_inter_contact_duration(Data, bins=None):
 
         Returns
         -------
-        [x_delta_t,y_probability]: List
+        x_y_list: List
             A list with two lists. The first list contains the probabilities for the y-axis and the second list contains
              the inter-contact duration tAC-tAB
-
-        Notes
-        -----
+        delta_t_list: list
+            Contains all the calculated $\delta t$ values for the contact duration of the used data set.
 
         References
         ----------
@@ -198,7 +197,7 @@ def calculate_inter_contact_duration(Data, bins=None):
         >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\\t",
         >>>               meta_attr_list=attr_list)
         >>> bins = [20, 40, 60, 80]
-        >>> x_y_list = calculate_inter_contact_duration(test_df, bins=bins)
+        >>> x_y_list, delta_t_list = calculate_inter_contact_duration(test_df, bins=bins)
         >>> print(x_y_list[0])
         [0.0, 0.049999999999999996, 0.0]
         >>> print(x_y_list[1])
@@ -212,18 +211,18 @@ def calculate_inter_contact_duration(Data, bins=None):
         """
 
     individuals = list(set(list(Data.interaction.i) + list(Data.interaction.j)))
-    inter_event_duration = np.array([])
+    delta_t_list = np.array([])
     for ind in individuals:
         time_stamp = Data.interaction[(Data.interaction.i == ind) | (Data.interaction.j == ind)].Time.values
         diff = time_stamp[1:] - time_stamp[:-1]
-        inter_event_duration = np.append(inter_event_duration, diff[diff > 20])
+        delta_t_list = np.append(delta_t_list, diff[diff > 20])
 
     if bins is None:
-        bins = 10**np.linspace(np.log10(min(inter_event_duration)), np.log10(max(inter_event_duration)), 50)
-        x_delta_t, y_probability = np.histogram(inter_event_duration, bins=bins, density=True)
+        bins = 10**np.linspace(np.log10(min(delta_t_list)), np.log10(max(delta_t_list)), 50)
+        x_delta_t, y_probability = np.histogram(delta_t_list, bins=bins, density=True)
     else:
-        x_delta_t, y_probability = np.histogram(inter_event_duration, bins=bins, density=True)
+        x_delta_t, y_probability = np.histogram(delta_t_list, bins=bins, density=True)
 
     y_probability = y_probability[:-1]
     x_y_list = [list(x_delta_t), list(y_probability)]
-    return x_y_list, inter_event_duration
+    return x_y_list, delta_t_list

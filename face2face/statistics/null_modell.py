@@ -34,7 +34,7 @@ def check_bonferroni_correction(contact_matrix):
 
         References
         ----------
-
+        .. [1] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019). Building connections: How scientists meet each other during a conference.
 
         Examples
         ---------
@@ -73,7 +73,8 @@ def mapping_function(Data, label="type"):
 
     r"""Creates a mapping
 
-        Creates a mapping dict to create the attribute mixing matrix dynamic independent of the amount of attributes
+        Creates a mapping dictionary to create the attribute mixing matrix dynamic,
+        independent of the amount of attributes.
 
         Parameters
         ----------
@@ -91,9 +92,11 @@ def mapping_function(Data, label="type"):
         ---------
         Based on the amount of attribute values the used attribute has, you have to create a mapping for the
         null model functions.
+
         >>> mapping = mapping_function(test_df, label="Age")
         >>> print(mapping)
         {0: 0, 1: 1, 2: 2}
+
         >>> mapping = mapping_function(test_df, label="Sex")
         >>> print(mapping)
         {0: 0, 1: 1}
@@ -148,13 +151,9 @@ def configuration_model_label_z_score_mixing_matrix(Data, runs=1000, label="type
         contact_matrix : list
              A matrixlike List of lists that contains the z-scores for a given attribute
 
-        Notes
-        -----
-
         References
         ----------
-        .. [1] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019). Building
-        connections: How scientists meet each other during a conference.
+        .. [1] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019). Building connections: How scientists meet each other during a conference.
 
         Examples
         ---------
@@ -225,9 +224,6 @@ def shuffle_label_z_score_mixing_matrix(Data, runs=1000, label="type", seed_labe
         contact_matrix : list
              A matrixlike List of lists that contains the z-scores for a given attribute and randomized identities.
 
-        Notes
-        -----
-
         References
         ----------
         .. [2] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019). Building connections: How scientists meet each other during a conference.
@@ -277,7 +273,7 @@ def remove_self_loops(graph):
 
     r"""Removes self-loops that occur by using the "configuration_model"-function
 
-        Removes self-loops that occur by using the "configuration_model"-function
+        Removes self-loops that occur by using the "configuration_model"-function from networkx.
 
         Parameters
         ----------
@@ -290,12 +286,6 @@ def remove_self_loops(graph):
         graph : networkX Graph
             A graph with a specified degree sequence. Nodes are labeled based on the imported dataset. Graph contains
             no selfloops anymore.
-
-        Notes
-        -----
-
-        References
-        ----------
 
         Examples
         ---------

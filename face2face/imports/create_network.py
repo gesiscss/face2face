@@ -11,30 +11,24 @@ pd.set_option('display.float_format', lambda x: '%.5f' % x)
 
 
 def create_network_from_data(Data, replace_attr=False, label=None):
-    r"""Create a networkx Graph
+    r"""Allow to create a networkx Graph
 
-        Creating a networkx graph from the interaction and the meta data.
+        Creating a networkx graph based on the interaction data. Metadata can also be provided to add node attributes.
 
         Parameters
         ----------
         Data : Data
             Data Object that contains Tij- and Metadata for a dataset.
         replace_attr: bool
-            If True attributes of type string will be replaced by float numbers.
+            If True, attributes of type string will be replaced by float numbers.
         label: optional, string
-            If string label is given the rows where label column value is NaN will be removed before creating the
+            If string label is given, the rows where label column value is NaN will be removed before creating the
             network.
 
         Returns
         -------
         G : NetworkX Graph
             A graph with a specified degree sequence. Nodes are labeled based on the imported dataset.
-
-        Notes
-        -----
-
-        References
-        ----------
 
         Examples
         ---------
@@ -129,7 +123,7 @@ def create_network_from_data(Data, replace_attr=False, label=None):
 def hopping_time_networks(Data, minutes=1000):
     r"""Create multiple Networkx Graphs and DataFrames
 
-        Creating multiple Networkx Graphs and DataFrames based on the given interval
+        Creating multiple Networkx Graphs and DataFrames based on the given hopping time interval.
 
         Parameters
         ----------
@@ -141,9 +135,9 @@ def hopping_time_networks(Data, minutes=1000):
         Returns
         -------
         network_list: list
-            A list of all networkx Graphs for a given interval.
+            A list of all networkx Graphs for the given interval.
         df_list: list
-             A list of all dataframes for a given interval.
+             A list of all dataframes for the given interval.
 
         Examples
         --------
@@ -252,7 +246,7 @@ def hopping_time_networks(Data, minutes=1000):
 def sliding_time_networks(Data, slide=1, interval=1000):
     r"""Create multiple Networkx Graphs and DataFrames
 
-        Creating multiple Networkx Graphs and DataFrames based on the given interval and a slide.
+        Creating multiple Networkx Graphs and DataFrames based on the given interval and the sliding time interval.
 
         Parameters
         ----------

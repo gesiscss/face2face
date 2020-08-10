@@ -13,7 +13,7 @@ pd.set_option('display.width', 1000)
 def avg_degree_attr(df):
     """Calculates the average degree
 
-        Calculates the average degree for every attribute of every group and for the whole group
+        Calculates the average degree for every subgroup and for the whole group for every attribute.
 
         Parameters
         ----------
@@ -23,26 +23,20 @@ def avg_degree_attr(df):
         Returns
         -------
         attr_degree_list : list
-            A list that contains the average degree for every attribute and every attribute value.
-
-        Notes
-        -----
-
-        References
-        ----------
+            A list that contains the average degree for every subgroup and for the whole group for every attribute.
 
         Examples
         ---------
-        The first string in a list for example "Age" tells you which attribute's average degrees are in this list.
-        The following first list entrys for example 1.0, 0.0 or 2.0 are the different attribute values and the second
+        The first string in a list, for example "Age", tells you which attribute's average degrees are in this list.
+        The following first list entrys for example 0.0, 1.0 or 2.0 are the different attribute values and the second
         entry in the list is the average degree for this attribute value. The 'GlobalAvG' list entry tells you the
         average degree for the whole attribute (for example "Age").
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
-        >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\\t",
+        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
+        >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
         >>>               meta_attr_list=attr_list)
-        >>> avg_degree_list = new_avg_degree_attr(test_df)
+        >>> avg_degree_list = avg_degree_attr(test_df)
         >>> print(avg_degree_list)
         [['Age', [[0.0, 1.6666666666666667], [1.0, 2.5], [2.0, 2.0], ['GlobalAvG', 2.055555555555556]]],
          ['Sex', [['F', 1.8], ['M', 2.0], ['GlobalAvG', 1.9]]]]
@@ -94,7 +88,7 @@ def avg_degree_attr(df):
 def group_list_degree(df):
     """Creates lists of the degrees
 
-       Creating a list of degrees for every attribute of every group
+       Creating a list of degrees for every attribute value of every group
 
        Parameters
        ----------
@@ -106,22 +100,16 @@ def group_list_degree(df):
        attr_degree_list: list
            Contains lists for all attributes and all occuring degrees for the different attribute values.
 
-       Notes
-       -----
-
-       References
-       ----------
-
        Examples
        ---------
        This functions return a list of lists which contains a list for every attribute value. In this list you have the
        attribute as a string, the attribute value and a list with all degrees for this attribute value.
 
        >>> attr_list = ["ID", "Age", "Sex"]
-       >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
-       >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\\t",
+       >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
+       >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
        >>>               meta_attr_list=attr_list)
-       >>> attr_degree_list = new_group_list_degree(test_df)
+       >>> attr_degree_list = group_list_degree(test_df)
        [['Age', 1.0, [1, 2, 2]], ['Age', 0.0, [3, 2]], ['Age', 2.0, [2, 2, 2]], ['Sex', 'F', [1, 2, 2, 2, 2]],
        ['Sex', 'M', [2, 2, 2]]]
 
@@ -155,9 +143,9 @@ def group_list_degree(df):
 
 
 def global_avg_var_std(attr_degree_list):
-    """Calculating global measures
+    """Calculating global degree measures
 
-    Calculate the average, the variance and the standard deviation for the global meta data
+    Calculate the average, the variance and the standard deviation for the degrees of the whole dataset.
 
     Parameters
     ----------
@@ -167,8 +155,8 @@ def global_avg_var_std(attr_degree_list):
     Returns
     -------
     measures : list
-        This list contains the Average Degree, the variance and the standard deviation for the degrees of the whole
-        dataset
+        This list contains the average degree, the variance and the standard deviation for the degrees of the whole
+        dataset.
 
     Notes
     -----
