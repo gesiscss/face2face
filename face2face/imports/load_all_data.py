@@ -91,8 +91,8 @@ class Data:
                     "thiers13": {"tij": [str(path + "data/thiers13/tij_thiers13.dat"), "\t"],
                                  "meta": [str(path + "data/thiers13/metadata_thiers13.dat"), "\t"],
                                  "attr": {0: "ID", 1: "Class", 2: "Gender"}},
-                    "test": {"tij": [str(path + "data/Test/tij_test.dat"), "\t"],
-                             "meta": [str(path + "data/Test/meta_test.dat"), "\t"],
+                    "test": {"tij": [str(path + "data2/Test/tij_test.dat"), "\t"],
+                             "meta": [str(path + "data2/Test/meta_test.dat"), "\t"],
                              "attr": {0: "ID", 1: "Age", 2: "Gender"}},
                     }
 
