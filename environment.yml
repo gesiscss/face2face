@@ -1,9 +1,9 @@
 name: face2face_env
 channels:
 dependencies:
-    -python
-    -pip
-    -pip:
+    - python
+    - pip
+    - pip:
         - pandas
         - networkx
         - numpy
