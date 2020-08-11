@@ -41,7 +41,7 @@ Install the development version
 ------------------------------------
 
 Additional packages
-------------------
+----------------------
 
 The following additional packages provide additional functionality.
 
@@ -81,9 +81,3 @@ Testing
 
 face2face uses the Python ``pytest`` testing package.  You can learn more
 about pytest on their `homepage <https://pytest.org>`_.
-
-Test a source distribution
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Test an installed package
-^^^^^^^^^^^^^^^^^^^^^^^^^^

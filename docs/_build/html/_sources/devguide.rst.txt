@@ -45,29 +45,8 @@ If you want to be part in the development here is a guide on how to setup your l
 Version Control for face-to-face-interaction-analysis-toolkit project
 ------------------------------------------------------------------------
 
-Please make sure that you have installed ``pre-commit`` and ``pytest`` on your computer
-
-If you cloned the Repository and pulled the latest changes install pre-commit by::
-
-Using pip::
-
-	pip install pre-commit
-
-Using homebrew::
-
-	brew install pre-commit
-	
-Using Conda::
-	
-	conda install -c conda-forge pre-commit
-
-After that you have to install the hooks.
-	
-pre-commit install --install-hooks --overwrite 
-
-
-When you want to commit any changes on your repository the hook will run every pytest to check if your code does not break anything.
-If the test passes you can push it to your repository.
+When you want to commit any changes on your repository the git hook will run every pytest to check if your code does not break anything.
+If the test passes you can push it to the repository. 
 
 
 
