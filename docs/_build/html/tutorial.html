@@ -84,7 +84,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#import-tij-and-metadata-as-data-object">Import Tij- and Metadata as Data Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import-interaction-data-and-metadata-as-data-object">Import Interaction data and Metadata as Data Object</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#create-different-networks">Create different Networks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#notebook-tutorials-in-git">Notebook Tutorials in Git</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#beginner-tutorials">Beginner Tutorials</a><ul>
@@ -177,15 +177,15 @@
             
   <div class="section" id="tutorial">
 <h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
-<p>This guide should help you to get started with this package.</p>
-<div class="section" id="import-tij-and-metadata-as-data-object">
-<h2>Import Tij- and Metadata as Data Object<a class="headerlink" href="#import-tij-and-metadata-as-data-object" title="Permalink to this headline">¶</a></h2>
-<p>Import predefined datasets as Data Object. The Data Class gives you multiple import options. You can import already predefined data sets included in this toolbox, you can import your own data sets or you can import dataframes which you have created. To learn more about the input parameter of this Class check out the Online documentation or the tutorial “import_data_set”. For this example we import the predefined “WS16” data set as described below.</p>
+<p>This guide should help you to get started with the <code class="docutils literal notranslate"><span class="pre">face2face</span></code> toolbox.</p>
+<div class="section" id="import-interaction-data-and-metadata-as-data-object">
+<h2>Import Interaction data and Metadata as Data Object<a class="headerlink" href="#import-interaction-data-and-metadata-as-data-object" title="Permalink to this headline">¶</a></h2>
+<p>Import predefined datasets as :class:<code class="docutils literal notranslate"><span class="pre">Data</span></code> Object. The :class:<code class="docutils literal notranslate"><span class="pre">Data</span></code> Class gives you multiple import options. You can import already predefined data sets included in this toolbox, you can import your own data sets or you can import dataframes which you have created. To learn more about the input parameter of this Class check out the Online documentation or the tutorial “import_data_set”. For this example we import the predefined “WS16” data set as described below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">face2face</span> <span class="k">as</span> <span class="nn">f2f</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">f2f</span><span class="o">.</span><span class="n">Data</span><span class="p">(</span><span class="s2">&quot;WS16&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code> object is a collection of one or two pandas dataframes. It always contains a tij-dataframe, but it can also contain a metadata dataframe. You can use the whole Data-Object as Parameter for all functions where you use tij-dataframes or metadata-dataframes.
+<p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Data</span></code> object is a collection of one or two pandas dataframes. It always contains a tij-dataframe, but additionally it can also contain a metadata dataframe. You can use the whole Data-Object as Parameter for all functions where you use tij-dataframes or metadata-dataframes.
 If you want to access one of the two dataframes of the Data-Object, you can access it like this.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df_tij</span> <span class="o">=</span> <span class="n">Data</span><span class="o">.</span><span class="n">interaction</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">df_meta</span> <span class="o">=</span> <span class="n">Data</span><span class="o">.</span><span class="n">metadata</span>
@@ -205,7 +205,7 @@ If you want to access one of the two dataframes of the Data-Object, you can acce
 <div class="section" id="notebook-tutorials-in-git">
 <h2>Notebook Tutorials in Git<a class="headerlink" href="#notebook-tutorials-in-git" title="Permalink to this headline">¶</a></h2>
 <p>To get an overview of the functions that are included in this toolbox you can work through the following tutorials to get an idea how to use these functions.</p>
-<p>If you are already experienced in using python and especially librarys like pandas, numpy and networkX you can skip the beginner tutorials “01_tutorial_exploring_the_data” and “02_tutorial_first_functions”.</p>
+<p>If you are already experienced in using python and especially librarys like pandas, numpy and networkX you can skip the beginner tutorials “01_tutorial_exploring_the_data”, “02_tutorial_first_functions” and “03_tutorial_first_functions”.</p>
 <p>If you are new to Python or this librarys or you want to refresh your knowledge you can start with the beginner tutorials.</p>
 <div class="section" id="beginner-tutorials">
 <h3>Beginner Tutorials<a class="headerlink" href="#beginner-tutorials" title="Permalink to this headline">¶</a></h3>

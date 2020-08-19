@@ -83,10 +83,8 @@
             
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Install</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#install-the-released-version">Install the released version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#install-the-development-version">Install the development version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-latest-version">Install the latest version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#additional-packages">Additional packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Tutorial</a></li>
@@ -159,29 +157,20 @@
             
   <div class="section" id="install">
 <h1>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h1>
-<p>face2face requires a Python Version &gt;= 3.6.1 for the used librarys inside this toolbox. If you have no python environment on your computer yet you can check the following instruction guide for the installation. <a class="reference external" href="https://scipy.org/install.html">scientific Python stack</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you are on Windows and want to install optional packages (e.g., <cite>scipy</cite>),
-then you will need to install a Python distribution such as
-<a class="reference external" href="https://www.anaconda.com/download/">Anaconda</a>,
-<a class="reference external" href="https://www.enthought.com/product/canopy">Enthought Canopy</a>,
-<a class="reference external" href="http://python-xy.github.io/">Python(x,y)</a>,
-<a class="reference external" href="https://winpython.github.io/">WinPython</a>, or
-<a class="reference external" href="http://www.pyzo.org/">Pyzo</a>.
-If you use one of these Python distribution, please refer to their online
-documentation.</p>
-</div>
-<p>Below we assume you have the default Python environment already configured on
-your computer and you intend to install <code class="docutils literal notranslate"><span class="pre">face2face</span></code> inside of it.  If you want
-to create and work with Python virtual environments, please follow instructions
-on <a class="reference external" href="https://docs.python.org/3/library/venv.html">venv</a> and <a class="reference external" href="http://docs.python-guide.org/en/latest/dev/virtualenvs/">virtual
-environments</a>.</p>
-<p>First, make sure you have the latest version of <code class="docutils literal notranslate"><span class="pre">pip</span></code> (the Python package manager)
-installed. If you do not, refer to the <a class="reference external" href="https://pip.pypa.io/en/stable/installing/">Pip documentation</a> and install <code class="docutils literal notranslate"><span class="pre">pip</span></code> first.</p>
-<div class="section" id="install-the-released-version">
-<h2>Install the released version<a class="headerlink" href="#install-the-released-version" title="Permalink to this headline">¶</a></h2>
-<p>Install the current release of <code class="docutils literal notranslate"><span class="pre">face2face</span></code> with <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<p>face2face is Python 3 based toolbox so you need to install a Python 3 IDE if you want to use the toolbox. Below you can see possible sources where you can download a fitting python distribution for Windows.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.anaconda.com/download/">Anaconda</a>,</p></li>
+<li><p><a class="reference external" href="https://www.enthought.com/product/canopy">Enthought Canopy</a>,</p></li>
+<li><p><a class="reference external" href="http://python-xy.github.io/">Python(x,y)</a>,</p></li>
+<li><p><a class="reference external" href="https://winpython.github.io/">WinPython</a>, or</p></li>
+<li><p><a class="reference external" href="http://www.pyzo.org/">Pyzo</a>.</p></li>
+</ul>
+<p>When you have set up the python environment you can also think about using an IDE like <a class="reference external" href="https://www.jetbrains.com/de-de/pycharm/download/#section=windows/">PyCharm</a> to work with.</p>
+<p>After you successfully have set up a python 3 environment on your computer you have to make sure that you have the latest <code class="docutils literal notranslate"><span class="pre">pip</span></code> version installed. For more information you can check the <a class="reference external" href="https://pip.pypa.io/en/stable/installing/">Documentation of pip</a>.</p>
+<p>If you installed the latest <code class="docutils literal notranslate"><span class="pre">pip</span></code> version you are able to easily install the <code class="docutils literal notranslate"><span class="pre">face2face</span></code> toolbox inside the command prompt.</p>
+<div class="section" id="install-the-latest-version">
+<h2>Install the latest version<a class="headerlink" href="#install-the-latest-version" title="Permalink to this headline">¶</a></h2>
+<p>Install the latest release of <code class="docutils literal notranslate"><span class="pre">face2face</span></code> with <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install face2face
 </pre></div>
 </div>
@@ -190,24 +179,17 @@ installed. If you do not, refer to the <a class="reference external" href="https
 </pre></div>
 </div>
 </div>
-<div class="section" id="install-the-development-version">
-<h2>Install the development version<a class="headerlink" href="#install-the-development-version" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="additional-packages">
 <h2>Additional packages<a class="headerlink" href="#additional-packages" title="Permalink to this headline">¶</a></h2>
-<p>The following additional packages provide additional functionality.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">face2face</span></code> toolbox is based on a few additional librarys, that are required for the usage of the functions. Below you can see the librarys that you have to install.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://www.numpy.org/">NumPy</a> provides matrix representation of
-graphs and is used in some graph algorithms for high-performance matrix
-computations.</p></li>
-<li><p><a class="reference external" href="http://pandas.pydata.org/">pandas</a> provides a DataFrame, which
-is a tabular data structure with labeled axes.</p></li>
-<li><p><a class="reference external" href="http://matplotlib.org/">Matplotlib</a> provides flexible drawing of
-graphs.</p></li>
-<li><p><a class="reference external" href="https://networkx.github.io/documentation/stable/">networkX</a> provides creating and analysing of network graphs.</p></li>
-<li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/index.html">SciPy</a> provides a collection of mathematical algorithms and convenience functions.</p></li>
-<li><p><a class="reference external" href="https://seaborn.pydata.org/">seaborn</a> provides functions to create statistical graphics in python.</p></li>
-<li><p><a class="reference external" href="https://pythonhosted.org/powerlaw/">powerlaw</a> provides functions to find the best fitting distribution for a data set.</p></li>
+<li><p><a class="reference external" href="http://www.numpy.org/">NumPy</a></p></li>
+<li><p><a class="reference external" href="http://pandas.pydata.org/">pandas</a></p></li>
+<li><p><a class="reference external" href="http://matplotlib.org/">Matplotlib</a></p></li>
+<li><p><a class="reference external" href="https://networkx.github.io/documentation/stable/">networkX</a></p></li>
+<li><p><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/index.html">SciPy</a></p></li>
+<li><p><a class="reference external" href="https://seaborn.pydata.org/">seaborn</a></p></li>
+<li><p><a class="reference external" href="https://pythonhosted.org/powerlaw/">powerlaw</a></p></li>
 </ul>
 <p>To install <code class="docutils literal notranslate"><span class="pre">face2face</span></code> and all additional packages, do:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install face2face
@@ -221,15 +203,10 @@ graphs.</p></li>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install numpy
 </pre></div>
 </div>
-<p>If you want to use multiple librarys for your project, which use similar librarys like <code class="docutils literal notranslate"><span class="pre">pandas</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, but they require different versions you can use the functions from the <code class="docutils literal notranslate"><span class="pre">check_compatiblity</span></code> method to find out if the
-versions of the required packages contain already or still contain the functions, that are needed in the <code class="docutils literal notranslate"><span class="pre">face2face</span></code> toolbox. To get the maximum backwards and forward compatibility there are no specific versions required for the packages that are used for this toolbox,
+<p>If you want to use multiple librarys on your environment, which use similar librarys like <code class="docutils literal notranslate"><span class="pre">pandas</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, but they require different versions you can use the functions from the <code class="docutils literal notranslate"><span class="pre">check_compatiblity</span></code> method to find out if the
+versions of the required librarys already contain or still contain the functions, that are needed in the <code class="docutils literal notranslate"><span class="pre">face2face</span></code> toolbox. To get the maximum backward and forward compatibility there are no specific versions required for the packages that are used for this toolbox,
 but instead you can use this tool as an assistant to find out which parts of this toolbox won’t work with the currently installed package versions. So you can decide if you need the affected functions and if the function tells you which functions in the installed package versions are missing you have
 a good hint to find the version you need to make this functions work.</p>
-</div>
-<div class="section" id="testing">
-<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
-<p>face2face uses the Python <code class="docutils literal notranslate"><span class="pre">pytest</span></code> testing package.  You can learn more
-about pytest on their <a class="reference external" href="https://pytest.org">homepage</a>.</p>
 </div>
 </div>
 

@@ -1,35 +1,24 @@
 Install
 =======
 
-face2face requires a Python Version >= 3.6.1 for the used librarys inside this toolbox. If you have no python environment on your computer yet you can check the following instruction guide for the installation. `scientific Python stack <https://scipy.org/install.html>`_.
+face2face is Python 3 based toolbox so you need to install a Python 3 IDE if you want to use the toolbox. Below you can see possible sources where you can download a fitting python distribution for Windows.
 
+- `Anaconda <https://www.anaconda.com/download/>`_,
+- `Enthought Canopy <https://www.enthought.com/product/canopy>`_,
+- `Python(x,y) <http://python-xy.github.io/>`_,
+- `WinPython <https://winpython.github.io/>`_, or
+- `Pyzo <http://www.pyzo.org/>`_.
 
-.. note::
-   If you are on Windows and want to install optional packages (e.g., `scipy`),
-   then you will need to install a Python distribution such as
-   `Anaconda <https://www.anaconda.com/download/>`_,
-   `Enthought Canopy <https://www.enthought.com/product/canopy>`_,
-   `Python(x,y) <http://python-xy.github.io/>`_,
-   `WinPython <https://winpython.github.io/>`_, or
-   `Pyzo <http://www.pyzo.org/>`_.
-   If you use one of these Python distribution, please refer to their online
-   documentation.
-   
-Below we assume you have the default Python environment already configured on
-your computer and you intend to install ``face2face`` inside of it.  If you want
-to create and work with Python virtual environments, please follow instructions
-on `venv <https://docs.python.org/3/library/venv.html>`_ and `virtual
-environments <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_.
+When you have set up the python environment you can also think about using an IDE like `PyCharm <https://www.jetbrains.com/de-de/pycharm/download/#section=windows/>`_ to work with.
 
-First, make sure you have the latest version of ``pip`` (the Python package manager)
-installed. If you do not, refer to the `Pip documentation
-<https://pip.pypa.io/en/stable/installing/>`_ and install ``pip`` first.
+After you successfully have set up a python 3 environment on your computer you have to make sure that you have the latest ``pip`` version installed. For more information you can check the `Documentation of pip <https://pip.pypa.io/en/stable/installing/>`_.
 
+If you installed the latest ``pip`` version you are able to easily install the ``face2face`` toolbox inside the command prompt.
 
-Install the released version
+Install the latest version
 ------------------------------
 
-Install the current release of ``face2face`` with ``pip``::
+Install the latest release of ``face2face`` with ``pip``::
 
     $ pip install face2face
 	
@@ -37,25 +26,18 @@ You can also install ``face2face`` with ``conda``::
 
 	$ conda install face2face
 
-Install the development version
-------------------------------------
-
 Additional packages
 ----------------------
 
-The following additional packages provide additional functionality.
+The ``face2face`` toolbox is based on a few additional librarys, that are required for the usage of the functions. Below you can see the librarys that you have to install.
 
-- `NumPy <http://www.numpy.org/>`_ provides matrix representation of
-  graphs and is used in some graph algorithms for high-performance matrix
-  computations.
-- `pandas <http://pandas.pydata.org/>`_ provides a DataFrame, which
-  is a tabular data structure with labeled axes.
-- `Matplotlib <http://matplotlib.org/>`_ provides flexible drawing of
-  graphs.
-- `networkX <https://networkx.github.io/documentation/stable/>`_ provides creating and analysing of network graphs.
-- `SciPy <https://docs.scipy.org/doc/scipy/reference/index.html>`_ provides a collection of mathematical algorithms and convenience functions.
-- `seaborn <https://seaborn.pydata.org/>`_ provides functions to create statistical graphics in python.
-- `powerlaw <https://pythonhosted.org/powerlaw/>`_ provides functions to find the best fitting distribution for a data set.
+- `NumPy <http://www.numpy.org/>`_ 
+- `pandas <http://pandas.pydata.org/>`_ 
+- `Matplotlib <http://matplotlib.org/>`_ 
+- `networkX <https://networkx.github.io/documentation/stable/>`_ 
+- `SciPy <https://docs.scipy.org/doc/scipy/reference/index.html>`_
+- `seaborn <https://seaborn.pydata.org/>`_ 
+- `powerlaw <https://pythonhosted.org/powerlaw/>`_
 
 
 
@@ -71,13 +53,9 @@ Or, install any additional package (e.g., ``numpy``) individually::
 
     $ pip install numpy
 
-If you want to use multiple librarys for your project, which use similar librarys like ``pandas`` or ``numpy``, but they require different versions you can use the functions from the ``check_compatiblity`` method to find out if the 
-versions of the required packages contain already or still contain the functions, that are needed in the ``face2face`` toolbox. To get the maximum backwards and forward compatibility there are no specific versions required for the packages that are used for this toolbox,
+If you want to use multiple librarys on your environment, which use similar librarys like ``pandas`` or ``numpy``, but they require different versions you can use the functions from the ``check_compatiblity`` method to find out if the 
+versions of the required librarys already contain or still contain the functions, that are needed in the ``face2face`` toolbox. To get the maximum backward and forward compatibility there are no specific versions required for the packages that are used for this toolbox,
 but instead you can use this tool as an assistant to find out which parts of this toolbox won't work with the currently installed package versions. So you can decide if you need the affected functions and if the function tells you which functions in the installed package versions are missing you have
 a good hint to find the version you need to make this functions work. 
 
-Testing
----------
 
-face2face uses the Python ``pytest`` testing package.  You can learn more
-about pytest on their `homepage <https://pytest.org>`_.

@@ -5,7 +5,7 @@ If you want to be part in the development here is a guide on how to setup your l
 
 1. 
 
-	* Get the development repository from `https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit<https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit>`_ and create your own fork by clicking on the fork button.
+	* Get the development repository from https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit<https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit> and create your own fork by clicking on the fork button.
 
 	* Clone the repository to your local computer by using:: 
 		
@@ -27,7 +27,7 @@ If you want to be part in the development here is a guide on how to setup your l
 		git checkout master
 		git pull upstream master
 		
-	* Commit your progress locally with (``git add`` and ``git commit``)
+	* Commit your progress locally
 	
 	* Create a branch for your new feature or for the bugfix that you want to add to the toolbox. Use a meaningful name as a branch name like 'Feature_XYZ'::
 	
@@ -35,7 +35,7 @@ If you want to be part in the development here is a guide on how to setup your l
 
 3.
 	
-	* Push your changes back to your fork on GitHub::
+	* Push your local changes to the fork on GitHub::
 	
 		git push origin	Feature_XYZ
 		

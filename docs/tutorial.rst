@@ -3,20 +3,20 @@ Tutorial
 
 .. currentmodule:: face2face
 
-This guide should help you to get started with this package.
+This guide should help you to get started with the ``face2face`` toolbox.
 
 
-Import Tij- and Metadata as Data Object
-----------------------------------------
+Import Interaction data and Metadata as Data Object
+-----------------------------------------------------
 
-Import predefined datasets as Data Object. The Data Class gives you multiple import options. You can import already predefined data sets included in this toolbox, you can import your own data sets or you can import dataframes which you have created. To learn more about the input parameter of this Class check out the Online documentation or the tutorial "import_data_set". For this example we import the predefined "WS16" data set as described below.
+Import predefined datasets as :class:``Data`` Object. The :class:``Data`` Class gives you multiple import options. You can import already predefined data sets included in this toolbox, you can import your own data sets or you can import dataframes which you have created. To learn more about the input parameter of this Class check out the Online documentation or the tutorial "import_data_set". For this example we import the predefined "WS16" data set as described below.
 
 .. code-block:: python
 
 	>>> import face2face as f2f
 	>>> df = f2f.Data("WS16")
 	
-A :class:`Data` object is a collection of one or two pandas dataframes. It always contains a tij-dataframe, but it can also contain a metadata dataframe. You can use the whole Data-Object as Parameter for all functions where you use tij-dataframes or metadata-dataframes.
+A :class:`Data` object is a collection of one or two pandas dataframes. It always contains a tij-dataframe, but additionally it can also contain a metadata dataframe. You can use the whole Data-Object as Parameter for all functions where you use tij-dataframes or metadata-dataframes.
 If you want to access one of the two dataframes of the Data-Object, you can access it like this.
 
 .. code-block:: python
@@ -43,7 +43,7 @@ Notebook Tutorials in Git
 
 To get an overview of the functions that are included in this toolbox you can work through the following tutorials to get an idea how to use these functions. 
 
-If you are already experienced in using python and especially librarys like pandas, numpy and networkX you can skip the beginner tutorials "01_tutorial_exploring_the_data" and "02_tutorial_first_functions".
+If you are already experienced in using python and especially librarys like pandas, numpy and networkX you can skip the beginner tutorials "01_tutorial_exploring_the_data", "02_tutorial_first_functions" and "03_tutorial_first_functions".
 
 If you are new to Python or this librarys or you want to refresh your knowledge you can start with the beginner tutorials.
 

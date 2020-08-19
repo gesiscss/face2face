@@ -1,0 +1,61 @@
+/*Variable Gestaltung der Bildgrößen für Responsiv Design*/
+body{
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header'
+    'main5 main5 main5 main5'
+    'main main2 main3 main4'
+    'footer footer footer footer';
+  grid-gap: 10px;
+  background-color: whitesmoke;
+  /*padding: 10px;*/
+  align-content: space-evenly;
+  grid-template-columns:  repeat(4, 1fr);
+}
+
+div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.parent{
+    text-align: center;
+}
+
+.parent > ul{
+    display: inline-block
+}
+
+a < div{
+    color: inherit;
+    text-decoration: none;
+}
+
+div{
+    text-align: center;
+}
+.item1 { grid-area: header;}
+.item2 { grid-area: main; box-shadow: 10px 5px 5px grey; border: 5px solid rgba(236,126,0,0.95686275); background-color: rgba(98,115,144,0.36000001);}
+.item3 { grid-area: main2; box-shadow: 10px 5px 5px grey; border: 5px solid rgba(236,126,0,0.95686275);background-color: rgba(98,115,144,0.36000001);}
+.item4 { grid-area: main3; box-shadow: 10px 5px 5px grey; border: 5px solid rgba(236,126,0,0.95686275);background-color: rgba(98,115,144,0.36000001);}
+.item5 { grid-area: main4; box-shadow: 10px 5px 5px grey; border: 5px solid rgba(236,126,0,0.95686275);background-color: rgba(98,115,144,0.36000001);}
+.item6 { grid-area: footer; border: 5px solid black; background-color:rgba(98,115,144,0.36000001)}
+.item7 { grid-area: main5; box-shadow: 10px 5px 5px grey; border: 5px solid rgba(236,126,0,0.95686275);background-color: rgba(98,115,144,0.36000001);text-align: center; display: inline-block;}
