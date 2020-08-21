@@ -2,15 +2,15 @@ import numpy as np
 
 
 def calculate_contact_duration(Data, bins=None):
-    """Calculates the probabilitys for contact duration
+    """Calculates the probabilitys for the contact duration
 
-    Calculates the probability for having a face-to-face contact for the time delta T
+    Calculates the probabilities for having a face-to-face contact for the different times delta T
 
     Parameters
     ----------
     Data: Data
-        Contains a dataframe with the tij-data from the dataset. Might also contain metadata.
-    bins: (optional int, default: None)
+        Contains a dataframe with the tij-data from the data set. Might also contain metadata.
+    bins: optional: int, default: None
         Amount of bins that are used to calculate the probabilities based on a histogram.
 
     Returns
@@ -23,14 +23,15 @@ def calculate_contact_duration(Data, bins=None):
 
     References
     ----------
-    .. [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person Interactions from Distributed RFID Sensor Networks. PLOS ONE
+    .. [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics
+           of Person-to-Person Interactions from Distributed RFID Sensor Networks. PLOS ONE
 
     Examples
     ----------
 
     >>> attr_list = ["ID", "Age", "Sex"]
-    >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
-    >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\\t",
+    >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
+    >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
     >>>               meta_attr_list=attr_list)
     >>> y_x_list, delta_t_list = calculate_contact_duration(test_df)
     >>> print(y_x_List[0])
@@ -98,7 +99,8 @@ def calculate_triangle_duration(Data, bins=None):
 
         References
         ----------
-        .. [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person Interactions from Distributed RFID Sensor Networks. PLOS ONE
+        .. [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person
+               Interactions from Distributed RFID Sensor Networks. PLOS ONE
 
         Examples
         ----------
@@ -172,7 +174,7 @@ def calculate_inter_contact_duration(Data, bins=None):
         Parameters
         ----------
         Data.interaction: Data
-            Contains a dataframe with the tij-data from the dataset
+            Contains a dataframe with the tij-data from the data set
 
         Returns
         -------
@@ -190,11 +192,11 @@ def calculate_inter_contact_duration(Data, bins=None):
 
         Examples
         ---------
-        For this small example dataset i fixed the bins for this function. This is not necessary for the normal usage.
+        For this small example data set we fixed the bins for this function. This is not necessary for the normal usage.
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
-        >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\\t",
+        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
+        >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
         >>>               meta_attr_list=attr_list)
         >>> bins = [20, 40, 60, 80]
         >>> x_y_list, delta_t_list = calculate_inter_contact_duration(test_df, bins=bins)

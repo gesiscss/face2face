@@ -20,12 +20,10 @@ def plot_avg_degree_group(attr_degree_list, measures):
         -------
         None
 
-        Notes
-        -----
-
         References
         ------------
-        [1] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019). Building connections: How scientists meet each other during a conference.
+        .. [1] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019).
+               Building connections: How scientists meet each other during a conference.
 
         See Also
         ----------

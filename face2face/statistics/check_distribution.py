@@ -20,10 +20,10 @@ def search_best_fit_distribution(data, xmin=None, xmax=None, extend_data=None, d
         extend_data: int, default: None
             Can be used to extend the data set with random generated data points.
         discret: bool, default: False
-            Must be set if data set is discret, because discrete versions of probability distributions are calculated
+            Must be set if data set is discrete, because discrete versions of probability distributions are calculated
             differently.
         approximation_method: str, int
-            Different approximation methods for discret data sets. Possible values: "round", "xmax" or an integer.
+            Different approximation methods for discrete data sets. Possible values: "round", "xmax" or an integer.
         distance_measurement_method: str, default: "D".
             Changes the measurement method to calculated the minimized distance between the empirical data and the
             distribution. Possible Values: "D","V","Asquare".
@@ -70,7 +70,10 @@ def search_best_fit_distribution(data, xmin=None, xmax=None, extend_data=None, d
                          "lognormal_positive"]
 
     best_fit = get_best_fit_distribution(distribution_list, fit, termination_condition=termination_condition)
-    print("The best fitting distribution is " + best_fit[0])
+    if len(best_fit) == 1:
+        print("The best fitting distribution is " + best_fit[0])
+    elif len(best_fit) == 2:
+        print("The best fitting distribution is " + best_fit[0] + "or" + best_fit[1])
 
     tupel_list = distribution_tupel_combinations(distribution_list, fit)
 
@@ -81,12 +84,12 @@ def get_best_fit_distribution(distribution_list, fit, termination_condition=1):
 
     """Searches the best fitting distribution
 
-        Tests the included distributions recursively against each other to get the best fit object.
+        Tests the included distributions recursively against each other to get the best fitting distribution.
 
         Parameters
         ----------
         distribution_list: list
-            Contains a list of strings with every distribution included in this package.
+            Contains a list of strings with every distribution included in the powerlaw library.
         fit: Fit object
             Fit objected for the given data set.
         termination_condition: int, default: 1

@@ -34,7 +34,8 @@ def check_bonferroni_correction(contact_matrix):
 
         References
         ----------
-        .. [1] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019). Building connections: How scientists meet each other during a conference.
+        .. [1] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019).
+               Building connections: How scientists meet each other during a conference.
 
         Examples
         ---------
@@ -79,7 +80,7 @@ def mapping_function(Data, label="type"):
         Parameters
         ----------
         Data: Data
-            Data Object that contains Tij- and Metadata for a dataset.
+            Data Object that contains Tij- and Metadata for a data set.
         label: str
             A string that tells the function which attribute should be mapped.
 
@@ -123,13 +124,13 @@ def configuration_model_label_z_score_mixing_matrix(Data, runs=1000, label="type
 
     r"""Creates a contact matrix based on the configuration model
 
-        Creates a contact matrix with z-scores based on the choosen attribute. You can assume randomized attributes and/
+        Creates a contact matrix with z-scores based on the chosen attribute. You can assume randomized attributes and/
         or randomized degrees in the null model.
 
         Parameters
         ----------
         Data: Data
-            Data Object that contains Tij- and Metadata for a dataset.
+            Data Object that contains Tij- and Metadata for a data set.
         runs: int
             The amount of times the function should be executed. It's a heuristic approach, so the more the runs the
             better might be the result
@@ -140,10 +141,10 @@ def configuration_model_label_z_score_mixing_matrix(Data, runs=1000, label="type
         force_simple_graph: bool
             Deletes parallel- and selfedges that can occur by using the networkx "configuration_model"-function if True.
         seed_config_mat : List, default None
-            Allows to create reproducable configuration models for a reproducable output. This parameters is basically
+            Allows to create reproducible configuration models for a reproducible output. This parameters is basically
             just for applying tests.
         seed_label : list, default None
-            Allows to create reproducable "randomized" labels for a reproducable output. This parameters is basically
+            Allows to create reproducible "randomized" labels for a reproducible output. This parameters is basically
             just for applying tests.
 
         Returns
@@ -153,7 +154,8 @@ def configuration_model_label_z_score_mixing_matrix(Data, runs=1000, label="type
 
         References
         ----------
-        .. [1] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019). Building connections: How scientists meet each other during a conference.
+        .. [1] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019).
+               Building connections: How scientists meet each other during a conference.
 
         Examples
         ---------
@@ -202,21 +204,19 @@ def shuffle_label_z_score_mixing_matrix(Data, runs=1000, label="type", seed_labe
 
     r"""Creates a contact matrix based on a null model with randomized identities.
 
-        Creates a contact matrix with z-scores based on the choosen attribute. You can assume randomized identities.
+        Creates a contact matrix with z-scores based on the chosen attribute. You can assume randomized identities.
 
         Parameters
         ----------
-        network : networkX Graph
-            A graph with a specified degree sequence. Nodes are labeled based on the imported dataset.
         Data: Data
-            Data Object that contains Tij- and Metadata for a dataset.
+            Data Object that contains Tij- and Metadata for a data set.
         runs: int
             The amount of times the function should be executed. It's a heuristic approach, so the more the runs the
             better might be the result
         label: str
             A string that tells the function for which attribute the contact matrix should be made.
         seed_label : list, default None
-            Allows to create reproducable "randomized" labels for a reproducable output. This parameters is basically
+            Allows to create reproducible "randomized" labels for a reproducible output. This parameters is basically
             just for applying tests.
 
         Returns
@@ -226,7 +226,8 @@ def shuffle_label_z_score_mixing_matrix(Data, runs=1000, label="type", seed_labe
 
         References
         ----------
-        .. [2] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019). Building connections: How scientists meet each other during a conference.
+        .. [2] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019).
+               Building connections: How scientists meet each other during a conference.
 
         Examples
         ---------
@@ -278,19 +279,19 @@ def remove_self_loops(graph):
         Parameters
         ----------
         graph : networkX Graph
-            A graph with a specified degree sequence. Nodes are labeled based on the imported dataset. Graph might
+            A graph with a specified degree sequence. Nodes are labeled based on the imported data set. Graph might
             contain self loops
 
         Returns
         ---------
         graph : networkX Graph
-            A graph with a specified degree sequence. Nodes are labeled based on the imported dataset. Graph contains
+            A graph with a specified degree sequence. Nodes are labeled based on the imported data set. Graph contains
             no selfloops anymore.
 
         Examples
         ---------
         The :func:`networkx.configuration_model` function which is being used for the configuration model can lead to
-        self- and parellel edges. As you can see here the function :func:`remove_self_loops` filters self loops out of
+        self- and parallel edges. As you can see here the function :func:`remove_self_loops` filters self loops out of
         the network.
 
         >>> degree_sequence_1 = [v[1] for v in test_network.degree]

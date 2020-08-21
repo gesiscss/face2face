@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 plt.rcParams.update(plt.rcParamsDefault)
 
 
-def plot_contact_duration(list_x_y,color_list, marker_list,label_list):
+def plot_contact_duration(list_x_y, color_list, marker_list, label_list):
     r"""Plots the probability distribution of the contact duration
 
         Plots the values of the probability on the y-axis and the values of the contact duration Delta T on the x-axis.
@@ -12,7 +12,7 @@ def plot_contact_duration(list_x_y,color_list, marker_list,label_list):
         ----------
         list_x_y : list
             Contains the output of the "calculate_contact_duration"-function, which is a list of the y-values
-            (probabilitys) and the x-values (contact durations). You can add multiple lists of the
+            (probabilities) and the x-values (contact durations). You can add multiple lists of the
             "calculate_contact_duration"-function in the list_x_y to compare them in the graph.
 
         color_list: list
@@ -28,19 +28,18 @@ def plot_contact_duration(list_x_y,color_list, marker_list,label_list):
         -------
         None
 
-        Notes
-        -----
-
         References
         ----------
-        [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596. https://doi.org/10.1371/journal.pone.0011596
+        [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person
+        Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596.
+        https://doi.org/10.1371/journal.pone.0011596
 
         See Also
         ---------
         face2face.statistics.distribution.calculate_contact_duration
         """
     for i in range(len(list_x_y)):
-        plt.plot(list_x_y[i][1],list_x_y[i][0],marker_list[i], color=color_list[i], label= label_list[i])
+        plt.plot(list_x_y[i][1], list_x_y[i][0], marker_list[i], color=color_list[i], label=label_list[i])
         plt.ylabel("Probability ($\Delta$t)")
         plt.xlabel("Contact duration $\Delta$t (seconds)")
         plt.yscale("log")
@@ -65,11 +64,11 @@ def plot_triangle_duration(list_x_y, color_list, marker_list, label_list):
         ----------
         list_x_y : list
             Contains the output of the "calculate_triangle_duration"-function, which is a list of the y-values
-            (probabilitys) and the x-values (triangle durations). You can add multiple lists of the
+            (probabilities) and the x-values (triangle durations). You can add multiple lists of the
             "calculate_triangle_duration"-function in the list_x_y to compare them in the graph.
 
         color_list: list
-            Should contain a color for every list in list_x_y to define the color of the markers for the visualisation.
+            Should contain a color for every list in list_x_y to define the color of the markers for the visualization.
 
         marker_list: list
             Should contain a marker for every list in list_x_y to define the shape of the data points.
@@ -80,12 +79,12 @@ def plot_triangle_duration(list_x_y, color_list, marker_list, label_list):
         -------
         None
 
-        Notes
-        -----
-
         References
         ----------
-        [2] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596. https://doi.org/10.1371/journal.pone.0011596
+        [2] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person
+        Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596.
+        https://doi.org/10.1371/journal.pone.0011596
+
         See Also
         ---------
         face2face.statistics.distribution.calculate_triangle_duration
@@ -93,7 +92,7 @@ def plot_triangle_duration(list_x_y, color_list, marker_list, label_list):
         """
 
     for i in range(len(list_x_y)):
-        plt.plot(list_x_y[i][1],list_x_y[i][0],marker_list[i], color=color_list[i], label= label_list[i])
+        plt.plot(list_x_y[i][1], list_x_y[i][0], marker_list[i], color=color_list[i], label=label_list[i])
         plt.ylabel("Probability($\Delta$t)")
         plt.xlabel("Triangle duration $\Delta$t (seconds)")
         plt.yscale("log")
@@ -119,7 +118,7 @@ def plot_inter_contact_duration(list_x_y, color_list, marker_list, label_list):
         ----------
         list_x_y : list
             Contains the output of the "calculate_inter_contact_duration"-function, which is a list of the y-values
-            (probabilitys) and the x-values (inter-contact durations). You can add multiple lists of the
+            (probabilities) and the x-values (inter-contact durations). You can add multiple lists of the
             "calculate_inter_contact_duration"-function in the list_x_y to compare them in the graph.
 
         color_list: list
@@ -134,12 +133,12 @@ def plot_inter_contact_duration(list_x_y, color_list, marker_list, label_list):
         -------
         None
 
-        Notes
-        -----
-
         References
         ----------
-        [2] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596. https://doi.org/10.1371/journal.pone.0011596
+        [2] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person
+        Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596.
+        https://doi.org/10.1371/journal.pone.0011596
+
         See Also
         ---------
         face2face.statistics.distribution.calculate_inter_contact_duration
@@ -147,7 +146,7 @@ def plot_inter_contact_duration(list_x_y, color_list, marker_list, label_list):
         """
 
     for i in range(len(list_x_y)):
-        plt.plot(list_x_y[i][1],list_x_y[i][0],marker_list[i], color=color_list[i], label= label_list[i])
+        plt.plot(list_x_y[i][1], list_x_y[i][0],marker_list[i], color=color_list[i], label=label_list[i])
         plt.ylabel("Probability ($\Delta$t)")
         plt.xlabel("Inter-contact duration tAC-tAB (seconds)")
         plt.yscale("log")

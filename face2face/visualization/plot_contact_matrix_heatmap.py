@@ -8,7 +8,7 @@ def plot_cm_heatmap(contact_matrix):
 
     """Plots a heatmap for a given contact matrix
 
-       Plots the contact matrix for a choosen attribute. The heatmap ncludes a bonferroni correction which is shown by
+       Plots the contact matrix for a chosen attribute. The heatmap includes a bonferroni correction which is shown by
        a white * if a value is an outlier.
 
        Parameters
@@ -20,12 +20,10 @@ def plot_cm_heatmap(contact_matrix):
        -------
        None
 
-       Notes
-       -----
-
        References
        ------------
-       [1] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019). Building connections: How scientists meet each other during a conference.
+       .. [1] Génois, Mathieu & Zens, Maria & Lechner, Clemens & Rammstedt, Beatrice & Strohmaier, Markus. (2019).
+              Building connections: How scientists meet each other during a conference.
 
        See Also
        ----------

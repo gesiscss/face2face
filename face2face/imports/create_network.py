@@ -34,8 +34,8 @@ def create_network_from_data(Data, replace_attr=False, label=None):
         ---------
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
-        >>>                path_meta="../../data/Test/meta_test.dat", separator_meta="\\t",
+        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
+        >>>                path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
         >>>                meta_attr_list=attr_list)
         >>> test_network = create_network_from_data(test_df)
         >>> print(test_network.edges)
@@ -128,7 +128,7 @@ def hopping_time_networks(Data, minutes=1000):
         Parameters
         ----------
         Data: Data
-            Data Object that contains Tij- and Metadata for a dataset.
+            Data Object that contains Tij- and Metadata for a data set.
         minutes: int
             The interval time in which the Networkx Graphs should be splitted.
 
@@ -142,7 +142,7 @@ def hopping_time_networks(Data, minutes=1000):
         Examples
         --------
         In this example the full dataframe got splitted in dataframes and networks with time windows of 40 seconds
-        (2/3 minutes). The Output in this case describes the network and the dataframe for the first 40 seconds in the
+        (2/3 minutes). The output in this case describes the network and the dataframe for the first 40 seconds in the
         original dataframe.
         
         >>> attr_list = ["ID", "Age", "Sex"]
@@ -180,20 +180,12 @@ def hopping_time_networks(Data, minutes=1000):
 
     time_stamp_split_list = []
 
-    #while time_stamps <= end_time_stamp + interval_seconds:
-    #    time_stamp_split_list.append(time_stamps)
-    #    time_stamps += interval_seconds
-
     id_group = 0
     while time_stamps <= end_time_stamp + interval_seconds:
-        time_stamp_split_list.append([time_stamps, str(time_stamps-interval_seconds-Data.interaction["Time"][0]) + "-" + str(time_stamps-Data.interaction["Time"][0])])
+        time_stamp_split_list.append([time_stamps, str(time_stamps-interval_seconds-Data.interaction["Time"][0]) + "-"
+                                      + str(time_stamps-Data.interaction["Time"][0])])
         time_stamps += interval_seconds
         id_group += 1
-
-    #if time_stamp_split_list[-1] >= Data.interaction["Time"].tail(1).item():
-    #    time_stamp_split_list = time_stamp_split_list
-    #else:
-    #    time_stamp_split_list = time_stamp_split_list
 
     marker_timestamp_list = []
     unique_timestamp_list = set(Data.interaction["Time"].values)
@@ -251,7 +243,7 @@ def sliding_time_networks(Data, slide=1, interval=1000):
         Parameters
         ----------
         Data: Data
-            Data Object that contains Tij- and Metadata for a dataset.
+            Data Object that contains Tij- and Metadata for a data set.
         slide: int
             The time steps in which the intervals should be created.
         interval: int
@@ -268,8 +260,8 @@ def sliding_time_networks(Data, slide=1, interval=1000):
         ---------
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
-        >>>                path_meta="../../data/Test/meta_test.dat", separator_meta = "\\t",
+        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
+        >>>                path_meta="../../data/Test/meta_test.dat", separator_meta = "\t",
         >>>                meta_attr_list=attr_list)
         >>> test_network_list, test_df_list = sliding_time_networks(test_df, slide=1/3, interval=2/3)
         >>> print(test_df_list[0])
@@ -306,12 +298,6 @@ def sliding_time_networks(Data, slide=1, interval=1000):
     time_stamps = Data.interaction["Time"][0]
     end_time_stamp = Data.interaction["Time"].tail(1).item()
     time_stamp_split_list = []
-
-    #id_group = 0
-    #while time_stamps <= end_time_stamp + interval_seconds:
-    #    time_stamp_split_list.append([time_stamps, time_stamps + interval_seconds, id_group])
-    #    time_stamps += interval_slide
-    #    id_group += 1
 
     interval = 0
     interval2 = interval_seconds
@@ -382,7 +368,7 @@ def event_time_networks(Data, events):
         Parameters
         ----------
         Data: Data
-            Data Object that contains Tij- and Metadata for a dataset.
+            Data Object that contains Tij- and Metadata for a data set.
         events: list
             A list of tuples that contains the eventname and the start and the beginning of the event.
 
@@ -396,8 +382,8 @@ def event_time_networks(Data, events):
         Examples
         --------
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
-        >>>       path_meta="../../data/Test/meta_test.dat", separator_meta = "\\t",
+        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
+        >>>       path_meta="../../data/Test/meta_test.dat", separator_meta = "\t",
         >>>       meta_attr_list=attr_list)
 
         >>> event_list = [("Event A", 20, 60), ("Event B", 120, 180), ("Event C", 400, 500)]

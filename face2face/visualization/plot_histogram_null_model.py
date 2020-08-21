@@ -9,7 +9,7 @@ from face2face.statistics.null_modell import configuration_model_label_z_score_m
 from face2face.statistics.null_modell import shuffle_label_z_score_mixing_matrix
 
 
-def plot_diff_scales(ax1, x_value, y_value, x2_value, y2_value, titel):
+def plot_diff_scales(ax1, x_value, y_value, x2_value, y2_value, title):
 
     """Creates the subplots
 
@@ -18,16 +18,17 @@ def plot_diff_scales(ax1, x_value, y_value, x2_value, y2_value, titel):
        Parameters
        ----------
        ax1: axes
-           Basic axes parameter for the figure without any layout informations yet
+           Basic axes parameter for the figure without any layout information yet
        x_value: list
-           List with the amount of edges between the two attribute-values for every iteration of the null model functions.
+           List with the amount of edges between the two attribute-values for every iteration of the null model
+           functions.
        y_value:
-           Frequency of the occurence of the amount of edges for every iteration
+           Frequency of the occurrence of the amount of edges for every iteration
        x2_value: float
            Average z-score for this attribute-value combination
        y2_value: float
            Maximum value of y_value list for a better representation of the z-score
-       titel: list
+       title: list
            Contains the two attribute-values that gets compared in this iteration
 
        Returns
@@ -38,7 +39,7 @@ def plot_diff_scales(ax1, x_value, y_value, x2_value, y2_value, titel):
            Parameter for the visualization of the z-score for the two attribute-values
        """
 
-    ax1.title.set_text(str(titel))
+    ax1.title.set_text(str(title))
     ax2 = ax1.twiny()
     ax1.bar(x2_value, y2_value, color="#0B6C11", width=0.08, align="center")
     ax1.set_ylabel('Frequency', color="k")
@@ -62,7 +63,7 @@ def plot_null_model_subplots(Data, runs, label="type", shuffle_label=False, forc
        Parameters
        ----------
        Data: Data
-           Data Object that contains Tij- and Metadata for a dataset.
+           Data Object that contains Tij- and Metadata for a data set.
        runs: int
            The amount of times the function should be executed. It's a heuristic approach, so the more the runs the
            better might be the result
@@ -87,11 +88,9 @@ def plot_null_model_subplots(Data, runs, label="type", shuffle_label=False, forc
        """
 
     if model == "configuration_model":
-        contact_matrix, matrices, data_mixing_matrix, matrices2 = configuration_model_label_z_score_mixing_matrix(Data,
-                                                                                                                  runs=runs,
-                                                                                                                  label=label,
-                                                                                                                  shuffle_label=shuffle_label,
-                                                                                                                  force_simple_graph=force_simple_graph)
+        contact_matrix, matrices, data_mixing_matrix, matrices2 = configuration_model_label_z_score_mixing_matrix(
+            Data, runs=runs, label=label, shuffle_label=shuffle_label, force_simple_graph=force_simple_graph)
+
     elif model == "random_identities":
         contact_matrix, matrices2 = shuffle_label_z_score_mixing_matrix(Data, runs=runs, label=label)
 

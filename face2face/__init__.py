@@ -4,6 +4,7 @@ from .visualization.plot_probability_distribution import plot_inter_contact_dura
 from .visualization.plot_average_degree_group import plot_avg_degree_group
 from .visualization.plot_contact_matrix_heatmap import plot_cm_heatmap
 from .visualization.output_network_information import print_network_measures
+from .visualization.plot_histogram_null_model import *
 
 from .statistics.distribution import calculate_triangle_duration, calculate_inter_contact_duration, \
     calculate_contact_duration

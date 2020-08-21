@@ -16,11 +16,6 @@ def print_network_measures(network):
         -------
         None
 
-        Notes
-        -----
-
-        References
-        ----------
 
         """
     n_nodes, n_edges = calculating_number_of_edges_nodes(network)

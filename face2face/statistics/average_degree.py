@@ -18,7 +18,7 @@ def avg_degree_attr(df):
         Parameters
         ----------
         df: Data
-            Data Object that contains Tij- and Metadata for a dataset.
+            Data Object that contains Tij- and Metadata for a data set.
 
         Returns
         -------
@@ -28,7 +28,7 @@ def avg_degree_attr(df):
         Examples
         ---------
         The first string in a list, for example "Age", tells you which attribute's average degrees are in this list.
-        The following first list entrys for example 0.0, 1.0 or 2.0 are the different attribute values and the second
+        The following first list entries for example 0.0, 1.0 or 2.0 are the different attribute values and the second
         entry in the list is the average degree for this attribute value. The 'GlobalAvG' list entry tells you the
         average degree for the whole attribute (for example "Age").
 
@@ -93,12 +93,12 @@ def group_list_degree(df):
        Parameters
        ----------
        df: Data
-           Contains a dataframe with the tij-data from the dataset
+           Contains a dataframe with the tij-data from the data set
 
        Returns
        -------
        attr_degree_list: list
-           Contains lists for all attributes and all occuring degrees for the different attribute values.
+           Contains lists for all attributes and all occurring degrees for the different attribute values.
 
        Examples
        ---------
@@ -145,7 +145,7 @@ def group_list_degree(df):
 def global_avg_var_std(attr_degree_list):
     """Calculating global degree measures
 
-    Calculate the average, the variance and the standard deviation for the degrees of the whole dataset.
+    Calculate the average, the variance and the standard deviation for the degrees of the whole data set.
 
     Parameters
     ----------
@@ -156,7 +156,7 @@ def global_avg_var_std(attr_degree_list):
     -------
     measures : list
         This list contains the average degree, the variance and the standard deviation for the degrees of the whole
-        dataset.
+        data set.
 
     Examples
     --------

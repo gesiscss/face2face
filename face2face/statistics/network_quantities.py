@@ -11,7 +11,7 @@ def calculating_number_of_edges_nodes(network):
         Parameters
         ----------
         network: networkx Graph
-            A graph with a specified degree sequence. Nodes are labeled based on the imported dataset.
+            A graph with a specified degree sequence. Nodes are labeled based on the imported data set.
 
         Returns
         -------
@@ -44,17 +44,11 @@ def calculating_number_of_edges_nodes(network):
 def mean_degree_network(network):
     r"""Calculate average degree
 
-        Calculating the average degree of a given network
-
-        Average Degree for random network?
+        Calculating the average degree of a given random network
 
         .. math::
 
             \langle k \rangle = \frac{2 * \langle L \rangle}{N}
-
-        .. math::
-
-            \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
 
         Parameters
         ----------
@@ -68,7 +62,8 @@ def mean_degree_network(network):
 
         References
         ----------
-        .. [1] Barabási, A.-L. & Pósfai, M. (2016), Network science , Cambridge University Press , Cambridge.
+        .. [1] Barabasi, Albert-Laszlo. (2013). Network science. Philosophical transactions. Series A, Mathematical,
+               physical, and engineering sciences. 371. 20120375. 10.1098/rsta.2012.0375.
 
         Examples
         --------
@@ -83,11 +78,6 @@ def mean_degree_network(network):
         2
 
         """
-    #k = 0
-    #for i in network.degree:
-    #    k += i[1]
-    #k = k/len(network.degree)
-
     k = (2 * len(network.edges))/len(network.nodes)
 
     return k
@@ -109,12 +99,12 @@ def variance_std_network(network):
         Parameters
         ----------
         network: networkx Graph
-            A graph with a specified degree sequence. Nodes are labeled based on the imported dataset.
+            A graph with a specified degree sequence. Nodes are labeled based on the imported data set.
 
         Returns
         -------
         var: float
-            Contains the Variance of the network degree
+            Contains the variance of the network degree
         std: float
             Contains the standard deviation of the network degree
 
@@ -155,7 +145,7 @@ def average_path_length_network(network):
         Parameters
         ----------
         network: networkx Graph
-            A graph with a specified degree sequence. Nodes are labeled based on the imported dataset.
+            A graph with a specified degree sequence. Nodes are labeled based on the imported data set.
 
         Returns
         -------
@@ -164,7 +154,8 @@ def average_path_length_network(network):
 
         References
         ----------
-        .. [1] Barabási, A.-L. & Pósfai, M. (2016), Network science , Cambridge University Press , Cambridge.
+        .. [1] Barabasi, Albert-Laszlo. (2013). Network science. Philosophical transactions. Series A, Mathematical,
+               physical, and engineering sciences. 371. 20120375. 10.1098/rsta.2012.0375.
 
         Examples
         --------
@@ -203,7 +194,7 @@ def clustering_coefficient(network):
         Parameters
         ----------
         network: networkx Graph
-            A graph with a specified degree sequence. Nodes are labeled based on the imported dataset.
+            A graph with a specified degree sequence. Nodes are labeled based on the imported data set.
 
         Returns
         -------
@@ -212,7 +203,8 @@ def clustering_coefficient(network):
 
         References
         ----------
-         .. [2] Barabási, A.-L. & Pósfai, M. (2016), Network science , Cambridge University Press , Cambridge.
+         .. [1] Barabasi, Albert-Laszlo. (2013). Network science. Philosophical transactions. Series A, Mathematical,
+                physical, and engineering sciences. 371. 20120375. 10.1098/rsta.2012.0375.
 
 
         Examples
