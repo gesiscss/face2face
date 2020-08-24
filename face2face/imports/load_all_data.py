@@ -74,7 +74,7 @@ class Data:
                              "attr": {0: "ID", 1: "Age", 2: "Sex", 3: "Country", 4: "Language", 5: "Education",
                                       6: "Academic Background", 7: "Role", 8: "Previous participation"}},
                     "ICCSS17": {"tij": [str(path + "data/ICCSS17/tij_ICCSS17.dat"), "\t"],
-                             "meta": [str(path + "data/WS16/metadata_ICCSS17.dat"), "\t"],
+                             "meta": [str(path + "data/ICCSS17/metadata_ICCSS17.dat"), "\t"],
                              "attr": {0: "ID", 1: "Age", 2: "Sex", 3: "Country", 4: "Language", 5: "Education",
                                       6: "Academic Background", 7: "Role", 8: "Previous participation"}},
                     }
