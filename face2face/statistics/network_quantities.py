@@ -24,8 +24,8 @@ def calculating_number_of_edges_nodes(network):
         ---------
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-        >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+        >>>               path_meta="face2face/data/Test/meta_test.dat", separator_meta="\t",
         >>>               meta_attr_list=attr_list)
         >>> test_network = create_network_from_data(test_df)
         >>> number_of_nodes, number_of_edges = calculating_number_of_edges_nodes(test_network)
@@ -69,8 +69,8 @@ def mean_degree_network(network):
         --------
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-        >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+        >>>               path_meta="face2face/data/Test/meta_test.dat", separator_meta="\t",
         >>>               meta_attr_list=attr_list)
         >>> test_network = create_network_from_data(test_df)
         >>> k = mean_degree_network(test_network)
@@ -112,8 +112,8 @@ def variance_std_network(network):
         ---------
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-        >>>                path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+        >>>                path_meta="face2face/data/Test/meta_test.dat", separator_meta="\t",
         >>>                meta_attr_list=attr_list)
         >>> test_network = create_network_from_data(test_df)
         >>> variance, standard_deviation = variance_std_network(test_network)
@@ -161,8 +161,8 @@ def average_path_length_network(network):
         --------
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-        >>>                path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+        >>>                path_meta="face2face/data/Test/meta_test.dat", separator_meta="\t",
         >>>                meta_attr_list=attr_list)
         >>> test_network = create_network_from_data(test_df)
         >>> d = average_path_length_network(test_network)
@@ -211,8 +211,8 @@ def clustering_coefficient(network):
         --------
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-        >>>                path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+        >>>                path_meta="face2face/data/Test/meta_test.dat", separator_meta="\t",
         >>>                meta_attr_list=attr_list)
         >>> test_network = create_network_from_data(test_df)
         >>> C = clustering_coefficient(test_network)
