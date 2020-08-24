@@ -44,7 +44,3 @@ This tutorial should give you basic instructions on how to use the powerlaw pack
 ## [Tutorial 10](How_to_use_statistical_characterization.ipynb) How to use powerlaw and face2face library for statistical characterization of a data set
 
 This tutorial requires the knowledge from the previous Tutorial ([Tutorial 8]). This tutorial should teach you how to use the librarys powerlaw and face2face, to determine reasonable parameters, find the best fitting distribution for the data set and how to visualize it.
-
-## [Tutorial 11](Paper.ipynb) Making the plots for the paper
-
-This tutorial shortly describes how the plots for the paper "The statistical characteristics of face-to-face interaction" were made so that they are more comprenhensible for people how read the paper and are interested.
