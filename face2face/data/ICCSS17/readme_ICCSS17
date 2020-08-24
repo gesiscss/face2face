@@ -1,0 +1,39 @@
+Columns are:
+- ID
+- Age range
+- Gender
+- Country
+- Language
+- Academic seniority
+- Academic background
+- Role in the conference
+- Participation to a previous edition
+
+Labels for categories are:
+- Age range
+	0: younger than 30 years
+	1: 30 to 39 years
+	2: 40 to 49 years
+	3: 50 years and older
+- Gender
+	M: Male
+	F: Female
+- Academic seniority
+	1: Bachelor/Master student
+	2: PhD student
+	3: Postdoctoral researcher
+	4: Junior/Assistant professor
+	5: Associate/Full professor
+	6: Other (industry/staff)
+- Academic background
+	1: Social/Political/Behavioral Sciences
+	2: Computer/Information Science
+	3: Math/Physics/Biology
+	4: Media/Communication/Linguistics
+	5: Others
+- Role in the conference
+	1: Speaker
+	2: Poster presenter
+	3: Participation only
+	4: Staff
+
