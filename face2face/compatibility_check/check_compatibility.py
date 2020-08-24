@@ -103,8 +103,8 @@ def check_compatibility_of_versions():
     return dictionary
 
 
-dictionary2 = check_compatibility_of_versions()
-print(dictionary2)
+#dictionary2 = check_compatibility_of_versions()
+#print(dictionary2)
 
 
 def check_which_methods_are_affected(dict):
@@ -169,4 +169,4 @@ def check_which_methods_are_affected(dict):
     for i in next_list:
         print(i)
 
-check_which_methods_are_affected(dictionary2)
+#check_which_methods_are_affected(dictionary2)
