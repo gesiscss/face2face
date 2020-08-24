@@ -1,13 +1,12 @@
 <img src='svg_data/pytest_passing.svg'><img src='svg_data/coverage.svg'>
-[![Binder](https://notebooks.gesis.org/binder/badge.svg)](https://notebooks.gesis.org/binder/v2/gh/gesiscss/face2face_public/master?filepath=tutorial)
+[![Binder](https://notebooks.gesis.org/binder/badge.svg)](https://notebooks.gesis.org/binder/v2/gh/gesiscss/face2face/master?filepath=tutorial)
 
 2020-07-06 11:20:19.132423
-2020-07-06 14:55:47.095103
 
-Face-2-face-interaction is a library that contains multiple methods for the basic analysis of sociopatterns data sets and networks.
+face2face is a toolbox that contains multiple methods for the basic analysis of sociopatterns data sets and networks.
 
-- **Website (including documentation):** 
-- **Website of Gesis**
+- **Homepage:** https://gesiscss.github.io/face2face/ 
+- **Website of Gesis:** https://www.gesis.org/home 
 
 ## Installation
 
@@ -17,18 +16,18 @@ If you want to become a contributor in this library and you want to apply change
 
 If you just want to install the library on your system to work with it, you can do so with:
     
-        $ pip install f2f-interaction
-        
-or you can also the it from Anaconda by:
-
-        $ conda install f2f-interaction
+        $ pip install face2face
         
 ## Tutorials
 
-If you are new to this library and you want to learn about how to use the included methods or you want to learn how they work you can use the tutorials. For a short description of the different tutorials you can find more information in the tutorial README [Tutorial README](/tutorial/README.md). 
+If you are new to this library and you want to learn about how to use the included methods or you want to learn how they work you can use the tutorials. For a short description of the different tutorials you can find more information in the tutorial README [Tutorial README](/tutorial/README.md). If you want to test the tutorials right now you can click on the binder badge on top of this README.md to open the tutorials in the Gesis Notebooks. 
 
 [Here](/tutorial) you get to the tutorial folder.
 
 ## Short summary
 
-With the methods from the import module you can import your own tij- and metadata data sets or you can use predefined data sets which are included in the installed library. With the Data Object you created with your or the predefined datas sets you can directly start with the analysis of the probability for different contact durations and visualize them. You can also use the Object to create a network and analyze this network in terms of basic key figures about the underlying network. Furthermore you can use this library to analyze and visualize the homophily of the given data set. 
+With the methods from the import module you can import your own tij- and metadata data sets or you can use predefined data sets which are included in the installed library. With the Data Object you created with your or the predefined data sets you can directly start with the analysis of the probability for different contact durations and visualize them. You can also use the Object to create a network and analyze this network in terms of basic key figures about the underlying network. Furthermore you can use this library to analyze and visualize the homophily of the given data set. 
+
+## Current State
+
+The face2face toolbox at its current state is an alpha version. If you find any bugs or you have suggestions about how to extend the toolbox with useful new functionalities please let us know by creating a new issue thread on our <a href="https://github.com/gesiscss/face2face/issues">GitHub Page</a> or contribute a fix or additional methods by yourself as described in the developer guide in the online documentation.
