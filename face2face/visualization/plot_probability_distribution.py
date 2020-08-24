@@ -30,9 +30,9 @@ def plot_contact_duration(list_x_y, color_list, marker_list, label_list):
 
         References
         ----------
-        [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person
-        Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596.
-        https://doi.org/10.1371/journal.pone.0011596
+        .. [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person
+               Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596.
+               https://doi.org/10.1371/journal.pone.0011596
 
         See Also
         ---------
@@ -81,9 +81,9 @@ def plot_triangle_duration(list_x_y, color_list, marker_list, label_list):
 
         References
         ----------
-        [2] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person
-        Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596.
-        https://doi.org/10.1371/journal.pone.0011596
+        .. [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person
+               Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596.
+               https://doi.org/10.1371/journal.pone.0011596
 
         See Also
         ---------
@@ -135,9 +135,9 @@ def plot_inter_contact_duration(list_x_y, color_list, marker_list, label_list):
 
         References
         ----------
-        [2] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person
-        Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596.
-        https://doi.org/10.1371/journal.pone.0011596
+        .. [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person
+               Interactions from Distributed RFID Sensor Networks. PLOS ONE 5(7): e11596.
+               https://doi.org/10.1371/journal.pone.0011596
 
         See Also
         ---------

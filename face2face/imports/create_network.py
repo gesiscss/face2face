@@ -34,8 +34,8 @@ def create_network_from_data(Data, replace_attr=False, label=None):
         ---------
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-        >>>                path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+        >>>                path_meta="face2face/data/Test/meta_test.dat", separator_meta="\t",
         >>>                meta_attr_list=attr_list)
         >>> test_network = create_network_from_data(test_df)
         >>> print(test_network.edges)
@@ -146,8 +146,8 @@ def hopping_time_networks(Data, minutes=1000):
         original dataframe.
         
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
-        >>>                path_meta="../../data/Test/meta_test.dat", separator_meta = "\\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\\t",
+        >>>                path_meta="face2face/data/Test/meta_test.dat", separator_meta = "\\t",
         >>>                meta_attr_list = attr_list)
         >>> test_network_list, test_df_list = hopping_time_networks(test_df, minutes=2/3)
         >>> print(test_network_list[0].edges)
@@ -260,8 +260,8 @@ def sliding_time_networks(Data, slide=1, interval=1000):
         ---------
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-        >>>                path_meta="../../data/Test/meta_test.dat", separator_meta = "\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+        >>>                path_meta="face2face/data/Test/meta_test.dat", separator_meta = "\t",
         >>>                meta_attr_list=attr_list)
         >>> test_network_list, test_df_list = sliding_time_networks(test_df, slide=1/3, interval=2/3)
         >>> print(test_df_list[0])
@@ -382,8 +382,8 @@ def event_time_networks(Data, events):
         Examples
         --------
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-        >>>       path_meta="../../data/Test/meta_test.dat", separator_meta = "\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+        >>>       path_meta="face2face/data/Test/meta_test.dat", separator_meta = "\t",
         >>>       meta_attr_list=attr_list)
 
         >>> event_list = [("Event A", 20, 60), ("Event B", 120, 180), ("Event C", 400, 500)]

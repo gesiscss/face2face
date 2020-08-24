@@ -30,8 +30,8 @@ def calculate_contact_duration(Data, bins=None):
     ----------
 
     >>> attr_list = ["ID", "Age", "Sex"]
-    >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-    >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
+    >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+    >>>               path_meta="face2face/data/Test/meta_test.dat", separator_meta="\t",
     >>>               meta_attr_list=attr_list)
     >>> y_x_list, delta_t_list = calculate_contact_duration(test_df)
     >>> print(y_x_List[0])
@@ -105,8 +105,8 @@ def calculate_triangle_duration(Data, bins=None):
         Examples
         ----------
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
-        >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\\t",
+        >>>               path_meta="face2face/data/Test/meta_test.dat", separator_meta="\\t",
         >>>               meta_attr_list=attr_list)
         >>> y_x_list, delta_t_list = calculate_triangle_duration(test_df)
         >>> print(y_x_list[0])
@@ -187,7 +187,8 @@ def calculate_inter_contact_duration(Data, bins=None):
         References
         ----------
 
-        .. [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person Interactions from Distributed RFID Sensor Networks. PLOS ONE
+        .. [1] Cattuto C, Van den Broeck W, Barrat A, Colizza V, Pinton JF, et al. (2010) Dynamics of Person-to-Person
+               Interactions from Distributed RFID Sensor Networks. PLOS ONE
 
 
         Examples
@@ -195,8 +196,8 @@ def calculate_inter_contact_duration(Data, bins=None):
         For this small example data set we fixed the bins for this function. This is not necessary for the normal usage.
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-        >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+        >>>               path_meta="face2face/data/Test/meta_test.dat", separator_meta="\t",
         >>>               meta_attr_list=attr_list)
         >>> bins = [20, 40, 60, 80]
         >>> x_y_list, delta_t_list = calculate_inter_contact_duration(test_df, bins=bins)

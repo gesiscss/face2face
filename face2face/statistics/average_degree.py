@@ -33,8 +33,8 @@ def avg_degree_attr(df):
         average degree for the whole attribute (for example "Age").
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-        >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+        >>>               path_meta="face2face/data/Test/meta_test.dat", separator_meta="\t",
         >>>               meta_attr_list=attr_list)
         >>> avg_degree_list = avg_degree_attr(test_df)
         >>> print(avg_degree_list)
@@ -106,8 +106,8 @@ def group_list_degree(df):
        attribute as a string, the attribute value and a list with all degrees for this attribute value.
 
        >>> attr_list = ["ID", "Age", "Sex"]
-       >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-       >>>               path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
+       >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+       >>>               path_meta="face2face/data/Test/meta_test.dat", separator_meta="\t",
        >>>               meta_attr_list=attr_list)
        >>> attr_degree_list = group_list_degree(test_df)
        [['Age', 1.0, [1, 2, 2]], ['Age', 0.0, [3, 2]], ['Age', 2.0, [2, 2, 2]], ['Sex', 'F', [1, 2, 2, 2, 2]],

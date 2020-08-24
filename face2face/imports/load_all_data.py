@@ -49,14 +49,14 @@ class Data:
             Importing own data sets or predefined data sets manually (without header)
 
             >>> attr_list = ["ID", "Age", "Sex"]
-            >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\\t",
-            >>>       path_meta="../../data/Test/meta_test.dat", separator_meta = "\\t",
+            >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\\t",
+            >>>       path_meta="face2face/data/Test/meta_test.dat", separator_meta = "\\t",
             >>>       meta_attr_list=attr_list)
 
             Importing own data sets or predefined data sets manually (with headers for tij- and metadata)
 
-            >>> test_df = Data(path_tij="../../data/Synthetic_Data/synthetic_tij.dat", separator_tij=",",
-            >>>       path_meta="../../data/Synthetic_Data/synthetic_metadata.dat", separator_meta = ",", header= "all")
+            >>> test_df = Data(path_tij="face2face/data/Synthetic_Data/synthetic_tij.dat", separator_tij=",",
+            >>>       path_meta="face2face/data/Synthetic_Data/synthetic_metadata.dat", separator_meta = ",", header= "all")
 
             """
         script_path = __file__
@@ -69,6 +69,14 @@ class Data:
                     "Synthetic": {"tij": [str(path + "data/Synthetic_Data/synthetic_tij.dat"), ","],
                                   "meta": [str(path + "data/Synthetic_Data/synthetic_metadata.dat"), ","],
                                   "attr": {0: "ID", 1: "type"}},
+                    "WS16": {"tij": [str(path + "data/WS16/tij_WS16.dat"), "\t"],
+                             "meta": [str(path + "data/WS16/metadata_WS16.dat"), "\t"],
+                             "attr": {0: "ID", 1: "Age", 2: "Sex", 3: "Country", 4: "Language", 5: "Education",
+                                      6: "Academic Background", 7: "Role", 8: "Previous participation"}},
+                    "ICCSS17": {"tij": [str(path + "data/ICCSS17/tij_ICCSS17.dat"), "\t"],
+                             "meta": [str(path + "data/WS16/metadata_ICCSS17.dat"), "\t"],
+                             "attr": {0: "ID", 1: "Age", 2: "Sex", 3: "Country", 4: "Language", 5: "Education",
+                                      6: "Academic Background", 7: "Role", 8: "Previous participation"}},
                     }
 
         if data_set_name is not None:
@@ -189,8 +197,8 @@ class Data:
         "F" turns into 0.0 and "M" turns into 1.0.
 
         >>> attr_list = ["ID", "Age", "Sex"]
-        >>> test_df = Data(path_tij="../../data/Test/tij_test.dat", separator_tij="\t",
-        >>>                path_meta="../../data/Test/meta_test.dat", separator_meta="\t",
+        >>> test_df = Data(path_tij="face2face/data/Test/tij_test.dat", separator_tij="\t",
+        >>>                path_meta="face2face/data/Test/meta_test.dat", separator_meta="\t",
         >>>                meta_attr_list=attr_list)
         >>> print(test_df.metadata)
                 ID     Age  Sex
