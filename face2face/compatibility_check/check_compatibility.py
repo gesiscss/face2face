@@ -52,7 +52,7 @@ def check_compatibility_of_versions():
 
     import powerlaw
 
-    powerlaw_requirements = ["Fit", "generate_random", "noise_flag", "distribution_compare"]
+    powerlaw_requirements = ["Fit", "generate_random", "distribution_compare"]
 
     powerlaw_functions = dir(powerlaw) + dir(powerlaw.Distribution) + dir(powerlaw.Fit)
     dictionary["powerlaw"] = []
@@ -103,8 +103,8 @@ def check_compatibility_of_versions():
     return dictionary
 
 
-#dictionary2 = check_compatibility_of_versions()
-#print(dictionary2)
+dictionary2 = check_compatibility_of_versions()
+print(dictionary2)
 
 
 def check_which_methods_are_affected(dict):
@@ -169,4 +169,4 @@ def check_which_methods_are_affected(dict):
     for i in next_list:
         print(i)
 
-#check_which_methods_are_affected(dictionary2)
+check_which_methods_are_affected(dictionary2)
