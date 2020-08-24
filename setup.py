@@ -10,10 +10,11 @@ packages = ["face2face",
 	    "face2face.compatibility_check"
             ]
 setup(name="face2face",
-      version="0.1.1.1.3 Alpha",
+      version="0.2.1 Alpha",
       packages=packages,
       description="Library with basic social science functions",
       url="https://gesiscss.github.io/face2face/",
+      license="GPLv3",
       #python_requires=">=3.6.1",
       long_description=long_description,
       install_requires=DEPENDENCIES,
