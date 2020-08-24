@@ -178,11 +178,11 @@
 <p>Replaces string attributes into float attributes for the null model functions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>self</strong> (<em>Data</em>) – Data Object that contains Tij- and Metadata for a dataset.</p>
+<dd class="field-odd"><p><strong>self</strong> (<em>Data</em>) – Data Object that contains Tij- and Metadata for a data set.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>self</strong> – Data Object that contains Tij- and Metadata for a dataset. Metadata string attribute values are changed into
-float values.</p>
+<dd class="field-even"><p><strong>self</strong> – Data Object that contains Tij- and Metadata for a data set. Metadata string attribute values are changed
+into float values.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="face2face.imports.load_all_data.Data.html#face2face.imports.load_all_data.Data" title="face2face.imports.load_all_data.Data">Data</a></p>
@@ -192,8 +192,8 @@ float values.</p>
 <p>As you can see in this example every non-numerical or NaN value gets replaced into a float value. In this case
 “F” turns into 0.0 and “M” turns into 1.0.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;     &quot;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>               <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;  &quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;face2face/data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>               <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;face2face/data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;      &quot;</span><span class="p">,</span>
 <span class="gp">&gt;&gt;&gt; </span>               <span class="n">meta_attr_list</span><span class="o">=</span><span class="n">attr_list</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">test_df</span><span class="o">.</span><span class="n">metadata</span><span class="p">)</span>
 <span class="go">        ID     Age  Sex</span>
@@ -248,7 +248,7 @@ float values.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Andreas
+        &copy; Copyright 2020, Johann Schaible
 
     </p>
   </div>

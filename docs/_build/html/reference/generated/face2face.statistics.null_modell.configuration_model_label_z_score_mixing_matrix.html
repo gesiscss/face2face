@@ -182,20 +182,20 @@
 <dt id="face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix">
 <code class="sig-prename descclassname">face2face.statistics.null_modell.</code><code class="sig-name descname">configuration_model_label_z_score_mixing_matrix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Data</span></em>, <em class="sig-param"><span class="n">runs</span><span class="o">=</span><span class="default_value">1000</span></em>, <em class="sig-param"><span class="n">label</span><span class="o">=</span><span class="default_value">'type'</span></em>, <em class="sig-param"><span class="n">shuffle_label</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">force_simple_graph</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">seed_config_mat</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seed_label</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.statistics.null_modell.configuration_model_label_z_score_mixing_matrix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a contact matrix based on the configuration model</p>
-<p>Creates a contact matrix with z-scores based on the choosen attribute. You can assume randomized attributes and/
+<p>Creates a contact matrix with z-scores based on the chosen attribute. You can assume randomized attributes and/
 or randomized degrees in the null model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>Data</strong> (<em>Data</em>) – Data Object that contains Tij- and Metadata for a dataset.</p></li>
+<li><p><strong>Data</strong> (<em>Data</em>) – Data Object that contains Tij- and Metadata for a data set.</p></li>
 <li><p><strong>runs</strong> (<em>int</em>) – The amount of times the function should be executed. It’s a heuristic approach, so the more the runs the
 better might be the result</p></li>
 <li><p><strong>label</strong> (<em>str</em>) – A string that tells the function for which attribute the contact matrix should be made.</p></li>
 <li><p><strong>shuffle_label</strong> (<em>bool</em>) – Gives the option to extend the null model by randomizing the node attributes.</p></li>
 <li><p><strong>force_simple_graph</strong> (<em>bool</em>) – Deletes parallel- and selfedges that can occur by using the networkx “configuration_model”-function if True.</p></li>
-<li><p><strong>seed_config_mat</strong> (<em>List, default None</em>) – Allows to create reproducable configuration models for a reproducable output. This parameters is basically
+<li><p><strong>seed_config_mat</strong> (<em>List, default None</em>) – Allows to create reproducible configuration models for a reproducible output. This parameters is basically
 just for applying tests.</p></li>
-<li><p><strong>seed_label</strong> (<em>list, default None</em>) – Allows to create reproducable “randomized” labels for a reproducable output. This parameters is basically
+<li><p><strong>seed_label</strong> (<em>list, default None</em>) – Allows to create reproducible “randomized” labels for a reproducible output. This parameters is basically
 just for applying tests.</p></li>
 </ul>
 </dd>
@@ -209,7 +209,8 @@ just for applying tests.</p></li>
 <p class="rubric">References</p>
 <dl class="footnote brackets">
 <dt class="label" id="id1"><span class="brackets">1</span></dt>
-<dd><p>Génois, Mathieu &amp; Zens, Maria &amp; Lechner, Clemens &amp; Rammstedt, Beatrice &amp; Strohmaier, Markus. (2019). Building connections: How scientists meet each other during a conference.</p>
+<dd><p>Génois, Mathieu &amp; Zens, Maria &amp; Lechner, Clemens &amp; Rammstedt, Beatrice &amp; Strohmaier, Markus. (2019).
+Building connections: How scientists meet each other during a conference.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
@@ -250,7 +251,7 @@ just for applying tests.</p></li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Andreas
+        &copy; Copyright 2020, Johann Schaible
 
     </p>
   </div>

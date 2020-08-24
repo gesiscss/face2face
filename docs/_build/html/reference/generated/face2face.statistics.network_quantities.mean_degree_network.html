@@ -181,12 +181,9 @@
 <dt id="face2face.statistics.network_quantities.mean_degree_network">
 <code class="sig-prename descclassname">face2face.statistics.network_quantities.</code><code class="sig-name descname">mean_degree_network</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">network</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.statistics.network_quantities.mean_degree_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate average degree</p>
-<p>Calculating the average degree of a given network</p>
-<p>Average Degree for random network?</p>
+<p>Calculating the average degree of a given random network</p>
 <div class="math notranslate nohighlight">
 \[\langle k \rangle = \frac{2 * \langle L \rangle}{N}\]</div>
-<div class="math notranslate nohighlight">
-\[\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>network</strong> (<em>networkx Graph</em>) – A graph with a specified degree sequence. Nodes are labeled based on the imported dataset.</p>
@@ -201,13 +198,14 @@
 <p class="rubric">References</p>
 <dl class="footnote brackets">
 <dt class="label" id="id1"><span class="brackets">1</span></dt>
-<dd><p>Barabási, A.-L. &amp; Pósfai, M. (2016), Network science , Cambridge University Press , Cambridge.</p>
+<dd><p>Barabasi, Albert-Laszlo. (2013). Network science. Philosophical transactions. Series A, Mathematical,
+physical, and engineering sciences. 371. 20120375. 10.1098/rsta.2012.0375.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>              <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;face2face/data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>              <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;face2face/data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
 <span class="gp">&gt;&gt;&gt; </span>              <span class="n">meta_attr_list</span><span class="o">=</span><span class="n">attr_list</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">test_network</span> <span class="o">=</span> <span class="n">create_network_from_data</span><span class="p">(</span><span class="n">test_df</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">k</span> <span class="o">=</span> <span class="n">mean_degree_network</span><span class="p">(</span><span class="n">test_network</span><span class="p">)</span>
@@ -239,7 +237,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Andreas
+        &copy; Copyright 2020, Johann Schaible
 
     </p>
   </div>

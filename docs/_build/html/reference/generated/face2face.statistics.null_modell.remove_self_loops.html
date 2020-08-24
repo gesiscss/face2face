@@ -185,11 +185,11 @@
 <p>Removes self-loops that occur by using the “configuration_model”-function from networkx.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>graph</strong> (<em>networkX Graph</em>) – A graph with a specified degree sequence. Nodes are labeled based on the imported dataset. Graph might
+<dd class="field-odd"><p><strong>graph</strong> (<em>networkX Graph</em>) – A graph with a specified degree sequence. Nodes are labeled based on the imported data set. Graph might
 contain self loops</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>graph</strong> – A graph with a specified degree sequence. Nodes are labeled based on the imported dataset. Graph contains
+<dd class="field-even"><p><strong>graph</strong> – A graph with a specified degree sequence. Nodes are labeled based on the imported data set. Graph contains
 no selfloops anymore.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
@@ -198,7 +198,7 @@ no selfloops anymore.</p>
 </dl>
 <p class="rubric">Examples</p>
 <p>The <code class="xref py py-func docutils literal notranslate"><span class="pre">networkx.configuration_model()</span></code> function which is being used for the configuration model can lead to
-self- and parellel edges. As you can see here the function <a class="reference internal" href="#face2face.statistics.null_modell.remove_self_loops" title="face2face.statistics.null_modell.remove_self_loops"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_self_loops()</span></code></a> filters self loops out of
+self- and parallel edges. As you can see here the function <a class="reference internal" href="#face2face.statistics.null_modell.remove_self_loops" title="face2face.statistics.null_modell.remove_self_loops"><code class="xref py py-func docutils literal notranslate"><span class="pre">remove_self_loops()</span></code></a> filters self loops out of
 the network.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">degree_sequence_1</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">test_network</span><span class="o">.</span><span class="n">degree</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">test_model</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">configuration_model</span><span class="p">(</span><span class="n">degree_sequence_1</span><span class="p">)</span>
@@ -236,7 +236,7 @@ the network.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Andreas
+        &copy; Copyright 2020, Johann Schaible
 
     </p>
   </div>

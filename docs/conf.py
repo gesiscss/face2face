@@ -18,8 +18,8 @@ sys.path.insert(0, os.path.abspath('..'))
 # -- Project information -----------------------------------------------------
 
 project = 'face2face'
-copyright = '2020, Andreas'
-author = 'Andreas'
+copyright = '2020, Johann Schaible'
+author = 'Johann Schaible'
 
 
 # -- General configuration ---------------------------------------------------

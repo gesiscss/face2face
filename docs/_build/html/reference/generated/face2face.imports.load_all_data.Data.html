@@ -177,41 +177,41 @@
 <dd><dl class="py method">
 <dt id="face2face.imports.load_all_data.Data.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_set_name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_tij</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">separator_tij</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">separator_meta</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">meta_attr_list</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">header</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">meta_df</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tij_df</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#face2face.imports.load_all_data.Data.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize an object that contains Tij- and Metadata for imported or given datasets.</p>
+<dd><p>Initialize an object that contains Tij- and Metadata for imported or given data sets.</p>
 <p>Creating multiple Networkx Graphs and DataFrames based on a given event list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>data_set_namestring (optional str, default None)</strong> – If you want to use predefined datasets you can use this parameter to create a Data object for SFHH or
-WS16 datasets if you use this initials as a string.</p></li>
-<li><p><strong>path_tij (optional str, default None)</strong> – Can be used to import tij data sets manually.</p></li>
-<li><p><strong>separator_tij (optional str, default None)</strong> – Must be used if you import tij data sets manually.</p></li>
-<li><p><strong>path_meta (optinal str, default None)</strong> – Can be used to import meta data sets manually.</p></li>
-<li><p><strong>separator_meta (optional str, default None)</strong> – Must be used if you import meta data sets manually.</p></li>
-<li><p><strong>meta_attr_list (optional list, default None)</strong> – Must be used if you want to import a meta data set manually that has no header.</p></li>
-<li><p><strong>header (optional str, default None)</strong> – Must be used if tij and or metadata already contain a header. Possible parameters are ‘tij’, ‘meta’ or
+<li><p><strong>data_set_name</strong> (<em>optional: str, default: None</em>) – If you want to use predefined data sets you can use this parameter to create a Data object. For example
+you can import the “Synthetic” data set.</p></li>
+<li><p><strong>path_tij</strong> (<em>optional: str, default: None</em>) – Must be used to import tij data sets manually.</p></li>
+<li><p><strong>separator_tij</strong> (<em>optional: str, default: None</em>) – Must be used if you import tij data sets manually.</p></li>
+<li><p><strong>path_meta</strong> (<em>optional: str, default: None</em>) – Must be used to import meta data sets manually.</p></li>
+<li><p><strong>separator_meta</strong> (<em>optional: str, default: None</em>) – Must be used if you import meta data sets manually.</p></li>
+<li><p><strong>meta_attr_list</strong> (<em>optional: list, default: None</em>) – Must be used if you want to import metadata manually that has no header.</p></li>
+<li><p><strong>header</strong> (<em>optional: str, default: None</em>) – Must be used if tij and/or metadata already contain a header. Possible parameters are ‘tij’, ‘meta’ or
 ‘all’.</p></li>
-<li><p><strong>meta_df (optional dataframe, default None)</strong> – Must be used if you want to create a Data Class Object based on dataframes</p></li>
-<li><p><strong>tij_df (optional dataframe, default None)</strong> – Must be used if you want to create a Data Class Object based on dataframes, for example with a dataframe
-of the dataframe list of the create_network functions</p></li>
+<li><p><strong>meta_df</strong> (<em>optional: dataframe, default: None</em>) – Must be used if you want to create a Data Class Object based on a dataframe</p></li>
+<li><p><strong>tij_df</strong> (<em>optional: dataframe, default: None</em>) – Must be used if you want to create a Data Class Object based on a dataframe, for example with a
+dataframe of the dataframe list from the create_network functions</p></li>
 </ul>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
-<p>Importing predefined datasets by their string name</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="s2">&quot;WS16&quot;</span><span class="p">)</span>
+<p>Importing predefined data sets by their string name</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="s2">&quot;Synthetic&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Importing own data sets or predefined data sets manually (without header)</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>      <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;face2face/data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>      <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;face2face/data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
 <span class="gp">&gt;&gt;&gt; </span>      <span class="n">meta_attr_list</span><span class="o">=</span><span class="n">attr_list</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Importing own data sets or predefined data sets manually (with headers for tij- and metadata)</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test_header.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>      <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test_header.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">)</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;face2face/data/Synthetic_Data/synthetic_tij.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>      <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;face2face/data/Synthetic_Data/synthetic_metadata.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span> <span class="s2">&quot;all&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -224,7 +224,7 @@ of the dataframe list of the create_network functions</p></li>
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#face2face.imports.load_all_data.Data.__init__" title="face2face.imports.load_all_data.Data.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([data_set_name, path_tij, …])</p></td>
-<td><p>Initialize an object that contains Tij- and Metadata for imported or given datasets.</p></td>
+<td><p>Initialize an object that contains Tij- and Metadata for imported or given data sets.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="face2face.imports.load_all_data.Data.replace_str_attr_to_float.html#face2face.imports.load_all_data.Data.replace_str_attr_to_float" title="face2face.imports.load_all_data.Data.replace_str_attr_to_float"><code class="xref py py-obj docutils literal notranslate"><span class="pre">replace_str_attr_to_float</span></code></a>()</p></td>
 <td><p>Replace string attribute values</p></td>
@@ -255,7 +255,7 @@ of the dataframe list of the create_network functions</p></li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Andreas
+        &copy; Copyright 2020, Johann Schaible
 
     </p>
   </div>

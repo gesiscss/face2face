@@ -86,7 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#version-control-for-face-to-face-interaction-analysis-toolkit-project">Version Control for face-to-face-interaction-analysis-toolkit project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-control-for-face2face-project">Version Control for face2face project</a></li>
 </ul>
 </li>
 </ul>
@@ -158,21 +158,21 @@
 <p>If you want to be part in the development here is a guide on how to setup your local repository.</p>
 <ol class="arabic">
 <li><ul>
-<li><p>Get the development repository from <a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis">https://github.com/gesiscss/face-to-face-interaction-analysis</a>-toolkit&lt;<a class="reference external" href="https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit">https://github.com/gesiscss/face-to-face-interaction-analysis-toolkit</a>&gt; and create your own fork by clicking on the fork button.</p></li>
+<li><p>Get the development repository from <a class="reference external" href="https://github.com/gesiscss">https://github.com/gesiscss</a>/face2face&lt;<a class="reference external" href="https://github.com/gesiscss/face2face">https://github.com/gesiscss/face2face</a>&gt; and create your own fork by clicking on the fork button.</p></li>
 <li><p>Clone the repository to your local computer by using:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">your</span><span class="o">-</span><span class="n">username</span><span class="o">/</span><span class="n">face</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">face</span><span class="o">-</span><span class="n">interaction</span><span class="o">-</span><span class="n">analysis</span><span class="o">-</span><span class="n">toolkit</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">your</span><span class="o">-</span><span class="n">username</span><span class="o">/</span><span class="n">face2face</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </li>
-<li><p>After that you have to add the upstream repository. Navigate to the face-to-face-interaction-analysis-toolkit folder and do the following</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">face</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">face</span><span class="o">-</span><span class="n">interaction</span><span class="o">-</span><span class="n">analysis</span><span class="o">-</span><span class="n">toolkit</span><span class="o">/</span><span class="n">face</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">face</span><span class="o">-</span><span class="n">interaction</span><span class="o">-</span><span class="n">analysis</span><span class="o">-</span><span class="n">toolkit</span><span class="o">.</span><span class="n">git</span>
+<li><p>After that you have to add the upstream repository. Navigate to the face2face folder and do the following</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">face2face</span><span class="o">/</span><span class="n">face2face</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </li>
 <li><p>You should have two remote repositories now:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">upstream</span></code>, this repository refers to the original <code class="docutils literal notranslate"><span class="pre">face-to-face-interaction-analysis-toolkit</span></code> repository</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upstream</span></code>, this repository refers to the original <code class="docutils literal notranslate"><span class="pre">face2face</span></code> repository</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">origin</span></code>, this is the repository of you personal fork</p></li>
 </ul>
 </div></blockquote>
@@ -204,8 +204,8 @@
 </ul>
 </li>
 </ol>
-<div class="section" id="version-control-for-face-to-face-interaction-analysis-toolkit-project">
-<h2>Version Control for face-to-face-interaction-analysis-toolkit project<a class="headerlink" href="#version-control-for-face-to-face-interaction-analysis-toolkit-project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="version-control-for-face2face-project">
+<h2>Version Control for face2face project<a class="headerlink" href="#version-control-for-face2face-project" title="Permalink to this headline">¶</a></h2>
 <p>When you want to commit any changes on your repository the git hook will run every pytest to check if your code does not break anything.
 If the test passes you can push it to the repository.</p>
 </div>
@@ -229,7 +229,7 @@ If the test passes you can push it to the repository.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Andreas
+        &copy; Copyright 2020, Johann Schaible
 
     </p>
   </div>

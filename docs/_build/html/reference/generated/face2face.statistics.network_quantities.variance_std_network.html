@@ -188,11 +188,11 @@
 \[\sigma = \sqrt{\sigma^2} = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>network</strong> (<em>networkx Graph</em>) – A graph with a specified degree sequence. Nodes are labeled based on the imported dataset.</p>
+<dd class="field-odd"><p><strong>network</strong> (<em>networkx Graph</em>) – A graph with a specified degree sequence. Nodes are labeled based on the imported data set.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
-<li><p><strong>var</strong> (<em>float</em>) – Contains the Variance of the network degree</p></li>
+<li><p><strong>var</strong> (<em>float</em>) – Contains the variance of the network degree</p></li>
 <li><p><strong>std</strong> (<em>float</em>) – Contains the standard deviation of the network degree</p></li>
 </ul>
 </p>
@@ -200,8 +200,8 @@
 </dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attr_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ID&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;../../data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
-<span class="gp">&gt;&gt;&gt; </span>               <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;../../data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test_df</span> <span class="o">=</span> <span class="n">Data</span><span class="p">(</span><span class="n">path_tij</span><span class="o">=</span><span class="s2">&quot;face2face/data/Test/tij_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_tij</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>               <span class="n">path_meta</span><span class="o">=</span><span class="s2">&quot;face2face/data/Test/meta_test.dat&quot;</span><span class="p">,</span> <span class="n">separator_meta</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span>
 <span class="gp">&gt;&gt;&gt; </span>               <span class="n">meta_attr_list</span><span class="o">=</span><span class="n">attr_list</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">test_network</span> <span class="o">=</span> <span class="n">create_network_from_data</span><span class="p">(</span><span class="n">test_df</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">variance</span><span class="p">,</span> <span class="n">standard_deviation</span> <span class="o">=</span> <span class="n">variance_std_network</span><span class="p">(</span><span class="n">test_network</span><span class="p">)</span>
@@ -235,7 +235,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, Andreas
+        &copy; Copyright 2020, Johann Schaible
 
     </p>
   </div>
