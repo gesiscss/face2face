@@ -11,4 +11,4 @@ dependencies:
         - matplotlib
         - scipy
         - seaborn
-        - face2face
+        - face2face>=0.2.Alpha
